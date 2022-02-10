@@ -4,6 +4,13 @@
 # Comment the next line if you don't want to use dynamic frameworks
 use_frameworks!
 
+# Pods for Network
+$Alamofire = pod 'Alamofire', '~> 5.5'
+
+# Pods for CodeQuality
+$SwiftLint = pod 'SwiftLint', '~> 0.46'
+
+
 workspace 'NoteSalihMVVM'
 
 target 'NoteSalihMVVM' do
@@ -11,7 +18,7 @@ target 'NoteSalihMVVM' do
   project 'NoteSalihMVVM.xcodeproj'
   
   # Pods for NoteSalihMVVM
-  pod 'SwiftLint', '~> 0.46'
+  $SwiftLint
 
   target 'NoteSalihMVVMTests' do
     inherit! :search_paths
@@ -29,6 +36,7 @@ target 'DataProvider' do
   project 'DataProvider/DataProvider.xcodeproj'
   
   # Pods for DataProvider
+  $Alamofire
   
   target 'DataProviderTests' do
     inherit! :search_paths
