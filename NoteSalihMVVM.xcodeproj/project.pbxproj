@@ -14,6 +14,12 @@
 		67FE22D527B4FD370078E2C2 /* NoteSalihMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22D427B4FD370078E2C2 /* NoteSalihMVVMTests.swift */; };
 		67FE22DF27B4FD370078E2C2 /* NoteSalihMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22DE27B4FD370078E2C2 /* NoteSalihMVVMUITests.swift */; };
 		67FE22E127B4FD370078E2C2 /* NoteSalihMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22E027B4FD370078E2C2 /* NoteSalihMVVMUITestsLaunchTests.swift */; };
+		67FE235B27B501970078E2C2 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE235A27B501970078E2C2 /* DataProvider.framework */; };
+		67FE235C27B501970078E2C2 /* DataProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE235A27B501970078E2C2 /* DataProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67FE235F27B5019B0078E2C2 /* UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE235E27B5019B0078E2C2 /* UIComponents.framework */; };
+		67FE236027B5019B0078E2C2 /* UIComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE235E27B5019B0078E2C2 /* UIComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		67FE236227B501A10078E2C2 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE236127B501A10078E2C2 /* Utilities.framework */; };
+		67FE236327B501A10078E2C2 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE236127B501A10078E2C2 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4BC37DF75F635A8B9F21BA4 /* Pods_NoteSalihMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9E7F442AB8AEC47B09E137 /* Pods_NoteSalihMVVMTests.framework */; };
 		D8A55B81D8CA36F7EB2D961E /* Pods_NoteSalihMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B63CC31D82B1906683A2596 /* Pods_NoteSalihMVVM.framework */; };
 		DE1986CECFDDD8E500BA391F /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE4E1B6C70EFDF8BF7321E4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */; };
@@ -36,6 +42,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		67FE235D27B501970078E2C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67FE236027B5019B0078E2C2 /* UIComponents.framework in Embed Frameworks */,
+				67FE236327B501A10078E2C2 /* Utilities.framework in Embed Frameworks */,
+				67FE235C27B501970078E2C2 /* DataProvider.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1B63CC31D82B1906683A2596 /* Pods_NoteSalihMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24225254643F5BC4DD59938C /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM-NoteSalihMVVMUITests/Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +76,9 @@
 		67FE22DA27B4FD370078E2C2 /* NoteSalihMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoteSalihMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE22DE27B4FD370078E2C2 /* NoteSalihMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSalihMVVMUITests.swift; sourceTree = "<group>"; };
 		67FE22E027B4FD370078E2C2 /* NoteSalihMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSalihMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		67FE235A27B501970078E2C2 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FE235E27B5019B0078E2C2 /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FE236127B501A10078E2C2 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85434DA97AD8A315ACB117FA /* Pods-NoteSalihMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVMTests/Pods-NoteSalihMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FE4E1B6C70EFDF8BF7321E4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06C1EF8E39E4385C2A3ACB0 /* Pods-NoteSalihMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVMTests/Pods-NoteSalihMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +90,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A55B81D8CA36F7EB2D961E /* Pods_NoteSalihMVVM.framework in Frameworks */,
+				67FE235F27B5019B0078E2C2 /* UIComponents.framework in Frameworks */,
+				67FE235B27B501970078E2C2 /* DataProvider.framework in Frameworks */,
+				67FE236227B501A10078E2C2 /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +182,9 @@
 		E5AC2FB2BFBE87CDDB033303 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67FE236127B501A10078E2C2 /* Utilities.framework */,
+				67FE235E27B5019B0078E2C2 /* UIComponents.framework */,
+				67FE235A27B501970078E2C2 /* DataProvider.framework */,
 				1B63CC31D82B1906683A2596 /* Pods_NoteSalihMVVM.framework */,
 				9FE4E1B6C70EFDF8BF7321E4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */,
 				3C9E7F442AB8AEC47B09E137 /* Pods_NoteSalihMVVMTests.framework */,
@@ -173,6 +204,7 @@
 				67FE22B627B4FD360078E2C2 /* Sources */,
 				67FE22B727B4FD360078E2C2 /* Frameworks */,
 				67FE22B827B4FD360078E2C2 /* Resources */,
+				67FE235D27B501970078E2C2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
