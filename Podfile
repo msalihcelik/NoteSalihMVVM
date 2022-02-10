@@ -10,6 +10,10 @@ $Alamofire = pod 'Alamofire', '~> 5.5'
 # Pods for CodeQuality
 $SwiftLint = pod 'SwiftLint', '~> 0.46'
 
+# Pods for UI
+$MobilliumBuilders = pod 'MobilliumBuilders', '~> 1.4'
+$TinyConstraints = pod 'TinyConstraints', '~> 4.0'
+
 
 workspace 'NoteSalihMVVM'
 
@@ -19,6 +23,8 @@ target 'NoteSalihMVVM' do
   
   # Pods for NoteSalihMVVM
   $SwiftLint
+  $TinyConstraints
+  $MobilliumBuilders
 
   target 'NoteSalihMVVMTests' do
     inherit! :search_paths
