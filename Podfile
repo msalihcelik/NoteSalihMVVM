@@ -37,6 +37,32 @@ target 'DataProvider' do
 
 end
 
+target 'Utilities' do
+  
+  project 'Utilities/Utilities.xcodeproj'
+  
+  # Pods for Utilities
+  
+  target 'UtilitiesTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'UIComponents' do
+  
+  project 'UIComponents/UIComponents.xcodeproj'
+  
+  # Pods for UIComponents
+  
+  target 'UIComponentsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
