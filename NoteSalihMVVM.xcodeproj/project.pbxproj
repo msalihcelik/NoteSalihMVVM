@@ -14,15 +14,11 @@
 		67FE22D527B4FD370078E2C2 /* NoteSalihMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22D427B4FD370078E2C2 /* NoteSalihMVVMTests.swift */; };
 		67FE22DF27B4FD370078E2C2 /* NoteSalihMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22DE27B4FD370078E2C2 /* NoteSalihMVVMUITests.swift */; };
 		67FE22E127B4FD370078E2C2 /* NoteSalihMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22E027B4FD370078E2C2 /* NoteSalihMVVMUITestsLaunchTests.swift */; };
-		67FE235B27B501970078E2C2 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE235A27B501970078E2C2 /* DataProvider.framework */; };
-		67FE235C27B501970078E2C2 /* DataProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE235A27B501970078E2C2 /* DataProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		67FE235F27B5019B0078E2C2 /* UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE235E27B5019B0078E2C2 /* UIComponents.framework */; };
-		67FE236027B5019B0078E2C2 /* UIComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE235E27B5019B0078E2C2 /* UIComponents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		67FE236227B501A10078E2C2 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE236127B501A10078E2C2 /* Utilities.framework */; };
-		67FE236327B501A10078E2C2 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE236127B501A10078E2C2 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A4BC37DF75F635A8B9F21BA4 /* Pods_NoteSalihMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9E7F442AB8AEC47B09E137 /* Pods_NoteSalihMVVMTests.framework */; };
-		D8A55B81D8CA36F7EB2D961E /* Pods_NoteSalihMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B63CC31D82B1906683A2596 /* Pods_NoteSalihMVVM.framework */; };
-		DE1986CECFDDD8E500BA391F /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE4E1B6C70EFDF8BF7321E4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */; };
+		67FE23DF27B50EDB0078E2C2 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE23DE27B50EDB0078E2C2 /* DataProvider.framework */; };
+		67FE23E027B50EDB0078E2C2 /* DataProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE23DE27B50EDB0078E2C2 /* DataProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72B21813783445B5B1482C47 /* Pods_NoteSalihMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49D3916712FF904A4BF3635 /* Pods_NoteSalihMVVM.framework */; };
+		9B658A5A67F0993F78B5C6AA /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136820DD115292DD0F7097F4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */; };
+		D1A9799A3AAD5492011BC82F /* Pods_NoteSalihMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DBAF7B14D3971350F42B1 /* Pods_NoteSalihMVVMTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,15 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		67FE235D27B501970078E2C2 /* Embed Frameworks */ = {
+		67FE23E127B50EDB0078E2C2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				67FE236027B5019B0078E2C2 /* UIComponents.framework in Embed Frameworks */,
-				67FE236327B501A10078E2C2 /* Utilities.framework in Embed Frameworks */,
-				67FE235C27B501970078E2C2 /* DataProvider.framework in Embed Frameworks */,
+				67FE23E027B50EDB0078E2C2 /* DataProvider.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,12 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1B63CC31D82B1906683A2596 /* Pods_NoteSalihMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24225254643F5BC4DD59938C /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM-NoteSalihMVVMUITests/Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2DC549F193969FAB706F0BCA /* Pods-NoteSalihMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM/Pods-NoteSalihMVVM.debug.xcconfig"; sourceTree = "<group>"; };
-		38D02C79E6953548779B31F9 /* Pods-NoteSalihMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM.release.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM/Pods-NoteSalihMVVM.release.xcconfig"; sourceTree = "<group>"; };
-		3C9E7F442AB8AEC47B09E137 /* Pods_NoteSalihMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A80EA5DAE1C26F7CEF06E4C /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM-NoteSalihMVVMUITests/Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
+		136820DD115292DD0F7097F4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E38BD0E3BDFE12537DACD5 /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM-NoteSalihMVVMUITests/Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		67FE22BA27B4FD360078E2C2 /* NoteSalihMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteSalihMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE22BD27B4FD360078E2C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE22C127B4FD360078E2C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,9 +70,14 @@
 		67FE235E27B5019B0078E2C2 /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE236127B501A10078E2C2 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE236427B502020078E2C2 /* NoteSalihMVVM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoteSalihMVVM-Bridging-Header.h"; sourceTree = "<group>"; };
-		85434DA97AD8A315ACB117FA /* Pods-NoteSalihMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVMTests/Pods-NoteSalihMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
-		9FE4E1B6C70EFDF8BF7321E4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E06C1EF8E39E4385C2A3ACB0 /* Pods-NoteSalihMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVMTests/Pods-NoteSalihMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67FE23DE27B50EDB0078E2C2 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E78A5350026118ADDFEAC28 /* Pods-NoteSalihMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM.release.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM/Pods-NoteSalihMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		8BB9377AAB1574DA8F8139FA /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM-NoteSalihMVVMUITests/Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8F320E93418F72FCBEE9E50A /* Pods-NoteSalihMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVMTests/Pods-NoteSalihMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
+		B8A02CBEF44F7BDCCDAE7C33 /* Pods-NoteSalihMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM/Pods-NoteSalihMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		C8771307FEB325D75A2BBC9E /* Pods-NoteSalihMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVMTests/Pods-NoteSalihMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E49D3916712FF904A4BF3635 /* Pods_NoteSalihMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9DBAF7B14D3971350F42B1 /* Pods_NoteSalihMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8A55B81D8CA36F7EB2D961E /* Pods_NoteSalihMVVM.framework in Frameworks */,
-				67FE235F27B5019B0078E2C2 /* UIComponents.framework in Frameworks */,
-				67FE235B27B501970078E2C2 /* DataProvider.framework in Frameworks */,
-				67FE236227B501A10078E2C2 /* Utilities.framework in Frameworks */,
+				72B21813783445B5B1482C47 /* Pods_NoteSalihMVVM.framework in Frameworks */,
+				67FE23DF27B50EDB0078E2C2 /* DataProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4BC37DF75F635A8B9F21BA4 /* Pods_NoteSalihMVVMTests.framework in Frameworks */,
+				D1A9799A3AAD5492011BC82F /* Pods_NoteSalihMVVMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE1986CECFDDD8E500BA391F /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework in Frameworks */,
+				9B658A5A67F0993F78B5C6AA /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,12 +164,12 @@
 		90BF16B35B973056F03364FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2DC549F193969FAB706F0BCA /* Pods-NoteSalihMVVM.debug.xcconfig */,
-				38D02C79E6953548779B31F9 /* Pods-NoteSalihMVVM.release.xcconfig */,
-				24225254643F5BC4DD59938C /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */,
-				4A80EA5DAE1C26F7CEF06E4C /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig */,
-				E06C1EF8E39E4385C2A3ACB0 /* Pods-NoteSalihMVVMTests.debug.xcconfig */,
-				85434DA97AD8A315ACB117FA /* Pods-NoteSalihMVVMTests.release.xcconfig */,
+				B8A02CBEF44F7BDCCDAE7C33 /* Pods-NoteSalihMVVM.debug.xcconfig */,
+				6E78A5350026118ADDFEAC28 /* Pods-NoteSalihMVVM.release.xcconfig */,
+				37E38BD0E3BDFE12537DACD5 /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */,
+				8BB9377AAB1574DA8F8139FA /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig */,
+				C8771307FEB325D75A2BBC9E /* Pods-NoteSalihMVVMTests.debug.xcconfig */,
+				8F320E93418F72FCBEE9E50A /* Pods-NoteSalihMVVMTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -184,12 +177,13 @@
 		E5AC2FB2BFBE87CDDB033303 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67FE23DE27B50EDB0078E2C2 /* DataProvider.framework */,
 				67FE236127B501A10078E2C2 /* Utilities.framework */,
 				67FE235E27B5019B0078E2C2 /* UIComponents.framework */,
 				67FE235A27B501970078E2C2 /* DataProvider.framework */,
-				1B63CC31D82B1906683A2596 /* Pods_NoteSalihMVVM.framework */,
-				9FE4E1B6C70EFDF8BF7321E4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */,
-				3C9E7F442AB8AEC47B09E137 /* Pods_NoteSalihMVVMTests.framework */,
+				E49D3916712FF904A4BF3635 /* Pods_NoteSalihMVVM.framework */,
+				136820DD115292DD0F7097F4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */,
+				EA9DBAF7B14D3971350F42B1 /* Pods_NoteSalihMVVMTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,12 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67FE22E427B4FD370078E2C2 /* Build configuration list for PBXNativeTarget "NoteSalihMVVM" */;
 			buildPhases = (
-				74923C178CC9A4DF18BD157C /* [CP] Check Pods Manifest.lock */,
+				ED391B9ABA91CEC25C589E5D /* [CP] Check Pods Manifest.lock */,
 				67FE22ED27B4FE800078E2C2 /* Run SwiftLint */,
 				67FE22B627B4FD360078E2C2 /* Sources */,
 				67FE22B727B4FD360078E2C2 /* Frameworks */,
 				67FE22B827B4FD360078E2C2 /* Resources */,
-				67FE235D27B501970078E2C2 /* Embed Frameworks */,
+				67FE23E127B50EDB0078E2C2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67FE22E727B4FD370078E2C2 /* Build configuration list for PBXNativeTarget "NoteSalihMVVMTests" */;
 			buildPhases = (
-				364FEC18FFFC9E2260809E8F /* [CP] Check Pods Manifest.lock */,
+				6B101505BBC858FA1C0DB9E3 /* [CP] Check Pods Manifest.lock */,
 				67FE22CC27B4FD370078E2C2 /* Sources */,
 				67FE22CD27B4FD370078E2C2 /* Frameworks */,
 				67FE22CE27B4FD370078E2C2 /* Resources */,
@@ -240,7 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67FE22EA27B4FD370078E2C2 /* Build configuration list for PBXNativeTarget "NoteSalihMVVMUITests" */;
 			buildPhases = (
-				ABEA5DC637C915710DA9A457 /* [CP] Check Pods Manifest.lock */,
+				2FC597F5C4E080181896F14E /* [CP] Check Pods Manifest.lock */,
 				67FE22D627B4FD370078E2C2 /* Sources */,
 				67FE22D727B4FD370078E2C2 /* Frameworks */,
 				67FE22D827B4FD370078E2C2 /* Resources */,
@@ -326,7 +320,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		364FEC18FFFC9E2260809E8F /* [CP] Check Pods Manifest.lock */ = {
+		2FC597F5C4E080181896F14E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,7 +335,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NoteSalihMVVMTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-NoteSalihMVVM-NoteSalihMVVMUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,7 +360,29 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		74923C178CC9A4DF18BD157C /* [CP] Check Pods Manifest.lock */ = {
+		6B101505BBC858FA1C0DB9E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoteSalihMVVMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED391B9ABA91CEC25C589E5D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,28 +398,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-NoteSalihMVVM-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ABEA5DC637C915710DA9A457 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NoteSalihMVVM-NoteSalihMVVMUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -584,7 +578,7 @@
 		};
 		67FE22E527B4FD370078E2C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DC549F193969FAB706F0BCA /* Pods-NoteSalihMVVM.debug.xcconfig */;
+			baseConfigurationReference = B8A02CBEF44F7BDCCDAE7C33 /* Pods-NoteSalihMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -592,6 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BNK334U5U9;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NoteSalihMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -604,6 +599,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmetsalihcelik.NoteSalihMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -616,7 +612,7 @@
 		};
 		67FE22E627B4FD370078E2C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38D02C79E6953548779B31F9 /* Pods-NoteSalihMVVM.release.xcconfig */;
+			baseConfigurationReference = 6E78A5350026118ADDFEAC28 /* Pods-NoteSalihMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -624,6 +620,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BNK334U5U9;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NoteSalihMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -636,6 +633,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmetsalihcelik.NoteSalihMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -647,16 +645,18 @@
 		};
 		67FE22E827B4FD370078E2C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E06C1EF8E39E4385C2A3ACB0 /* Pods-NoteSalihMVVMTests.debug.xcconfig */;
+			baseConfigurationReference = C8771307FEB325D75A2BBC9E /* Pods-NoteSalihMVVMTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BNK334U5U9;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmetsalihcelik.NoteSalihMVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -668,16 +668,18 @@
 		};
 		67FE22E927B4FD370078E2C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85434DA97AD8A315ACB117FA /* Pods-NoteSalihMVVMTests.release.xcconfig */;
+			baseConfigurationReference = 8F320E93418F72FCBEE9E50A /* Pods-NoteSalihMVVMTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BNK334U5U9;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmetsalihcelik.NoteSalihMVVMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -689,14 +691,17 @@
 		};
 		67FE22EB27B4FD370078E2C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24225254643F5BC4DD59938C /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */;
+			baseConfigurationReference = 37E38BD0E3BDFE12537DACD5 /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BNK334U5U9;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmetsalihcelik.NoteSalihMVVMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -708,14 +713,17 @@
 		};
 		67FE22EC27B4FD370078E2C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A80EA5DAE1C26F7CEF06E4C /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig */;
+			baseConfigurationReference = 8BB9377AAB1574DA8F8139FA /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BNK334U5U9;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmetsalihcelik.NoteSalihMVVMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
