@@ -14,6 +14,9 @@ $SwiftLint = pod 'SwiftLint', '~> 0.46'
 $MobilliumBuilders = pod 'MobilliumBuilders', '~> 1.4'
 $TinyConstraints = pod 'TinyConstraints', '~> 4.0'
 
+$SwiftGen = pod 'SwiftGen', '~> 6.5'
+$SwiftEntryKit = pod 'SwiftEntryKit', '~> 2.0'
+
 
 workspace 'NoteSalihMVVM'
 
@@ -25,6 +28,7 @@ target 'NoteSalihMVVM' do
   $SwiftLint
   $TinyConstraints
   $MobilliumBuilders
+  $SwiftEntryKit
 
   target 'NoteSalihMVVMTests' do
     inherit! :search_paths
@@ -69,6 +73,10 @@ target 'UIComponents' do
   project 'UIComponents/UIComponents.xcodeproj'
   
   # Pods for UIComponents
+  $SwiftLint
+  $SwiftEntryKit
+  $SwiftGen
+  $TinyConstraints
   
   target 'UIComponentsTests' do
     inherit! :search_paths

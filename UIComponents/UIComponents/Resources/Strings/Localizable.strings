@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  UIComponents
+
+  Created by Mehmet Salih ÇELİK on 11.02.2022.
+  
+*/
+
+// MARK: - Login
+"Login.title" = "Login";
+
+// MARK: - Register
+"Register.title" = "Register";
+
