@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		24D1CE6680978ADAD4BD0654 /* Pods_DataProviderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15018055354BD8DA8D7A9D63 /* Pods_DataProviderTests.framework */; };
 		5C88B9DE7DBE3203EC37859F /* Pods_DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31BBFB63F8CC5C1694557F0 /* Pods_DataProvider.framework */; };
+		67F7A8E427B6A1ED0041DC3A /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */; };
+		67F7A8E627B6A20B0041DC3A /* DecodableResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */; };
+		67F7A8E827B6A2220041DC3A /* RequestEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */; };
+		67F7A8EA27B6A2400041DC3A /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E927B6A2400041DC3A /* RequestMethod.swift */; };
+		67F7A8EC27B6A2570041DC3A /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8EB27B6A2570041DC3A /* RequestProtocol.swift */; };
+		67F7A8EE27B6A26D0041DC3A /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8ED27B6A26D0041DC3A /* Typealias.swift */; };
 		67FE234527B5013D0078E2C2 /* DataProvider.docc in Sources */ = {isa = PBXBuildFile; fileRef = 67FE234427B5013D0078E2C2 /* DataProvider.docc */; };
 		67FE234B27B5013D0078E2C2 /* DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE234027B5013D0078E2C2 /* DataProvider.framework */; };
 		67FE235027B5013D0078E2C2 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE234F27B5013D0078E2C2 /* DataProviderTests.swift */; };
@@ -28,6 +34,12 @@
 /* Begin PBXFileReference section */
 		15018055354BD8DA8D7A9D63 /* Pods_DataProviderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataProviderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C3E816A5BEC8D1C61FCD8B /* Pods-DataProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataProvider.debug.xcconfig"; path = "Target Support Files/Pods-DataProvider/Pods-DataProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
+		67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResponseRequest.swift; sourceTree = "<group>"; };
+		67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEncoding.swift; sourceTree = "<group>"; };
+		67F7A8E927B6A2400041DC3A /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		67F7A8EB27B6A2570041DC3A /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		67F7A8ED27B6A26D0041DC3A /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		67FE234027B5013D0078E2C2 /* DataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE234327B5013D0078E2C2 /* DataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
 		67FE234427B5013D0078E2C2 /* DataProvider.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DataProvider.docc; sourceTree = "<group>"; };
@@ -69,6 +81,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		67F7A8E127B6A1860041DC3A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */,
+				67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */,
+				67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */,
+				67F7A8E927B6A2400041DC3A /* RequestMethod.swift */,
+				67F7A8EB27B6A2570041DC3A /* RequestProtocol.swift */,
+				67F7A8ED27B6A26D0041DC3A /* Typealias.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		67FE233627B5013D0078E2C2 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +117,7 @@
 		67FE234227B5013D0078E2C2 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				67F7A8E127B6A1860041DC3A /* Core */,
 				67FE234327B5013D0078E2C2 /* DataProvider.h */,
 				67FE234427B5013D0078E2C2 /* DataProvider.docc */,
 			);
@@ -276,7 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F7A8E827B6A2220041DC3A /* RequestEncoding.swift in Sources */,
+				67F7A8E627B6A20B0041DC3A /* DecodableResponseRequest.swift in Sources */,
+				67F7A8E427B6A1ED0041DC3A /* DataProviderProtocol.swift in Sources */,
+				67F7A8EC27B6A2570041DC3A /* RequestProtocol.swift in Sources */,
+				67F7A8EA27B6A2400041DC3A /* RequestMethod.swift in Sources */,
 				67FE234527B5013D0078E2C2 /* DataProvider.docc in Sources */,
+				67F7A8EE27B6A26D0041DC3A /* Typealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C032D23C86F62B893AAA7820 /* Pods-DataProviderTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BNK334U5U9;
@@ -504,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE2F66B3A81CC5F62DBBE4B5 /* Pods-DataProviderTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BNK334U5U9;
