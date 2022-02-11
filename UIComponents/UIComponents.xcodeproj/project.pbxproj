@@ -11,9 +11,6 @@
 		67F7A8AC27B64D790041DC3A /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8AB27B64D790041DC3A /* swiftgen.yml */; };
 		67F7A8C627B64DD80041DC3A /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8B227B64DD80041DC3A /* StringConstants.swift */; };
 		67F7A8C927B64DD80041DC3A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */; };
-		67F7A8CA27B64DD80041DC3A /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8B727B64DD80041DC3A /* Nunito-ExtraBold.ttf */; };
-		67F7A8CB27B64DD80041DC3A /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8B827B64DD80041DC3A /* Nunito-SemiBold.ttf */; };
-		67F7A8CC27B64DD80041DC3A /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8B927B64DD80041DC3A /* Nunito-Bold.ttf */; };
 		67F7A8CD27B64DD80041DC3A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8BA27B64DD80041DC3A /* Fonts.swift */; };
 		67F7A8CE27B64DD80041DC3A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8BC27B64DD80041DC3A /* Assets.swift */; };
 		67F7A8CF27B64DD80041DC3A /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8BD27B64DD80041DC3A /* UIImage+Icons.swift */; };
@@ -23,6 +20,9 @@
 		67F7A8D427B64DD80041DC3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8C227B64DD80041DC3A /* Images.xcassets */; };
 		67F7A8D627B64E9D0041DC3A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8D527B64E9D0041DC3A /* Colors.xcassets */; };
 		67F7A8D927B650FF0041DC3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8D827B650FF0041DC3A /* Localizable.strings */; };
+		67F7A8F227B6A4740041DC3A /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8EF27B6A4740041DC3A /* JosefinSans-Bold.ttf */; };
+		67F7A8F327B6A4740041DC3A /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8F027B6A4740041DC3A /* JosefinSans-Regular.ttf */; };
+		67F7A8F427B6A4740041DC3A /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8F127B6A4740041DC3A /* JosefinSans-SemiBold.ttf */; };
 		67FE232127B500F20078E2C2 /* UIComponents.docc in Sources */ = {isa = PBXBuildFile; fileRef = 67FE232027B500F20078E2C2 /* UIComponents.docc */; };
 		67FE232727B500F20078E2C2 /* UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE231C27B500F20078E2C2 /* UIComponents.framework */; };
 		67FE232C27B500F20078E2C2 /* UIComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE232B27B500F20078E2C2 /* UIComponentsTests.swift */; };
@@ -47,9 +47,6 @@
 		67F7A8AB27B64D790041DC3A /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		67F7A8B227B64DD80041DC3A /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
-		67F7A8B727B64DD80041DC3A /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
-		67F7A8B827B64DD80041DC3A /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
-		67F7A8B927B64DD80041DC3A /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		67F7A8BA27B64DD80041DC3A /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		67F7A8BC27B64DD80041DC3A /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		67F7A8BD27B64DD80041DC3A /* UIImage+Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
@@ -59,6 +56,9 @@
 		67F7A8C227B64DD80041DC3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		67F7A8D527B64E9D0041DC3A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		67F7A8D827B650FF0041DC3A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		67F7A8EF27B6A4740041DC3A /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		67F7A8F027B6A4740041DC3A /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
+		67F7A8F127B6A4740041DC3A /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		67FE231C27B500F20078E2C2 /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE231F27B500F20078E2C2 /* UIComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponents.h; sourceTree = "<group>"; };
 		67FE232027B500F20078E2C2 /* UIComponents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UIComponents.docc; sourceTree = "<group>"; };
@@ -112,10 +112,10 @@
 		67F7A8B527B64DD80041DC3A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				67F7A8EF27B6A4740041DC3A /* JosefinSans-Bold.ttf */,
+				67F7A8F027B6A4740041DC3A /* JosefinSans-Regular.ttf */,
+				67F7A8F127B6A4740041DC3A /* JosefinSans-SemiBold.ttf */,
 				67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */,
-				67F7A8B727B64DD80041DC3A /* Nunito-ExtraBold.ttf */,
-				67F7A8B827B64DD80041DC3A /* Nunito-SemiBold.ttf */,
-				67F7A8B927B64DD80041DC3A /* Nunito-Bold.ttf */,
 				67F7A8BA27B64DD80041DC3A /* Fonts.swift */,
 			);
 			path = Fonts;
@@ -290,14 +290,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F7A8CB27B64DD80041DC3A /* Nunito-SemiBold.ttf in Resources */,
-				67F7A8CC27B64DD80041DC3A /* Nunito-Bold.ttf in Resources */,
 				67F7A8AC27B64D790041DC3A /* swiftgen.yml in Resources */,
+				67F7A8F327B6A4740041DC3A /* JosefinSans-Regular.ttf in Resources */,
 				67F7A8D427B64DD80041DC3A /* Images.xcassets in Resources */,
 				67F7A8D627B64E9D0041DC3A /* Colors.xcassets in Resources */,
 				67F7A8D927B650FF0041DC3A /* Localizable.strings in Resources */,
-				67F7A8CA27B64DD80041DC3A /* Nunito-ExtraBold.ttf in Resources */,
+				67F7A8F427B6A4740041DC3A /* JosefinSans-SemiBold.ttf in Resources */,
 				67F7A8D227B64DD80041DC3A /* Icons.xcassets in Resources */,
+				67F7A8F227B6A4740041DC3A /* JosefinSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
