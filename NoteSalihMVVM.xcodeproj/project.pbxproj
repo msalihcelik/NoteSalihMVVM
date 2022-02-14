@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6738489027BA5EE80094F2C7 /* ApiLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488F27BA5EE80094F2C7 /* ApiLogger.swift */; };
+		6738489227BA5F060094F2C7 /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */; };
+		6738489427BA5F1C0094F2C7 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489327BA5F1C0094F2C7 /* DataProvider.swift */; };
 		67FE22BE27B4FD360078E2C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22BD27B4FD360078E2C2 /* AppDelegate.swift */; };
 		67FE22C727B4FD370078E2C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE22C627B4FD370078E2C2 /* Assets.xcassets */; };
 		67FE22CA27B4FD370078E2C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FE22C827B4FD370078E2C2 /* LaunchScreen.storyboard */; };
@@ -74,6 +77,9 @@
 /* Begin PBXFileReference section */
 		136820DD115292DD0F7097F4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E38BD0E3BDFE12537DACD5 /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM-NoteSalihMVVMUITests/Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6738488F27BA5EE80094F2C7 /* ApiLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogger.swift; sourceTree = "<group>"; };
+		6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
+		6738489327BA5F1C0094F2C7 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		67FE22BA27B4FD360078E2C2 /* NoteSalihMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteSalihMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE22BD27B4FD360078E2C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE22C627B4FD370078E2C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +151,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6738488E27BA5E9C0094F2C7 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				6738488F27BA5EE80094F2C7 /* ApiLogger.swift */,
+				6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */,
+				6738489327BA5F1C0094F2C7 /* DataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
 		67FE22B127B4FD360078E2C2 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +190,7 @@
 				67FE23E927B52EAC0078E2C2 /* Configurations */,
 				67FE23EB27B52ED80078E2C2 /* Routing */,
 				67FE23FB27B533BC0078E2C2 /* Scenes */,
+				6738488E27BA5E9C0094F2C7 /* DataProvider */,
 				67FE22C627B4FD370078E2C2 /* Assets.xcassets */,
 				67FE22C827B4FD370078E2C2 /* LaunchScreen.storyboard */,
 			);
@@ -298,9 +315,9 @@
 		67FE241B27B53DEB0078E2C2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				67FE241C27B53E000078E2C2 /* LoginRouter.swift */,
 				67FE241D27B53E000078E2C2 /* LoginViewController.swift */,
 				67FE241E27B53E000078E2C2 /* LoginViewModel.swift */,
+				67FE241C27B53E000078E2C2 /* LoginRouter.swift */,
 				67FE242227B53E200078E2C2 /* LoginRoute.swift */,
 			);
 			path = Login;
@@ -596,8 +613,11 @@
 			files = (
 				67FE242027B53E000078E2C2 /* LoginViewController.swift in Sources */,
 				67FE23FA27B532A30078E2C2 /* ModalTransition.swift in Sources */,
+				6738489227BA5F060094F2C7 /* ApiRequestInterceptor.swift in Sources */,
 				67FE240727B5353F0078E2C2 /* BaseRouter.swift in Sources */,
 				67FE242327B53E200078E2C2 /* LoginRoute.swift in Sources */,
+				6738489027BA5EE80094F2C7 /* ApiLogger.swift in Sources */,
+				6738489427BA5F1C0094F2C7 /* DataProvider.swift in Sources */,
 				67FE23F927B532A30078E2C2 /* Transition.swift in Sources */,
 				67FE23F027B52FDE0078E2C2 /* Router.swift in Sources */,
 				67FE23EE27B52F880078E2C2 /* Animator.swift in Sources */,

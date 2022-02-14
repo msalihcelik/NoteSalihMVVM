@@ -22,9 +22,11 @@ protocol BaseViewModelProtocol: BaseViewModelDataSource, BaseViewModelEventSourc
 class BaseViewModel<R: Router>: BaseViewModelProtocol {
     
     let router: R
+    let dataProvider: DataProviderProtocol
 
-    init(router: R) {
+    init(router: R, dataProvider: DataProviderProtocol = apiDataProvider) {
         self.router = router
+        self.dataProvider = dataProvider
     }
     
     func viewDidLoad() {}
