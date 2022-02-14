@@ -5,6 +5,38 @@ import UIKit
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public extension UIColor {
+
+  static var appBlue: UIColor {
+      return Asset.Colors.appBlue.color
+  }
+
+  static var appDarkGray: UIColor {
+      return Asset.Colors.appDarkGray.color
+  }
+
+  static var appEbonyClay: UIColor {
+      return Asset.Colors.appEbonyClay.color
+  }
+
+  static var appGreen: UIColor {
+      return Asset.Colors.appGreen.color
+  }
+
+  static var appLightGray: UIColor {
+      return Asset.Colors.appLightGray.color
+  }
+
+  static var appRed: UIColor {
+      return Asset.Colors.appRed.color
+  }
+
+  static var appSilver: UIColor {
+      return Asset.Colors.appSilver.color
+  }
+
+  static var appYellow: UIColor {
+      return Asset.Colors.appYellow.color
+  }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
