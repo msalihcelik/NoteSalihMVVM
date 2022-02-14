@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		24D1CE6680978ADAD4BD0654 /* Pods_DataProviderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15018055354BD8DA8D7A9D63 /* Pods_DataProviderTests.framework */; };
 		5C88B9DE7DBE3203EC37859F /* Pods_DataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31BBFB63F8CC5C1694557F0 /* Pods_DataProvider.framework */; };
+		6738488927BA5BED0094F2C7 /* ApiDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488827BA5BED0094F2C7 /* ApiDataProvider.swift */; };
+		6738488B27BA5C130094F2C7 /* ApiRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488A27BA5C130094F2C7 /* ApiRequestAdapter.swift */; };
+		6738488D27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488C27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift */; };
 		67F7A8E427B6A1ED0041DC3A /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */; };
 		67F7A8E627B6A20B0041DC3A /* DecodableResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */; };
 		67F7A8E827B6A2220041DC3A /* RequestEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */; };
@@ -34,6 +37,9 @@
 /* Begin PBXFileReference section */
 		15018055354BD8DA8D7A9D63 /* Pods_DataProviderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataProviderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C3E816A5BEC8D1C61FCD8B /* Pods-DataProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataProvider.debug.xcconfig"; path = "Target Support Files/Pods-DataProvider/Pods-DataProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		6738488827BA5BED0094F2C7 /* ApiDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataProvider.swift; sourceTree = "<group>"; };
+		6738488A27BA5C130094F2C7 /* ApiRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestAdapter.swift; sourceTree = "<group>"; };
+		6738488C27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDecodableResponseRequest.swift; sourceTree = "<group>"; };
 		67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResponseRequest.swift; sourceTree = "<group>"; };
 		67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEncoding.swift; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6738488727BA5BC50094F2C7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6738488827BA5BED0094F2C7 /* ApiDataProvider.swift */,
+				6738488A27BA5C130094F2C7 /* ApiRequestAdapter.swift */,
+				6738488C27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		67F7A8E127B6A1860041DC3A /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				67F7A8E127B6A1860041DC3A /* Core */,
+				6738488727BA5BC50094F2C7 /* Manager */,
 				67FE234327B5013D0078E2C2 /* DataProvider.h */,
 				67FE234427B5013D0078E2C2 /* DataProvider.docc */,
 			);
@@ -303,12 +320,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F7A8E827B6A2220041DC3A /* RequestEncoding.swift in Sources */,
+				6738488D27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift in Sources */,
 				67F7A8E627B6A20B0041DC3A /* DecodableResponseRequest.swift in Sources */,
 				67F7A8E427B6A1ED0041DC3A /* DataProviderProtocol.swift in Sources */,
 				67F7A8EC27B6A2570041DC3A /* RequestProtocol.swift in Sources */,
 				67F7A8EA27B6A2400041DC3A /* RequestMethod.swift in Sources */,
 				67FE234527B5013D0078E2C2 /* DataProvider.docc in Sources */,
 				67F7A8EE27B6A26D0041DC3A /* Typealias.swift in Sources */,
+				6738488927BA5BED0094F2C7 /* ApiDataProvider.swift in Sources */,
+				6738488B27BA5C130094F2C7 /* ApiRequestAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
