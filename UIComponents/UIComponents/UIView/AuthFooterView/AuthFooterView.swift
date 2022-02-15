@@ -35,7 +35,7 @@ public class AuthFooterView: UIView {
         }
     }
     
-    public var emptyClosure: (() -> Void)?
+    public var actionClosure: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -77,6 +77,6 @@ extension AuthFooterView {
     
     @objc
     private func signButtonTapped(_ sender: UITapGestureRecognizer) {
-        emptyClosure?()
+        actionClosure?()
     }
 }
