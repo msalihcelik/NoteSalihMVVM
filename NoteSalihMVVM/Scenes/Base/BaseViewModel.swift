@@ -6,13 +6,17 @@
 //
 
 import Foundation
+import Utilities
 
 protocol BaseViewModelDataSource: AnyObject {
     
 }
 
 protocol BaseViewModelEventSource: AnyObject {
-
+    var showLoading: VoidClosure? { get set }
+    var hideLoading: VoidClosure? { get set }
+    var showActivityIndicatorView: VoidClosure? { get set }
+    var hideActivityIndicatorView: VoidClosure? { get set }
 }
 
 protocol BaseViewModelProtocol: BaseViewModelDataSource, BaseViewModelEventSource {
@@ -23,6 +27,12 @@ class BaseViewModel<R: Router>: BaseViewModelProtocol {
     
     let router: R
     let dataProvider: DataProviderProtocol
+    
+    var showLoading: VoidClosure?
+    var hideLoading: VoidClosure?
+    
+    var showActivityIndicatorView: VoidClosure?
+    var hideActivityIndicatorView: VoidClosure?
 
     init(router: R, dataProvider: DataProviderProtocol = apiDataProvider) {
         self.router = router
