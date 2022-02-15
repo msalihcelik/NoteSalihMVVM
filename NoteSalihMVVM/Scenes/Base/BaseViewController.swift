@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseViewController<V: BaseViewModelProtocol>: UIViewController {
+class BaseViewController<V: BaseViewModelProtocol>: UIViewController, LoadingProtocol, ActivityIndicatorProtocol {
     var viewModel: V
     
     init(viewModel: V) {
@@ -21,21 +21,34 @@ class BaseViewController<V: BaseViewModelProtocol>: UIViewController {
     }
     // swiftlint:enable fatal_error unavailable_function
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        subscribeViewModel()
+    }
+    
     deinit {
         debugPrint("deinit: \(self)")
     }
+}
+
+// MARK: - SubscribeViewModel
+extension BaseViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .green
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-    }
+    private func subscribeViewModel() {
+        viewModel.showLoading = { [weak self] in
+            self?.presentLoading()
+        }
+        viewModel.hideLoading = { [weak self] in
+            self?.dismissLoading()
+        }
         
+        viewModel.showActivityIndicatorView = { [weak self] in
+            self?.showActivityIndicator()
+        }
+        
+        viewModel.hideActivityIndicatorView = { [weak self] in
+            self?.hideActivityIndicator()
+        }
+    }
 }
