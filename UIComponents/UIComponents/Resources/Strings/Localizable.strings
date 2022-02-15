@@ -8,6 +8,11 @@
 
 // MARK: - Login
 "Login.title" = "Login";
+"Login.description" = "Login or sign up to continue using our app.";
+"Login.email" = "E-mail address";
+"Login.password" = "Password";
+"Login.newUser" = "New user? ";
+"Login.signUp" = "Sign up now";
 
 // MARK: - Register
 "Register.title" = "Register";

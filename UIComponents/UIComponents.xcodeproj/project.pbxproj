@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		596DC1E2B7BCF2028C05F247 /* Pods_UIComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAC70F0454C3FBA8332758C /* Pods_UIComponents.framework */; };
+		6738489D27BA8B030094F2C7 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489C27BA8B030094F2C7 /* AuthHeaderView.swift */; };
+		673848A027BAE5460094F2C7 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489F27BAE5460094F2C7 /* AuthTextField.swift */; };
+		673848A327BB39270094F2C7 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848A227BB39270094F2C7 /* AuthButton.swift */; };
+		673848A627BB7B5C0094F2C7 /* AuthFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848A527BB7B5C0094F2C7 /* AuthFooterView.swift */; };
 		67F7A8AC27B64D790041DC3A /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8AB27B64D790041DC3A /* swiftgen.yml */; };
 		67F7A8C627B64DD80041DC3A /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8B227B64DD80041DC3A /* StringConstants.swift */; };
 		67F7A8C927B64DD80041DC3A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */; };
@@ -44,6 +48,10 @@
 		3856A414D9BBCCD5DFC8D580 /* Pods-UIComponentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponentsTests.debug.xcconfig"; path = "Target Support Files/Pods-UIComponentsTests/Pods-UIComponentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FAC70F0454C3FBA8332758C /* Pods_UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C72530A4D193B1636CD6A /* Pods-UIComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIComponents.release.xcconfig"; path = "Target Support Files/Pods-UIComponents/Pods-UIComponents.release.xcconfig"; sourceTree = "<group>"; };
+		6738489C27BA8B030094F2C7 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		6738489F27BAE5460094F2C7 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		673848A227BB39270094F2C7 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		673848A527BB7B5C0094F2C7 /* AuthFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFooterView.swift; sourceTree = "<group>"; };
 		67F7A8AB27B64D790041DC3A /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		67F7A8B227B64DD80041DC3A /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
@@ -90,6 +98,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6738489A27BA8AD90094F2C7 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				6738489B27BA8AE10094F2C7 /* AuthHeaderView */,
+				673848A427BB7B080094F2C7 /* AuthFooterView */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		6738489B27BA8AE10094F2C7 /* AuthHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				6738489C27BA8B030094F2C7 /* AuthHeaderView.swift */,
+			);
+			path = AuthHeaderView;
+			sourceTree = "<group>";
+		};
+		6738489E27BAA7FC0094F2C7 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				6738489F27BAE5460094F2C7 /* AuthTextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		673848A127BB38B60094F2C7 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				673848A227BB39270094F2C7 /* AuthButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		673848A427BB7B080094F2C7 /* AuthFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				673848A527BB7B5C0094F2C7 /* AuthFooterView.swift */,
+			);
+			path = AuthFooterView;
+			sourceTree = "<group>";
+		};
 		67F7A8AD27B64DD80041DC3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +208,9 @@
 		67FE231E27B500F20078E2C2 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				673848A127BB38B60094F2C7 /* UIButton */,
+				6738489E27BAA7FC0094F2C7 /* UITextField */,
+				6738489A27BA8AD90094F2C7 /* UIView */,
 				67F7A8AD27B64DD80041DC3A /* Resources */,
 				67FE231F27B500F20078E2C2 /* UIComponents.h */,
 				67FE232027B500F20078E2C2 /* UIComponents.docc */,
@@ -383,11 +435,15 @@
 				67F7A8CD27B64DD80041DC3A /* Fonts.swift in Sources */,
 				67F7A8D327B64DD80041DC3A /* UIColor+Colors.swift in Sources */,
 				67F7A8D127B64DD80041DC3A /* UIImage+Images.swift in Sources */,
+				6738489D27BA8B030094F2C7 /* AuthHeaderView.swift in Sources */,
+				673848A027BAE5460094F2C7 /* AuthTextField.swift in Sources */,
 				67F7A8C627B64DD80041DC3A /* StringConstants.swift in Sources */,
 				67F7A8CF27B64DD80041DC3A /* UIImage+Icons.swift in Sources */,
+				673848A327BB39270094F2C7 /* AuthButton.swift in Sources */,
 				67F7A8C927B64DD80041DC3A /* UIFont+Extensions.swift in Sources */,
 				67F7A8CE27B64DD80041DC3A /* Assets.swift in Sources */,
 				67FE232127B500F20078E2C2 /* UIComponents.docc in Sources */,
+				673848A627BB7B5C0094F2C7 /* AuthFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
