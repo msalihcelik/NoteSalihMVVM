@@ -16,6 +16,8 @@
 		673848AE27BBD45F0094F2C7 /* LoadingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848A927BBD45F0094F2C7 /* LoadingProtocol.swift */; };
 		673848AF27BBD45F0094F2C7 /* BlockingActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848AA27BBD45F0094F2C7 /* BlockingActivityIndicator.swift */; };
 		673848B827BBD6DB0094F2C7 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848B727BBD6DB0094F2C7 /* ActivityIndicatorView.swift */; };
+		673848C527BBEDF80094F2C7 /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848C327BBEDF80094F2C7 /* ToastPresenter.swift */; };
+		673848C627BBEDF80094F2C7 /* ToastWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848C427BBEDF80094F2C7 /* ToastWarningView.swift */; };
 		67F7A8AC27B64D790041DC3A /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8AB27B64D790041DC3A /* swiftgen.yml */; };
 		67F7A8C627B64DD80041DC3A /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8B227B64DD80041DC3A /* StringConstants.swift */; };
 		67F7A8C927B64DD80041DC3A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */; };
@@ -60,6 +62,8 @@
 		673848A927BBD45F0094F2C7 /* LoadingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingProtocol.swift; sourceTree = "<group>"; };
 		673848AA27BBD45F0094F2C7 /* BlockingActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockingActivityIndicator.swift; sourceTree = "<group>"; };
 		673848B727BBD6DB0094F2C7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		673848C327BBEDF80094F2C7 /* ToastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
+		673848C427BBEDF80094F2C7 /* ToastWarningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastWarningView.swift; sourceTree = "<group>"; };
 		67F7A8AB27B64D790041DC3A /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		67F7A8B227B64DD80041DC3A /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
@@ -165,6 +169,15 @@
 			path = UIActivityIndicatorView;
 			sourceTree = "<group>";
 		};
+		673848C227BBEDF80094F2C7 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				673848C327BBEDF80094F2C7 /* ToastPresenter.swift */,
+				673848C427BBEDF80094F2C7 /* ToastWarningView.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		67F7A8AD27B64DD80041DC3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +252,7 @@
 				673848A127BB38B60094F2C7 /* UIButton */,
 				6738489E27BAA7FC0094F2C7 /* UITextField */,
 				6738489A27BA8AD90094F2C7 /* UIView */,
+				673848C227BBEDF80094F2C7 /* Toast */,
 				67F7A8AD27B64DD80041DC3A /* Resources */,
 				67FE231F27B500F20078E2C2 /* UIComponents.h */,
 				67FE232027B500F20078E2C2 /* UIComponents.docc */,
@@ -467,8 +481,10 @@
 				6738489D27BA8B030094F2C7 /* AuthHeaderView.swift in Sources */,
 				673848A027BAE5460094F2C7 /* AuthTextField.swift in Sources */,
 				67F7A8C627B64DD80041DC3A /* StringConstants.swift in Sources */,
+				673848C627BBEDF80094F2C7 /* ToastWarningView.swift in Sources */,
 				67F7A8CF27B64DD80041DC3A /* UIImage+Icons.swift in Sources */,
 				673848A327BB39270094F2C7 /* AuthButton.swift in Sources */,
+				673848C527BBEDF80094F2C7 /* ToastPresenter.swift in Sources */,
 				673848B827BBD6DB0094F2C7 /* ActivityIndicatorView.swift in Sources */,
 				67F7A8C927B64DD80041DC3A /* UIFont+Extensions.swift in Sources */,
 				67F7A8CE27B64DD80041DC3A /* Assets.swift in Sources */,
