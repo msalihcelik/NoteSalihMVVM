@@ -50,5 +50,13 @@ extension BaseViewController {
         viewModel.hideActivityIndicatorView = { [weak self] in
             self?.hideActivityIndicator()
         }
+        
+        viewModel.showWarningToast = { text in
+            ToastPresenter.showWarningToast(text: text)
+        }
+        
+        viewModel.showSuccessToast = { text in
+            ToastPresenter.showSuccessToast(text: text)
+        }
     }
 }
