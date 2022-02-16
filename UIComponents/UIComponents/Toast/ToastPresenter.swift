@@ -18,4 +18,14 @@ public class ToastPresenter {
         let customView = ToastWarningView(text: text)
         SwiftEntryKit.display(entry: customView, using: attributes)
     }
+    
+    public static func showSuccessToast(text: String) {
+        var attributes = EKAttributes.topToast
+        attributes.entryBackground = .color(color: EKColor(light: .appGreen, dark: .appGreen))
+        attributes.entranceAnimation = .translation
+        attributes.exitAnimation = .translation
+
+        let customView = ToastWarningView(text: text)
+        SwiftEntryKit.display(entry: customView, using: attributes)
+    }
 }
