@@ -18,6 +18,7 @@
 		673848B827BBD6DB0094F2C7 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848B727BBD6DB0094F2C7 /* ActivityIndicatorView.swift */; };
 		673848C527BBEDF80094F2C7 /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848C327BBEDF80094F2C7 /* ToastPresenter.swift */; };
 		673848C627BBEDF80094F2C7 /* ToastWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848C427BBEDF80094F2C7 /* ToastWarningView.swift */; };
+		673848CB27BCFD9F0094F2C7 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848CA27BCFD9F0094F2C7 /* UIImage+Extensions.swift */; };
 		67F7A8AC27B64D790041DC3A /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 67F7A8AB27B64D790041DC3A /* swiftgen.yml */; };
 		67F7A8C627B64DD80041DC3A /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8B227B64DD80041DC3A /* StringConstants.swift */; };
 		67F7A8C927B64DD80041DC3A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */; };
@@ -64,6 +65,7 @@
 		673848B727BBD6DB0094F2C7 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		673848C327BBEDF80094F2C7 /* ToastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
 		673848C427BBEDF80094F2C7 /* ToastWarningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastWarningView.swift; sourceTree = "<group>"; };
+		673848CA27BCFD9F0094F2C7 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		67F7A8AB27B64D790041DC3A /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		67F7A8B227B64DD80041DC3A /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		67F7A8B627B64DD80041DC3A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		673848C927BCFD820094F2C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				673848CA27BCFD9F0094F2C7 /* UIImage+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		67F7A8AD27B64DD80041DC3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +257,7 @@
 		67FE231E27B500F20078E2C2 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				673848C927BCFD820094F2C7 /* Extensions */,
 				673848B627BBD6DB0094F2C7 /* UIActivityIndicatorView */,
 				673848A727BBD45F0094F2C7 /* Loading */,
 				673848A127BB38B60094F2C7 /* UIButton */,
@@ -490,6 +501,7 @@
 				67F7A8CE27B64DD80041DC3A /* Assets.swift in Sources */,
 				67FE232127B500F20078E2C2 /* UIComponents.docc in Sources */,
 				673848AD27BBD45F0094F2C7 /* ActivityIndicatorProtocol.swift in Sources */,
+				673848CB27BCFD9F0094F2C7 /* UIImage+Extensions.swift in Sources */,
 				673848AE27BBD45F0094F2C7 /* LoadingProtocol.swift in Sources */,
 				673848A627BB7B5C0094F2C7 /* AuthFooterView.swift in Sources */,
 			);

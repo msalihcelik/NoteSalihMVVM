@@ -18,6 +18,7 @@ $TinyConstraints = pod 'TinyConstraints', '~> 4.0'
 $SwiftGen = pod 'SwiftGen', '~> 6.5'
 $SwiftEntryKit = pod 'SwiftEntryKit', '~> 2.0'
 $IQKeyboardManagerSwift = pod 'IQKeyboardManagerSwift', '~> 6.5'
+$Kingfisher = pod 'Kingfisher', '~> 6.3.1'
 
 
 workspace 'NoteSalihMVVM'
@@ -80,6 +81,7 @@ target 'UIComponents' do
   $SwiftEntryKit
   $SwiftGen
   $TinyConstraints
+  $Kingfisher
   
   target 'UIComponentsTests' do
     inherit! :search_paths
