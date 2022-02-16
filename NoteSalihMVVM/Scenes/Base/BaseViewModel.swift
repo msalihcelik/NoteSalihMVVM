@@ -18,6 +18,7 @@ protocol BaseViewModelEventSource: AnyObject {
     var showActivityIndicatorView: VoidClosure? { get set }
     var hideActivityIndicatorView: VoidClosure? { get set }
     var showWarningToast: StringClosure? { get set }
+    var showSuccessToast: StringClosure? { get set }
 }
 
 protocol BaseViewModelProtocol: BaseViewModelDataSource, BaseViewModelEventSource {
@@ -36,6 +37,7 @@ class BaseViewModel<R: Router>: BaseViewModelProtocol {
     var hideActivityIndicatorView: VoidClosure?
     
     var showWarningToast: StringClosure?
+    var showSuccessToast: StringClosure?
 
     init(router: R, dataProvider: DataProviderProtocol = apiDataProvider) {
         self.router = router

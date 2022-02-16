@@ -54,5 +54,9 @@ extension BaseViewController {
         viewModel.showWarningToast = { text in
             ToastPresenter.showWarningToast(text: text)
         }
+        
+        viewModel.showSuccessToast = { text in
+            ToastPresenter.showSuccessToast(text: text)
+        }
     }
 }
