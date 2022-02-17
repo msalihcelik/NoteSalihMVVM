@@ -11,6 +11,7 @@
 		6738489227BA5F060094F2C7 /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */; };
 		6738489427BA5F1C0094F2C7 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489327BA5F1C0094F2C7 /* DataProvider.swift */; };
 		673848C827BCFB2F0094F2C7 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848C727BCFB2F0094F2C7 /* MainNavigationController.swift */; };
+		6750EC7B27BE9947002B84E0 /* AppDelegate+IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750EC7A27BE9947002B84E0 /* AppDelegate+IQKeyboardManager.swift */; };
 		67FE22BE27B4FD360078E2C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22BD27B4FD360078E2C2 /* AppDelegate.swift */; };
 		67FE22C727B4FD370078E2C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE22C627B4FD370078E2C2 /* Assets.xcassets */; };
 		67FE22CA27B4FD370078E2C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FE22C827B4FD370078E2C2 /* LaunchScreen.storyboard */; };
@@ -82,6 +83,7 @@
 		6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
 		6738489327BA5F1C0094F2C7 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		673848C727BCFB2F0094F2C7 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		6750EC7A27BE9947002B84E0 /* AppDelegate+IQKeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+IQKeyboardManager.swift"; sourceTree = "<group>"; };
 		67FE22BA27B4FD360078E2C2 /* NoteSalihMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteSalihMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE22BD27B4FD360078E2C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE22C627B4FD370078E2C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				67FE22BD27B4FD360078E2C2 /* AppDelegate.swift */,
+				6750EC7A27BE9947002B84E0 /* AppDelegate+IQKeyboardManager.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				67FE23F027B52FDE0078E2C2 /* Router.swift in Sources */,
 				673848C827BCFB2F0094F2C7 /* MainNavigationController.swift in Sources */,
 				67FE23EE27B52F880078E2C2 /* Animator.swift in Sources */,
+				6750EC7B27BE9947002B84E0 /* AppDelegate+IQKeyboardManager.swift in Sources */,
 				67FE240827B5353F0078E2C2 /* BaseViewController.swift in Sources */,
 				67FE242127B53E000078E2C2 /* LoginViewModel.swift in Sources */,
 				67FE240627B5353F0078E2C2 /* BaseViewModel.swift in Sources */,
