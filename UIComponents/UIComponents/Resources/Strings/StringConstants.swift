@@ -16,6 +16,8 @@ public enum L10n {
     public static let description = L10n.tr("Localizable", "Login.description")
     /// E-mail address
     public static let email = L10n.tr("Localizable", "Login.email")
+    /// Forgot Password?
+    public static let forgot = L10n.tr("Localizable", "Login.forgot")
     /// New user? 
     public static let newUser = L10n.tr("Localizable", "Login.newUser")
     /// Password
