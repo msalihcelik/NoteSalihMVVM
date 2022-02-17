@@ -19,6 +19,10 @@ public class AuthTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     // swiftlint:enable all
+    
+    public override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0))
+    }
 }
 
 // MARK: - Configure
@@ -29,7 +33,5 @@ extension AuthTextField {
         layer.borderColor = UIColor.appLightGray.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 5
-        leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: frame.height))
-        leftViewMode = .always
     }
 }

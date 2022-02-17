@@ -135,6 +135,6 @@ extension LoginViewController {
         passwordTextField.placeholder = L10n.Login.password
         
         forgotPasswordButton.setTitle(L10n.Login.forgot, for: .normal)
-        loginButton.buttonTitle = L10n.Login.title
+        loginButton.setTitle(L10n.Login.title, for: .normal)
     }
 }

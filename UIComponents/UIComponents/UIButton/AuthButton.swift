@@ -8,12 +8,6 @@
 import UIKit
 
 public class AuthButton: UIButton {
-    
-    public var buttonTitle: String? {
-        didSet {
-            setTitle(buttonTitle, for: .normal)
-        }
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
