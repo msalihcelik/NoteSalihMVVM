@@ -71,7 +71,7 @@ extension LoginViewController {
     
     private func addHeader() {
         contentView.addSubview(headerView)
-        headerView.edgesToSuperview(excluding: .bottom, insets: .init(top: 103, left: 25, bottom: 0, right: 25), usingSafeArea: true)
+        headerView.edgesToSuperview(excluding: .bottom, insets: .init(top: 59, left: 25, bottom: 0, right: 25), usingSafeArea: true)
     }
     
     private func addFormStackView() {

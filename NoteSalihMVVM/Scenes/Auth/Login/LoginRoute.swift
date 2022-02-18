@@ -18,6 +18,7 @@ extension LoginRoute where Self: RouterProtocol {
         let viewModel = LoginViewModel(router: router)
         let viewController = LoginViewController(viewModel: viewModel)
         let navigationController = MainNavigationController(rootViewController: viewController)
+        navigationController.navigationBar.topItem?.title = ""
         
         let transition = PlaceOnWindowTransition()
         router.viewController = viewController

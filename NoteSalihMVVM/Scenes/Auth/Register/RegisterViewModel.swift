@@ -11,8 +11,17 @@ protocol RegisterViewDataSource {}
 
 protocol RegisterViewEventSource {}
 
-protocol RegisterViewProtocol: RegisterViewDataSource, RegisterViewEventSource {}
+protocol RegisterViewProtocol: RegisterViewDataSource, RegisterViewEventSource {
+    func pushPasswordResetScene()
+    func pushNotesScene()
+    func pushSignIn()
+}
 
 final class RegisterViewModel: BaseViewModel<RegisterRouter>, RegisterViewProtocol {
     
+    func pushPasswordResetScene() { }
+    
+    func pushNotesScene() { }
+    
+    func pushSignIn() { }
 }
