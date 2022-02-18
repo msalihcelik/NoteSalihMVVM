@@ -29,6 +29,7 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         .axis(.vertical)
         .spacing(27)
         .build()
+    private let forgotPasswordView = UIViewBuilder().build()
     private let forgotPasswordButton = UIButtonBuilder()
         .titleFont(.font(.josefinSansRegular, size: 13))
         .titleColor(.appEbonyClay)
@@ -53,8 +54,9 @@ extension LoginViewController {
         addContentView()
         addHeader()
         addFormStackView()
+        addForgotPasswordView()
         addButtonStackView()
-        addFooter()
+        addSignUpView()
     }
     
     private func addScrollView() {
@@ -65,7 +67,7 @@ extension LoginViewController {
     private func addContentView() {
         scrollView.addSubview(contentView)
         contentView.edgesToSuperview()
-        contentView.width(to: view)
+        contentView.widthToSuperview()
     }
     
     private func addHeader() {
@@ -76,22 +78,27 @@ extension LoginViewController {
     private func addFormStackView() {
         contentView.addSubview(formStackView)
         formStackView.topToBottom(of: headerView, offset: 39)
-        formStackView.edgesToSuperview(excluding: [.top, .bottom], insets: .init(top: 0, left: 25, bottom: 0, right: 25))
+        formStackView.edgesToSuperview(excluding: [.top, .bottom], insets: .left(25) + .right(25))
         
         formStackView.addArrangedSubview(emailTextField)
         formStackView.addArrangedSubview(passwordTextField)
     }
     
+    private func addForgotPasswordView() {
+        forgotPasswordView.addSubview(forgotPasswordButton)
+        forgotPasswordButton.edgesToSuperview(excluding: .left)
+    }
+    
     private func addButtonStackView() {
         contentView.addSubview(buttonStackView)
         buttonStackView.topToBottom(of: formStackView, offset: 13)
-        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 380, right: 25))
+        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 359, right: 25), usingSafeArea: true)
         
-        buttonStackView.addArrangedSubview(forgotPasswordButton)
+        buttonStackView.addArrangedSubview(forgotPasswordView)
         buttonStackView.addArrangedSubview(loginButton)
     }
     
-    private func addFooter() {
+    private func addSignUpView() {
         view.addSubview(signUpView)
         signUpView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 21, right: 25), usingSafeArea: true)
     }
@@ -101,7 +108,15 @@ extension LoginViewController {
 extension LoginViewController {
     
     private func configureContents() {
-        forgotPasswordButton.contentHorizontalAlignment = .right
+        configureSignUpView()
+        forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+    }
+    
+    private func configureSignUpView() {
+        signUpView.actionClosure = {
+            
+        }
     }
     
     private func setLocalize() {
@@ -116,5 +131,19 @@ extension LoginViewController {
         
         signUpView.leftLabelText = L10n.Login.newUser
         signUpView.signButtonTitle = L10n.Login.signUp
+    }
+}
+
+// MARK: - Actions
+extension LoginViewController {
+    
+    @objc
+    private func forgotPasswordButtonTapped() {
+        viewModel.pushPasswordResetScene()
+    }
+    
+    @objc
+    private func loginButtonTapped() {
+        viewModel.pushNotesScene()
     }
 }
