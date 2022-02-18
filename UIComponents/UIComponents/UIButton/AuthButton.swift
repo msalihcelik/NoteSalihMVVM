@@ -8,12 +8,6 @@
 import UIKit
 
 public class AuthButton: UIButton {
-    
-    public var buttonTitle: String? {
-        didSet {
-            setTitle(buttonTitle, for: .normal)
-        }
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,5 +29,6 @@ extension AuthButton {
         backgroundColor = .appBlue
         titleLabel?.font = .font(.josefinSansSemiBold, size: 15)
         layer.cornerRadius = 5
+        height(60)
     }
 }

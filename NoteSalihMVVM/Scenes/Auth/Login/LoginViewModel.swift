@@ -11,8 +11,15 @@ protocol LoginViewDataSource {}
 
 protocol LoginViewEventSource {}
 
-protocol LoginViewProtocol: LoginViewDataSource, LoginViewEventSource {}
+protocol LoginViewProtocol: LoginViewDataSource, LoginViewEventSource {
+    func pushPasswordResetScene()
+    func pushNotesScene()
+    func pushSignUp()
+}
 
 final class LoginViewModel: BaseViewModel<LoginRouter>, LoginViewProtocol {
     
+    func pushPasswordResetScene() { }
+    func pushNotesScene() { }
+    func pushSignUp() { }
 }

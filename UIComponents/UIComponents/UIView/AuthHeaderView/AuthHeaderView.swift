@@ -50,11 +50,13 @@ public class AuthHeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubviews()
+        configureContents()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         addSubviews()
+        configureContents()
     }
 }
 
@@ -66,5 +68,13 @@ extension AuthHeaderView {
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
         stackView.edgesToSuperview()
+    }
+}
+
+// MARK: - Configure
+extension AuthHeaderView {
+    
+    private func configureContents() {
+        descriptionLabel.textColor = .appDarkGray
     }
 }
