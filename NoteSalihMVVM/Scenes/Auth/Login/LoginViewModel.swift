@@ -20,6 +20,10 @@ protocol LoginViewProtocol: LoginViewDataSource, LoginViewEventSource {
 final class LoginViewModel: BaseViewModel<LoginRouter>, LoginViewProtocol {
     
     func pushPasswordResetScene() { }
-    func pushNotesScene() { }
+    
+    func pushNotesScene() {
+        router.pushRegister()
+    }
+    
     func pushSignUp() { }
 }
