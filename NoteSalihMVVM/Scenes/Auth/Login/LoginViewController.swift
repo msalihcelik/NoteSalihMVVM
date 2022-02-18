@@ -6,29 +6,19 @@
 //
 
 import UIKit
-import MobilliumBuilders
-import TinyConstraints
-import UIComponents
 
 final class LoginViewController: BaseViewController<LoginViewModel> {
     
     private let scrollView = UIScrollViewBuilder().build()
     private let contentView = UIViewBuilder().build()
-    private let header: AuthHeaderView = {
-        let header = AuthHeaderView()
-        return header
-    }()
+    private let headerView = AuthHeaderView()
     
     private let formStackView = UIStackViewBuilder()
         .axis(.vertical)
-        .alignment(.fill)
         .distribution(.fillEqually)
         .spacing(14)
         .build()
-    private let emailTextField: AuthTextField = {
-        let textField = AuthTextField()
-        return textField
-    }()
+    private let emailTextField = AuthTextField()
     private let passwordTextField: AuthTextField = {
         let textField = AuthTextField()
         textField.isSecureTextEntry = true
@@ -37,27 +27,20 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
     
     private let buttonStackView = UIStackViewBuilder()
         .axis(.vertical)
-        .alignment(.trailing)
-        .distribution(.fill)
         .spacing(27)
         .build()
     private let forgotPasswordButton = UIButtonBuilder()
         .titleFont(.font(.josefinSansRegular, size: 13))
         .titleColor(.appEbonyClay)
         .build()
-    private let loginButton: AuthButton = {
-        let button = AuthButton()
-        return button
-    }()
-    
-    private let footer: AuthFooterView = {
-        let footer = AuthFooterView()
-        return footer
-    }()
+    private let loginButton = AuthButton()
+
+    private let signUpView = AuthFooterView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
+        configureContents()
         setLocalize()
     }
 }
@@ -86,55 +69,52 @@ extension LoginViewController {
     }
     
     private func addHeader() {
-        contentView.addSubview(header)
-        header.edgesToSuperview(excluding: .bottom, insets: .init(top: 103, left: 25, bottom: 0, right: 25), usingSafeArea: true)
+        contentView.addSubview(headerView)
+        headerView.edgesToSuperview(excluding: .bottom, insets: .init(top: 103, left: 25, bottom: 0, right: 25), usingSafeArea: true)
     }
     
     private func addFormStackView() {
         contentView.addSubview(formStackView)
-        formStackView.topToBottom(of: header, offset: 39)
+        formStackView.topToBottom(of: headerView, offset: 39)
         formStackView.edgesToSuperview(excluding: [.top, .bottom], insets: .init(top: 0, left: 25, bottom: 0, right: 25))
         
         formStackView.addArrangedSubview(emailTextField)
-        emailTextField.height(47)
-        
         formStackView.addArrangedSubview(passwordTextField)
-        passwordTextField.height(47)
     }
     
     private func addButtonStackView() {
         contentView.addSubview(buttonStackView)
         buttonStackView.topToBottom(of: formStackView, offset: 13)
-        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 380, right: 25), isActive: true)
+        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 380, right: 25))
         
         buttonStackView.addArrangedSubview(forgotPasswordButton)
-        
         buttonStackView.addArrangedSubview(loginButton)
-        loginButton.edgesToSuperview(excluding: .top)
-        loginButton.height(60)
     }
     
     private func addFooter() {
-        view.addSubview(footer)
-        footer.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 21, right: 25), usingSafeArea: true)
-        
-        footer.leftLabelText = L10n.Login.newUser
-        footer.signButtonTitle = L10n.Login.signUp
-        footer.height(15)
+        view.addSubview(signUpView)
+        signUpView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 21, right: 25), usingSafeArea: true)
     }
 }
 
 // MARK: - Configure & SetLocalize
 extension LoginViewController {
     
+    private func configureContents() {
+        forgotPasswordButton.contentHorizontalAlignment = .right
+    }
+    
     private func setLocalize() {
-        header.titleText = L10n.Login.title
-        header.descriptionText = L10n.Login.description
+        headerView.titleText = L10n.Login.title
+        headerView.descriptionText = L10n.Login.description
         
         emailTextField.placeholder = L10n.Login.email
         passwordTextField.placeholder = L10n.Login.password
         
         forgotPasswordButton.setTitle(L10n.Login.forgot, for: .normal)
         loginButton.setTitle(L10n.Login.title, for: .normal)
+        
+        signUpView.leftLabelText = L10n.Login.newUser
+        signUpView.signButtonTitle = L10n.Login.signUp
     }
 }

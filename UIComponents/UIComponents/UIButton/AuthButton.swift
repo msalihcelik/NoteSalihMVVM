@@ -29,5 +29,6 @@ extension AuthButton {
         backgroundColor = .appBlue
         titleLabel?.font = .font(.josefinSansSemiBold, size: 15)
         layer.cornerRadius = 5
+        height(60)
     }
 }

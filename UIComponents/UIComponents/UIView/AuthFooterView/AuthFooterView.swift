@@ -71,6 +71,7 @@ extension AuthFooterView {
     
     private func configureContents() {
         signButton.addTarget(self, action: #selector(signButtonTapped), for: .touchUpInside)
+        height(15)
     }
 }
 
