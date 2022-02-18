@@ -54,7 +54,6 @@ extension LoginViewController {
         addContentView()
         addHeader()
         addFormStackView()
-        addForgotPasswordView()
         addButtonStackView()
         addSignUpView()
     }
@@ -82,10 +81,6 @@ extension LoginViewController {
         
         formStackView.addArrangedSubview(emailTextField)
         formStackView.addArrangedSubview(passwordTextField)
-    }
-    
-    private func addForgotPasswordView() {
-        
     }
     
     private func addButtonStackView() {
