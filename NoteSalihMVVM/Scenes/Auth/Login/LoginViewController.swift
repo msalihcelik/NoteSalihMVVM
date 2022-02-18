@@ -85,8 +85,7 @@ extension LoginViewController {
     }
     
     private func addForgotPasswordView() {
-        forgotPasswordView.addSubview(forgotPasswordButton)
-        forgotPasswordButton.edgesToSuperview(excluding: .left)
+        
     }
     
     private func addButtonStackView() {
@@ -96,6 +95,9 @@ extension LoginViewController {
         
         buttonStackView.addArrangedSubview(forgotPasswordView)
         buttonStackView.addArrangedSubview(loginButton)
+        
+        forgotPasswordView.addSubview(forgotPasswordButton)
+        forgotPasswordButton.edgesToSuperview(excluding: .left)
     }
     
     private func addSignUpView() {
@@ -114,8 +116,8 @@ extension LoginViewController {
     }
     
     private func configureSignUpView() {
-        signUpView.actionClosure = {
-            
+        signUpView.actionClosure = { [weak self] in
+            self?.viewModel.pushSignUp()
         }
     }
     
