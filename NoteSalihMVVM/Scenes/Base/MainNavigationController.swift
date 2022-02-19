@@ -18,6 +18,12 @@ class MainNavigationController: UINavigationController {
         configureContents()
     }
     
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        super.pushViewController(viewController, animated: animated)
+        
+        viewController.navigationItem.backButtonTitle = ""
+    }
+    
     private func configureContents() {
         let backImage = UIImage.icBackArrow
             .resize(to: .init(width: 20, height: 16))

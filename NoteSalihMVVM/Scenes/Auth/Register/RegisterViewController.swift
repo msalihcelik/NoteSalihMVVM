@@ -48,12 +48,12 @@ final class RegisterViewController: BaseViewController<RegisterViewModel> {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        navigationItem.setHidesBackButton(true, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationItem.setHidesBackButton(false, animated: true)
     }
 }
 
@@ -71,7 +71,7 @@ extension RegisterViewController {
     
     private func addScrollView() {
         view.addSubview(scrollView)
-        scrollView.edgesToSuperview()
+        scrollView.edgesToSuperview(excluding: .bottom)
     }
     
     private func addContentView() {
@@ -98,7 +98,7 @@ extension RegisterViewController {
     private func addButtonStackView() {
         contentView.addSubview(buttonStackView)
         buttonStackView.topToBottom(of: formStackView, offset: 13)
-        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 359, right: 25), usingSafeArea: true)
+        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 281, right: 25))
         
         buttonStackView.addArrangedSubview(forgotPasswordView)
         buttonStackView.addArrangedSubview(signUpButton)
@@ -110,6 +110,7 @@ extension RegisterViewController {
     private func addSignInView() {
         view.addSubview(signInView)
         signInView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 21, right: 25), usingSafeArea: true)
+        signInView.topToBottom(of: scrollView)
     }
 }
 
@@ -119,12 +120,12 @@ extension RegisterViewController {
     private func configureContents() {
         configureSignUpView()
         forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
-        signUpButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
     private func configureSignUpView() {
         signInView.actionClosure = { [weak self] in
-            self?.viewModel.pushNotesScene()
+            self?.viewModel.pushSignIn()
         }
     }
     
@@ -149,16 +150,11 @@ extension RegisterViewController {
     
     @objc
     private func forgotPasswordButtonTapped() {
-        
+        viewModel.pushPasswordResetScene()
     }
     
     @objc
     private func signUpButtonTapped() {
-        
-    }
-    
-    @objc
-    private func signInButtonTapped() {
-        
+        viewModel.pushNotesScene()
     }
 }

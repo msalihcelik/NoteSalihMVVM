@@ -21,9 +21,9 @@ final class LoginViewModel: BaseViewModel<LoginRouter>, LoginViewProtocol {
     
     func pushPasswordResetScene() { }
     
-    func pushNotesScene() {
+    func pushNotesScene() { }
+    
+    func pushSignUp() {
         router.pushRegister()
     }
-    
-    func pushSignUp() { }
 }

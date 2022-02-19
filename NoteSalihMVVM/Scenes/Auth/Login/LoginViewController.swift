@@ -60,7 +60,7 @@ extension LoginViewController {
     
     private func addScrollView() {
         view.addSubview(scrollView)
-        scrollView.edgesToSuperview()
+        scrollView.edgesToSuperview(excluding: .bottom)
     }
     
     private func addContentView() {
@@ -86,7 +86,7 @@ extension LoginViewController {
     private func addButtonStackView() {
         contentView.addSubview(buttonStackView)
         buttonStackView.topToBottom(of: formStackView, offset: 13)
-        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 359, right: 25), usingSafeArea: true)
+        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 344, right: 25), usingSafeArea: true)
         
         buttonStackView.addArrangedSubview(forgotPasswordView)
         buttonStackView.addArrangedSubview(loginButton)
@@ -98,6 +98,7 @@ extension LoginViewController {
     private func addSignUpView() {
         view.addSubview(signUpView)
         signUpView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 21, right: 25), usingSafeArea: true)
+        signUpView.topToBottom(of: scrollView)
     }
 }
 

@@ -23,5 +23,7 @@ final class RegisterViewModel: BaseViewModel<RegisterRouter>, RegisterViewProtoc
     
     func pushNotesScene() { }
     
-    func pushSignIn() { }
+    func pushSignIn() {
+        router.close(completion: nil)
+    }
 }
