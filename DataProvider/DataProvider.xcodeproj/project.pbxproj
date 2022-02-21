@@ -12,6 +12,9 @@
 		6738488927BA5BED0094F2C7 /* ApiDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488827BA5BED0094F2C7 /* ApiDataProvider.swift */; };
 		6738488B27BA5C130094F2C7 /* ApiRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488A27BA5C130094F2C7 /* ApiRequestAdapter.swift */; };
 		6738488D27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488C27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift */; };
+		67CD5EC027C39979009E5FC3 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5EBF27C39979009E5FC3 /* LoginRequest.swift */; };
+		67CD5EC227C39A30009E5FC3 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5EC127C39A30009E5FC3 /* Auth.swift */; };
+		67CD5EC427C39EFE009E5FC3 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5EC327C39EFE009E5FC3 /* AuthData.swift */; };
 		67F7A8E427B6A1ED0041DC3A /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */; };
 		67F7A8E627B6A20B0041DC3A /* DecodableResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */; };
 		67F7A8E827B6A2220041DC3A /* RequestEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */; };
@@ -40,6 +43,9 @@
 		6738488827BA5BED0094F2C7 /* ApiDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataProvider.swift; sourceTree = "<group>"; };
 		6738488A27BA5C130094F2C7 /* ApiRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestAdapter.swift; sourceTree = "<group>"; };
 		6738488C27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDecodableResponseRequest.swift; sourceTree = "<group>"; };
+		67CD5EBF27C39979009E5FC3 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		67CD5EC127C39A30009E5FC3 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		67CD5EC327C39EFE009E5FC3 /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
 		67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResponseRequest.swift; sourceTree = "<group>"; };
 		67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEncoding.swift; sourceTree = "<group>"; };
@@ -97,6 +103,39 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		67CD5EBC27C3990E009E5FC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67CD5EC527C39F23009E5FC3 /* Auth */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67CD5EBD27C39941009E5FC3 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				67CD5EBE27C3995A009E5FC3 /* Auth */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		67CD5EBE27C3995A009E5FC3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				67CD5EBF27C39979009E5FC3 /* LoginRequest.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		67CD5EC527C39F23009E5FC3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				67CD5EC127C39A30009E5FC3 /* Auth.swift */,
+				67CD5EC327C39EFE009E5FC3 /* AuthData.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		67F7A8E127B6A1860041DC3A /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +172,8 @@
 		67FE234227B5013D0078E2C2 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				67CD5EBD27C39941009E5FC3 /* Requests */,
+				67CD5EBC27C3990E009E5FC3 /* Model */,
 				67F7A8E127B6A1860041DC3A /* Core */,
 				6738488727BA5BC50094F2C7 /* Manager */,
 				67FE234327B5013D0078E2C2 /* DataProvider.h */,
@@ -325,10 +366,13 @@
 				67F7A8E427B6A1ED0041DC3A /* DataProviderProtocol.swift in Sources */,
 				67F7A8EC27B6A2570041DC3A /* RequestProtocol.swift in Sources */,
 				67F7A8EA27B6A2400041DC3A /* RequestMethod.swift in Sources */,
+				67CD5EC427C39EFE009E5FC3 /* AuthData.swift in Sources */,
 				67FE234527B5013D0078E2C2 /* DataProvider.docc in Sources */,
 				67F7A8EE27B6A26D0041DC3A /* Typealias.swift in Sources */,
 				6738488927BA5BED0094F2C7 /* ApiDataProvider.swift in Sources */,
 				6738488B27BA5C130094F2C7 /* ApiRequestAdapter.swift in Sources */,
+				67CD5EC027C39979009E5FC3 /* LoginRequest.swift in Sources */,
+				67CD5EC227C39A30009E5FC3 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

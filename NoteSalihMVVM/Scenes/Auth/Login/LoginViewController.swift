@@ -35,7 +35,7 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         .titleColor(.appEbonyClay)
         .build()
     private let loginButton = AuthButton()
-
+    
     private let signUpView = AuthFooterView()
     
     override func viewDidLoad() {
@@ -145,6 +145,9 @@ extension LoginViewController {
     
     @objc
     private func loginButtonTapped() {
-        viewModel.pushNotesScene()
+        guard let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !email.isEmpty
+        else { return }
+        viewModel.pushNotesScene(email: email, password: password)
     }
 }
