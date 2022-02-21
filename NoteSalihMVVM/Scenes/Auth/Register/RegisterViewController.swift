@@ -1,13 +1,13 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  NoteSalihMVVM
 //
-//  Created by Mehmet Salih ÇELİK on 10.02.2022.
+//  Created by Mehmet Salih ÇELİK on 18.02.2022.
 //
 
 import UIKit
 
-final class LoginViewController: BaseViewController<LoginViewModel> {
+final class RegisterViewController: BaseViewController<RegisterViewModel> {
     
     private let scrollView = UIScrollViewBuilder().build()
     private let contentView = UIViewBuilder().build()
@@ -18,6 +18,7 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         .distribution(.fillEqually)
         .spacing(14)
         .build()
+    private let fullNameTextField = AuthTextField()
     private let emailTextField = AuthTextField()
     private let passwordTextField: AuthTextField = {
         let textField = AuthTextField()
@@ -34,9 +35,9 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         .titleFont(.font(.josefinSansRegular, size: 13))
         .titleColor(.appEbonyClay)
         .build()
-    private let loginButton = AuthButton()
+    private let signUpButton = AuthButton()
 
-    private let signUpView = AuthFooterView()
+    private let signInView = AuthFooterView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +45,20 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         configureContents()
         setLocalize()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.setHidesBackButton(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.setHidesBackButton(false, animated: true)
+    }
 }
 
 // MARK: - UILayout
-extension LoginViewController {
+extension RegisterViewController {
     
     private func addSubviews() {
         addScrollView()
@@ -55,7 +66,7 @@ extension LoginViewController {
         addHeader()
         addFormStackView()
         addButtonStackView()
-        addSignUpView()
+        addSignInView()
     }
     
     private func addScrollView() {
@@ -79,6 +90,7 @@ extension LoginViewController {
         formStackView.topToBottom(of: headerView, offset: 39)
         formStackView.edgesToSuperview(excluding: [.top, .bottom], insets: .left(25) + .right(25))
         
+        formStackView.addArrangedSubview(fullNameTextField)
         formStackView.addArrangedSubview(emailTextField)
         formStackView.addArrangedSubview(passwordTextField)
     }
@@ -89,54 +101,55 @@ extension LoginViewController {
         buttonStackView.edgesToSuperview(excluding: .top, insets: .left(25) + .right(25))
         
         buttonStackView.addArrangedSubview(forgotPasswordView)
-        buttonStackView.addArrangedSubview(loginButton)
+        buttonStackView.addArrangedSubview(signUpButton)
         
         forgotPasswordView.addSubview(forgotPasswordButton)
         forgotPasswordButton.edgesToSuperview(excluding: .left)
     }
     
-    private func addSignUpView() {
-        view.addSubview(signUpView)
-        signUpView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 21, right: 25), usingSafeArea: true)
-        signUpView.topToBottom(of: scrollView)
+    private func addSignInView() {
+        view.addSubview(signInView)
+        signInView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 21, right: 25), usingSafeArea: true)
+        signInView.topToBottom(of: scrollView)
     }
 }
 
 // MARK: - Configure & SetLocalize
-extension LoginViewController {
+extension RegisterViewController {
     
     private func configureContents() {
         configureSignUpView()
         forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
-        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
     }
     
     private func configureSignUpView() {
-        signUpView.actionClosure = { [weak self] in
-            self?.viewModel.pushSignUp()
+        signInView.actionClosure = { [weak self] in
+            self?.viewModel.pushSignIn()
         }
     }
     
     private func setLocalize() {
-        headerView.titleText = L10n.Login.title
-        headerView.descriptionText = L10n.Login.description
+        headerView.titleText = L10n.Register.title
+        headerView.descriptionText = L10n.Register.description
         
-        emailTextField.placeholder = L10n.Login.email
-        passwordTextField.placeholder = L10n.Login.password
+        fullNameTextField.placeholder = L10n.Register.fullName
+        emailTextField.placeholder = L10n.Register.email
+        passwordTextField.placeholder = L10n.Register.password
         
-        forgotPasswordButton.setTitle(L10n.Login.forgot, for: .normal)
-        loginButton.setTitle(L10n.Login.title, for: .normal)
+        forgotPasswordButton.setTitle(L10n.Register.forgot, for: .normal)
+        signUpButton.setTitle(L10n.Register.title, for: .normal)
         
-        signUpView.leftLabelText = L10n.Login.newUser
-        signUpView.signButtonTitle = L10n.Login.signUp
+        signInView.leftLabelText = L10n.Register.already
+        signInView.signButtonTitle = L10n.Register.signIn
     }
 }
 
 // MARK: - Actions
-extension LoginViewController {
+extension RegisterViewController {
     
     @objc
     private func forgotPasswordButtonTapped() {
@@ -144,7 +157,7 @@ extension LoginViewController {
     }
     
     @objc
-    private func loginButtonTapped() {
+    private func signUpButtonTapped() {
         viewModel.pushNotesScene()
     }
 }
