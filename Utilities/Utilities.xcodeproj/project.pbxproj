@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		17C08849D603115415C1E927 /* Pods_Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F21675921E17F752E940F /* Pods_Utilities.framework */; };
 		673848C127BBDB500094F2C7 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673848C027BBDB500094F2C7 /* Closures.swift */; };
+		67CD5EBB27C38D49009E5FC3 /* Keychain+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5EBA27C38D49009E5FC3 /* Keychain+Constants.swift */; };
 		67FE22FD27B500840078E2C2 /* Utilities.docc in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22FC27B500840078E2C2 /* Utilities.docc */; };
 		67FE230327B500840078E2C2 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE22F827B500840078E2C2 /* Utilities.framework */; };
 		67FE230827B500840078E2C2 /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE230727B500840078E2C2 /* UtilitiesTests.swift */; };
@@ -30,6 +31,7 @@
 		36DFABF0346224899B49DA8C /* Pods-Utilities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utilities.debug.xcconfig"; path = "Target Support Files/Pods-Utilities/Pods-Utilities.debug.xcconfig"; sourceTree = "<group>"; };
 		5604AC3033A3561ABA624487 /* Pods_UtilitiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UtilitiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673848C027BBDB500094F2C7 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		67CD5EBA27C38D49009E5FC3 /* Keychain+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain+Constants.swift"; sourceTree = "<group>"; };
 		67FE22F827B500840078E2C2 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE22FB27B500840078E2C2 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		67FE22FC27B500840078E2C2 /* Utilities.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Utilities.docc; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		673848BE27BBDB2D0094F2C7 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				67CD5EB927C38C06009E5FC3 /* Keychain */,
 				673848BF27BBDB330094F2C7 /* Closures */,
 			);
 			path = Constants;
@@ -88,6 +91,14 @@
 				673848C027BBDB500094F2C7 /* Closures.swift */,
 			);
 			path = Closures;
+			sourceTree = "<group>";
+		};
+		67CD5EB927C38C06009E5FC3 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				67CD5EBA27C38D49009E5FC3 /* Keychain+Constants.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		67FE22EE27B500840078E2C2 = {
@@ -295,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67CD5EBB27C38D49009E5FC3 /* Keychain+Constants.swift in Sources */,
 				67FE22FD27B500840078E2C2 /* Utilities.docc in Sources */,
 				673848C127BBDB500094F2C7 /* Closures.swift in Sources */,
 			);
