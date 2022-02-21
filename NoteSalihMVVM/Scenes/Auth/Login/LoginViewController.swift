@@ -86,7 +86,7 @@ extension LoginViewController {
     private func addButtonStackView() {
         contentView.addSubview(buttonStackView)
         buttonStackView.topToBottom(of: formStackView, offset: 13)
-        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 344, right: 25), usingSafeArea: true)
+        buttonStackView.edgesToSuperview(excluding: .top, insets: .left(25) + .right(25))
         
         buttonStackView.addArrangedSubview(forgotPasswordView)
         buttonStackView.addArrangedSubview(loginButton)
@@ -109,6 +109,9 @@ extension LoginViewController {
         configureSignUpView()
         forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
     }
     
     private func configureSignUpView() {

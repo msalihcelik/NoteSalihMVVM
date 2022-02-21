@@ -98,7 +98,7 @@ extension RegisterViewController {
     private func addButtonStackView() {
         contentView.addSubview(buttonStackView)
         buttonStackView.topToBottom(of: formStackView, offset: 13)
-        buttonStackView.edgesToSuperview(excluding: .top, insets: .init(top: 0, left: 25, bottom: 281, right: 25))
+        buttonStackView.edgesToSuperview(excluding: .top, insets: .left(25) + .right(25))
         
         buttonStackView.addArrangedSubview(forgotPasswordView)
         buttonStackView.addArrangedSubview(signUpButton)
@@ -121,6 +121,9 @@ extension RegisterViewController {
         configureSignUpView()
         forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
     }
     
     private func configureSignUpView() {
