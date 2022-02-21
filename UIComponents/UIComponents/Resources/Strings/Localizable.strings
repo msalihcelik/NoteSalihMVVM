@@ -14,6 +14,7 @@
 "Login.newUser" = "New user? ";
 "Login.signUp" = "Sign up now";
 "Login.forgot" = "Forgot Password?";
+"Login.warningToast" = "The email and password you entered did not match our records. Please try again.";
 
 // MARK: - Register
 "Register.title" = "Sign Up";

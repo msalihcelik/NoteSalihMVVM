@@ -26,6 +26,8 @@ public enum L10n {
     public static let signUp = L10n.tr("Localizable", "Login.signUp")
     /// Login
     public static let title = L10n.tr("Localizable", "Login.title")
+    /// The email and password you entered did not match our records. Please try again.
+    public static let warningToast = L10n.tr("Localizable", "Login.warningToast")
   }
 
   public enum Register {
