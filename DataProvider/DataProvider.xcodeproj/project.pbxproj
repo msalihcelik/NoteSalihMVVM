@@ -15,6 +15,7 @@
 		67CD5EC027C39979009E5FC3 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5EBF27C39979009E5FC3 /* LoginRequest.swift */; };
 		67CD5EC227C39A30009E5FC3 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5EC127C39A30009E5FC3 /* Auth.swift */; };
 		67CD5EC427C39EFE009E5FC3 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5EC327C39EFE009E5FC3 /* AuthData.swift */; };
+		67CD5EC727C3CB14009E5FC3 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD5EC627C3CB14009E5FC3 /* RegisterRequest.swift */; };
 		67F7A8E427B6A1ED0041DC3A /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */; };
 		67F7A8E627B6A20B0041DC3A /* DecodableResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */; };
 		67F7A8E827B6A2220041DC3A /* RequestEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */; };
@@ -46,6 +47,7 @@
 		67CD5EBF27C39979009E5FC3 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		67CD5EC127C39A30009E5FC3 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		67CD5EC327C39EFE009E5FC3 /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
+		67CD5EC627C3CB14009E5FC3 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		67F7A8E327B6A1ED0041DC3A /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		67F7A8E527B6A20B0041DC3A /* DecodableResponseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResponseRequest.swift; sourceTree = "<group>"; };
 		67F7A8E727B6A2220041DC3A /* RequestEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEncoding.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				67CD5EBF27C39979009E5FC3 /* LoginRequest.swift */,
+				67CD5EC627C3CB14009E5FC3 /* RegisterRequest.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				6738488D27BA5C450094F2C7 /* ApiDecodableResponseRequest.swift in Sources */,
 				67F7A8E627B6A20B0041DC3A /* DecodableResponseRequest.swift in Sources */,
 				67F7A8E427B6A1ED0041DC3A /* DataProviderProtocol.swift in Sources */,
+				67CD5EC727C3CB14009E5FC3 /* RegisterRequest.swift in Sources */,
 				67F7A8EC27B6A2570041DC3A /* RequestProtocol.swift in Sources */,
 				67F7A8EA27B6A2400041DC3A /* RequestMethod.swift in Sources */,
 				67CD5EC427C39EFE009E5FC3 /* AuthData.swift in Sources */,

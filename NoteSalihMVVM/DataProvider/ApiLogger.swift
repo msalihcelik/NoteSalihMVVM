@@ -16,7 +16,6 @@ final class ApiLogger: EventMonitor {
     func request(_ request: Request, didCreateURLRequest urlRequest: URLRequest) {
         print("<------------------->Request Created<------------------------->")
         print(request.description)
-        print("qqqqqqqqq")
         if let httpBody = urlRequest.httpBody, let parameters = String(data: httpBody, encoding: .utf8) {
             print("Parameters:")
             print(parameters)
