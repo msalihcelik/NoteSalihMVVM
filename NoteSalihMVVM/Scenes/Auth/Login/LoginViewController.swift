@@ -34,7 +34,7 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         .titleFont(.font(.josefinSansRegular, size: 13))
         .titleColor(.appEbonyClay)
         .build()
-    private let loginButton = AuthButton()
+    private let signInButton = AuthButton()
     
     private let signUpView = AuthFooterView()
     
@@ -89,7 +89,7 @@ extension LoginViewController {
         buttonStackView.edgesToSuperview(excluding: .top, insets: .left(25) + .right(25))
         
         buttonStackView.addArrangedSubview(forgotPasswordView)
-        buttonStackView.addArrangedSubview(loginButton)
+        buttonStackView.addArrangedSubview(signInButton)
         
         forgotPasswordView.addSubview(forgotPasswordButton)
         forgotPasswordButton.edgesToSuperview(excluding: .left)
@@ -108,7 +108,7 @@ extension LoginViewController {
     private func configureContents() {
         configureSignUpView()
         forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
-        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
@@ -128,7 +128,7 @@ extension LoginViewController {
         passwordTextField.placeholder = L10n.Login.password
         
         forgotPasswordButton.setTitle(L10n.Login.forgot, for: .normal)
-        loginButton.setTitle(L10n.Login.title, for: .normal)
+        signInButton.setTitle(L10n.Login.title, for: .normal)
         
         signUpView.leftLabelText = L10n.Login.newUser
         signUpView.signButtonTitle = L10n.Login.signUp
@@ -144,10 +144,26 @@ extension LoginViewController {
     }
     
     @objc
-    private func loginButtonTapped() {
-        guard let email = emailTextField.text, !email.isEmpty,
-              let password = passwordTextField.text, !email.isEmpty
-        else { return }
-        viewModel.pushNotesScene(email: email, password: password)
+    private func signInButtonTapped() {
+        
+        if let email = emailTextField.text, email.isEmpty,
+           let password = passwordTextField.text, password.isEmpty {
+            viewModel.showWarningToast?(L10n.Login.emptyEmailPassword)
+        } else {
+            guard let email = emailTextField.text, !email.isEmpty else {
+                viewModel.showWarningToast?(L10n.Login.emptyEmail)
+                return
+            }
+            
+            guard let password = passwordTextField.text, !password.isEmpty else {
+                viewModel.showWarningToast?(L10n.Login.emptyPassword)
+                return
+            }
+            
+            let validation = Validation()
+            guard validation.isValidPassword(password) else { return }
+            guard validation.isValidEmail(email) else { return }
+            viewModel.signInButtonTapped(email: email, password: password)
+        }
     }
 }

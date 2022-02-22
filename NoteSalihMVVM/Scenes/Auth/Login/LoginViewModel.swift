@@ -15,7 +15,7 @@ protocol LoginViewEventSource {}
 
 protocol LoginViewProtocol: LoginViewDataSource, LoginViewEventSource {
     func pushPasswordResetScene()
-    func pushNotesScene(email: String, password: String)
+    func signInButtonTapped(email: String, password: String)
     func pushSignUp()
 }
 
@@ -25,16 +25,21 @@ final class LoginViewModel: BaseViewModel<LoginRouter>, LoginViewProtocol {
     
     func pushPasswordResetScene() { }
     
-    func pushNotesScene(email: String, password: String) {
+    func signInButtonTapped(email: String, password: String) {
+        showLoading?()
         dataProvider.request(for: LoginRequest(email: email, password: password)) { [weak self] result in
             guard let self = self else { return }
+            self.hideLoading?()
             switch result {
             case .success(let response):
-                self.keychain.set(response.data?.accessToken ?? "", forKey: Keychain.token)
-                self.router.pushRegister()
-            case .failure:
-                self.showWarningToast?(L10n.Login.warningToast)
-            
+                if let token = response.data?.accessToken {
+                    self.keychain.set(token, forKey: Keychain.token)
+                    if let message = response.message {
+                        self.showSuccessToast?(message)
+                    }
+                }
+            case .failure(let error):
+                self.showWarningToast?(error.localizedDescription)
             }
         }
     }
