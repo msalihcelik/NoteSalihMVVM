@@ -9,18 +9,30 @@
 // MARK: - Login
 "Login.title" = "Login";
 "Login.description" = "Login or sign up to continue using our app.";
-"Login.email" = "E-mail address";
+"Login.email" = "Email address";
 "Login.password" = "Password";
 "Login.newUser" = "New user? ";
 "Login.signUp" = "Sign up now";
 "Login.forgot" = "Forgot Password?";
+"Login.emptyEmail" = "Email address cannot be empty.";
+"Login.emptyPassword" = "Password cannot be empty";
+"Login.success" = "Success Login";
 
 // MARK: - Register
 "Register.title" = "Sign Up";
 "Register.description" = "Login or sign up to continue using our app.";
 "Register.fullName" = "Full Name";
-"Register.email" = "E-mail address";
+"Register.email" = "Email address";
 "Register.password" = "Password";
 "Register.forgot" = "Forgot Password?";
 "Register.already" = "Already have an account? ";
 "Register.signIn" = "Sign in now";
+"Register.emptyName" = "Full Name cannot be empty";
+"Register.emptyEmail" = "Email address cannot be empty";
+"Register.emptyPassword" = "Password cannot be empty";
+"Register.success" = "Success Sign Up";
+
+// MARK: - Validation
+"Validation.name" = "Please enter a valid name.";
+"Validation.email" = "Please enter a valid email address.";
+"Validation.password" = "Password must be at least 6 characters.";

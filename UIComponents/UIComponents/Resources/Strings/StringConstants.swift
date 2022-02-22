@@ -14,8 +14,12 @@ public enum L10n {
   public enum Login {
     /// Login or sign up to continue using our app.
     public static let description = L10n.tr("Localizable", "Login.description")
-    /// E-mail address
+    /// Email address
     public static let email = L10n.tr("Localizable", "Login.email")
+    /// Email address cannot be empty.
+    public static let emptyEmail = L10n.tr("Localizable", "Login.emptyEmail")
+    /// Password cannot be empty
+    public static let emptyPassword = L10n.tr("Localizable", "Login.emptyPassword")
     /// Forgot Password?
     public static let forgot = L10n.tr("Localizable", "Login.forgot")
     /// New user? 
@@ -24,6 +28,8 @@ public enum L10n {
     public static let password = L10n.tr("Localizable", "Login.password")
     /// Sign up now
     public static let signUp = L10n.tr("Localizable", "Login.signUp")
+    /// Success Login
+    public static let success = L10n.tr("Localizable", "Login.success")
     /// Login
     public static let title = L10n.tr("Localizable", "Login.title")
   }
@@ -33,8 +39,14 @@ public enum L10n {
     public static let already = L10n.tr("Localizable", "Register.already")
     /// Login or sign up to continue using our app.
     public static let description = L10n.tr("Localizable", "Register.description")
-    /// E-mail address
+    /// Email address
     public static let email = L10n.tr("Localizable", "Register.email")
+    /// Email address cannot be empty
+    public static let emptyEmail = L10n.tr("Localizable", "Register.emptyEmail")
+    /// Username cannot be empty
+    public static let emptyName = L10n.tr("Localizable", "Register.emptyName")
+    /// Password cannot be empty
+    public static let emptyPassword = L10n.tr("Localizable", "Register.emptyPassword")
     /// Forgot Password?
     public static let forgot = L10n.tr("Localizable", "Register.forgot")
     /// Full Name
@@ -43,8 +55,19 @@ public enum L10n {
     public static let password = L10n.tr("Localizable", "Register.password")
     /// Sign in now
     public static let signIn = L10n.tr("Localizable", "Register.signIn")
+    /// Success Sign Up
+    public static let success = L10n.tr("Localizable", "Register.success")
     /// Sign Up
     public static let title = L10n.tr("Localizable", "Register.title")
+  }
+
+  public enum Validation {
+    /// Please enter a valid email address.
+    public static let email = L10n.tr("Localizable", "Validation.email")
+    /// Please enter your real name.
+    public static let name = L10n.tr("Localizable", "Validation.name")
+    /// Password must be at least 6 characters.
+    public static let password = L10n.tr("Localizable", "Validation.password")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

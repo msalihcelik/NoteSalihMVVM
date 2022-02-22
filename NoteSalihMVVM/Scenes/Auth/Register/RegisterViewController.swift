@@ -158,6 +158,27 @@ extension RegisterViewController {
     
     @objc
     private func signUpButtonTapped() {
-        viewModel.pushNotesScene()
+        
+        guard let fullName = fullNameTextField.text, !fullName.isEmpty else {
+            viewModel.showWarningToast?(L10n.Register.emptyName)
+            return
+        }
+        
+        guard let email = emailTextField.text, !email.isEmpty else {
+            viewModel.showWarningToast?(L10n.Register.emptyEmail)
+            return
+        }
+        
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            viewModel.showWarningToast?(L10n.Register.emptyPassword)
+            return
+        }
+        
+        let validation = Validation()
+        guard validation.isValidName(fullName) else { return }
+        guard validation.isValidPassword(password) else { return }
+        guard validation.isValidEmail(email) else { return }
+        viewModel.signUpButtonTapped(username: fullName, email: email, password: password)
+        
     }
 }
