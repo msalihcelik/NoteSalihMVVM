@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6709080027C4F24900700C60 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670907FF27C4F24900700C60 /* Validation.swift */; };
+		6709080527C533FE00700C60 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080227C533FE00700C60 /* ForgotPasswordRouter.swift */; };
+		6709080627C533FE00700C60 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080327C533FE00700C60 /* ForgotPasswordViewController.swift */; };
+		6709080727C533FE00700C60 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080427C533FE00700C60 /* ForgotPasswordViewModel.swift */; };
+		6709080927C5343E00700C60 /* ForgotPasswordRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080827C5343E00700C60 /* ForgotPasswordRoute.swift */; };
 		6738489027BA5EE80094F2C7 /* ApiLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488F27BA5EE80094F2C7 /* ApiLogger.swift */; };
 		6738489227BA5F060094F2C7 /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */; };
 		6738489427BA5F1C0094F2C7 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489327BA5F1C0094F2C7 /* DataProvider.swift */; };
@@ -85,6 +89,10 @@
 		136820DD115292DD0F7097F4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E38BD0E3BDFE12537DACD5 /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM-NoteSalihMVVMUITests/Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		670907FF27C4F24900700C60 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		6709080227C533FE00700C60 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
+		6709080327C533FE00700C60 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		6709080427C533FE00700C60 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		6709080827C5343E00700C60 /* ForgotPasswordRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRoute.swift; sourceTree = "<group>"; };
 		6738488F27BA5EE80094F2C7 /* ApiLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogger.swift; sourceTree = "<group>"; };
 		6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
 		6738489327BA5F1C0094F2C7 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -171,6 +179,17 @@
 				670907FF27C4F24900700C60 /* Validation.swift */,
 			);
 			path = Validation;
+			sourceTree = "<group>";
+		};
+		6709080127C533DB00700C60 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				6709080327C533FE00700C60 /* ForgotPasswordViewController.swift */,
+				6709080427C533FE00700C60 /* ForgotPasswordViewModel.swift */,
+				6709080227C533FE00700C60 /* ForgotPasswordRouter.swift */,
+				6709080827C5343E00700C60 /* ForgotPasswordRoute.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		6738488E27BA5E9C0094F2C7 /* DataProvider */ = {
@@ -345,6 +364,7 @@
 			children = (
 				6750EC7C27BFB94B002B84E0 /* Register */,
 				67FE241B27B53DEB0078E2C2 /* Login */,
+				6709080127C533DB00700C60 /* ForgotPassword */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -666,12 +686,16 @@
 				6750EC7B27BE9947002B84E0 /* AppDelegate+IQKeyboardManager.swift in Sources */,
 				67FE240827B5353F0078E2C2 /* BaseViewController.swift in Sources */,
 				67FE242127B53E000078E2C2 /* LoginViewModel.swift in Sources */,
+				6709080927C5343E00700C60 /* ForgotPasswordRoute.swift in Sources */,
 				67FE240627B5353F0078E2C2 /* BaseViewModel.swift in Sources */,
 				67FE241927B53DC60078E2C2 /* AppRouter.swift in Sources */,
 				67FE241027B53B9F0078E2C2 /* PlaceOnWindowTransition.swift in Sources */,
 				67FE23F827B532A30078E2C2 /* PushTransition.swift in Sources */,
 				67FE241F27B53E000078E2C2 /* LoginRouter.swift in Sources */,
+				6709080627C533FE00700C60 /* ForgotPasswordViewController.swift in Sources */,
+				6709080727C533FE00700C60 /* ForgotPasswordViewModel.swift in Sources */,
 				67FE22BE27B4FD360078E2C2 /* AppDelegate.swift in Sources */,
+				6709080527C533FE00700C60 /* ForgotPasswordRouter.swift in Sources */,
 				6750EC8227BFB980002B84E0 /* RegisterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
