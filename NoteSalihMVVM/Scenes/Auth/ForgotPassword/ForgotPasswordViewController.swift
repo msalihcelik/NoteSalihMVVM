@@ -21,6 +21,7 @@ final class ForgotPasswordViewController: BaseViewController<ForgotPasswordViewM
         super.viewDidLoad()
         addSubViews()
         configureContents()
+        setLocalize()
     }
     
 }
@@ -69,7 +70,6 @@ extension ForgotPasswordViewController {
 extension ForgotPasswordViewController {
     
     private func configureContents() {
-        setLocalize()
         resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
     }
     

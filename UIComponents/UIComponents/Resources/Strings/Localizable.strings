@@ -44,3 +44,7 @@
 "Forgot.reset" = "Reset Password";
 "Forgot.emptyEmail" = "Your email address cannot be empty.";
 
+// MARK: - ResetConfirmation
+"ResetConfirmation.title" = "Password Reset Confirmation";
+"ResetConfirmation.description" = "An email has been sent to %@ with further instructions.";
+"ResetConfirmation.login" = "Login";

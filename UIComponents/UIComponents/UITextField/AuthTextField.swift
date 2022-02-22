@@ -45,5 +45,6 @@ extension AuthTextField {
         layer.cornerRadius = 5
         height(47)
         autocorrectionType = .no
+        autocapitalizationType = .none
     }
 }

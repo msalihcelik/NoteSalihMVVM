@@ -12,6 +12,10 @@
 		6709080627C533FE00700C60 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080327C533FE00700C60 /* ForgotPasswordViewController.swift */; };
 		6709080727C533FE00700C60 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080427C533FE00700C60 /* ForgotPasswordViewModel.swift */; };
 		6709080927C5343E00700C60 /* ForgotPasswordRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080827C5343E00700C60 /* ForgotPasswordRoute.swift */; };
+		6709081227C5603B00700C60 /* ResetConfirmationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080F27C5603B00700C60 /* ResetConfirmationRouter.swift */; };
+		6709081327C5603B00700C60 /* ResetConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709081027C5603B00700C60 /* ResetConfirmationViewController.swift */; };
+		6709081427C5603B00700C60 /* ResetConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709081127C5603B00700C60 /* ResetConfirmationViewModel.swift */; };
+		6709081627C5606B00700C60 /* ResetConfirmationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709081527C5606B00700C60 /* ResetConfirmationRoute.swift */; };
 		6738489027BA5EE80094F2C7 /* ApiLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738488F27BA5EE80094F2C7 /* ApiLogger.swift */; };
 		6738489227BA5F060094F2C7 /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */; };
 		6738489427BA5F1C0094F2C7 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6738489327BA5F1C0094F2C7 /* DataProvider.swift */; };
@@ -93,6 +97,10 @@
 		6709080327C533FE00700C60 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		6709080427C533FE00700C60 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		6709080827C5343E00700C60 /* ForgotPasswordRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRoute.swift; sourceTree = "<group>"; };
+		6709080F27C5603B00700C60 /* ResetConfirmationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetConfirmationRouter.swift; sourceTree = "<group>"; };
+		6709081027C5603B00700C60 /* ResetConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetConfirmationViewController.swift; sourceTree = "<group>"; };
+		6709081127C5603B00700C60 /* ResetConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetConfirmationViewModel.swift; sourceTree = "<group>"; };
+		6709081527C5606B00700C60 /* ResetConfirmationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetConfirmationRoute.swift; sourceTree = "<group>"; };
 		6738488F27BA5EE80094F2C7 /* ApiLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogger.swift; sourceTree = "<group>"; };
 		6738489127BA5F060094F2C7 /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
 		6738489327BA5F1C0094F2C7 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -190,6 +198,17 @@
 				6709080827C5343E00700C60 /* ForgotPasswordRoute.swift */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		6709080E27C5601000700C60 /* ResetConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				6709081027C5603B00700C60 /* ResetConfirmationViewController.swift */,
+				6709081127C5603B00700C60 /* ResetConfirmationViewModel.swift */,
+				6709080F27C5603B00700C60 /* ResetConfirmationRouter.swift */,
+				6709081527C5606B00700C60 /* ResetConfirmationRoute.swift */,
+			);
+			path = ResetConfirmation;
 			sourceTree = "<group>";
 		};
 		6738488E27BA5E9C0094F2C7 /* DataProvider */ = {
@@ -365,6 +384,7 @@
 				6750EC7C27BFB94B002B84E0 /* Register */,
 				67FE241B27B53DEB0078E2C2 /* Login */,
 				6709080127C533DB00700C60 /* ForgotPassword */,
+				6709080E27C5601000700C60 /* ResetConfirmation */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -674,6 +694,7 @@
 				6738489227BA5F060094F2C7 /* ApiRequestInterceptor.swift in Sources */,
 				67FE240727B5353F0078E2C2 /* BaseRouter.swift in Sources */,
 				67FE242327B53E200078E2C2 /* LoginRoute.swift in Sources */,
+				6709081427C5603B00700C60 /* ResetConfirmationViewModel.swift in Sources */,
 				6750EC8027BFB980002B84E0 /* RegisterRouter.swift in Sources */,
 				6738489027BA5EE80094F2C7 /* ApiLogger.swift in Sources */,
 				6738489427BA5F1C0094F2C7 /* DataProvider.swift in Sources */,
@@ -687,10 +708,13 @@
 				67FE240827B5353F0078E2C2 /* BaseViewController.swift in Sources */,
 				67FE242127B53E000078E2C2 /* LoginViewModel.swift in Sources */,
 				6709080927C5343E00700C60 /* ForgotPasswordRoute.swift in Sources */,
+				6709081327C5603B00700C60 /* ResetConfirmationViewController.swift in Sources */,
 				67FE240627B5353F0078E2C2 /* BaseViewModel.swift in Sources */,
 				67FE241927B53DC60078E2C2 /* AppRouter.swift in Sources */,
+				6709081627C5606B00700C60 /* ResetConfirmationRoute.swift in Sources */,
 				67FE241027B53B9F0078E2C2 /* PlaceOnWindowTransition.swift in Sources */,
 				67FE23F827B532A30078E2C2 /* PushTransition.swift in Sources */,
+				6709081227C5603B00700C60 /* ResetConfirmationRouter.swift in Sources */,
 				67FE241F27B53E000078E2C2 /* LoginRouter.swift in Sources */,
 				6709080627C533FE00700C60 /* ForgotPasswordViewController.swift in Sources */,
 				6709080727C533FE00700C60 /* ForgotPasswordViewModel.swift in Sources */,

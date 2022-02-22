@@ -33,6 +33,6 @@ final class ForgotPasswordViewModel: BaseViewModel<ForgotPasswordRouter>, Forgot
     }
     
     func pushResetConfirmation(email: String) {
-        
+        router.pushResetConfirmation(email: email)
     }
 }

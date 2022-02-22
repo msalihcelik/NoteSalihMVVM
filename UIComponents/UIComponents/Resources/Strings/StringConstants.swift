@@ -74,6 +74,17 @@ public enum L10n {
     public static let title = L10n.tr("Localizable", "Register.title")
   }
 
+  public enum ResetConfirmation {
+    /// An email has been sent to %@ with further instructions.
+    public static func description(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "ResetConfirmation.description", String(describing: p1))
+    }
+    /// Login
+    public static let login = L10n.tr("Localizable", "ResetConfirmation.login")
+    /// Password Reset Confirmation
+    public static let title = L10n.tr("Localizable", "ResetConfirmation.title")
+  }
+
   public enum Validation {
     /// Please enter a valid email address.
     public static let email = L10n.tr("Localizable", "Validation.email")
