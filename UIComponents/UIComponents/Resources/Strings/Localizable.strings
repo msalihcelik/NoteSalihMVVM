@@ -14,9 +14,9 @@
 "Login.newUser" = "New user? ";
 "Login.signUp" = "Sign up now";
 "Login.forgot" = "Forgot Password?";
-"Login.emptyEmailPassword" = "The email and password you entered did not match our records. Please try again";
 "Login.emptyEmail" = "Email address cannot be empty.";
 "Login.emptyPassword" = "Password cannot be empty";
+"Login.success" = "Success Login";
 
 // MARK: - Register
 "Register.title" = "Sign Up";
@@ -27,12 +27,12 @@
 "Register.forgot" = "Forgot Password?";
 "Register.already" = "Already have an account? ";
 "Register.signIn" = "Sign in now";
-"Register.emptyNameEmailPassword" = "Please be sure to fill in all fields.";
-"Register.emptyName" = "Username cannot be empty";
+"Register.emptyName" = "Full Name cannot be empty";
 "Register.emptyEmail" = "Email address cannot be empty";
 "Register.emptyPassword" = "Password cannot be empty";
+"Register.success" = "Success Sign Up";
 
 // MARK: - Validation
-"Validation.name" = "Please enter your real name.";
+"Validation.name" = "Please enter a valid name.";
 "Validation.email" = "Please enter a valid email address.";
 "Validation.password" = "Password must be at least 6 characters.";

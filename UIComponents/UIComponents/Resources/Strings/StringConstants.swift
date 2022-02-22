@@ -18,8 +18,6 @@ public enum L10n {
     public static let email = L10n.tr("Localizable", "Login.email")
     /// Email address cannot be empty.
     public static let emptyEmail = L10n.tr("Localizable", "Login.emptyEmail")
-    /// The email and password you entered did not match our records. Please try again
-    public static let emptyEmailPassword = L10n.tr("Localizable", "Login.emptyEmailPassword")
     /// Password cannot be empty
     public static let emptyPassword = L10n.tr("Localizable", "Login.emptyPassword")
     /// Forgot Password?
@@ -30,6 +28,8 @@ public enum L10n {
     public static let password = L10n.tr("Localizable", "Login.password")
     /// Sign up now
     public static let signUp = L10n.tr("Localizable", "Login.signUp")
+    /// Success Login
+    public static let success = L10n.tr("Localizable", "Login.success")
     /// Login
     public static let title = L10n.tr("Localizable", "Login.title")
   }
@@ -45,8 +45,6 @@ public enum L10n {
     public static let emptyEmail = L10n.tr("Localizable", "Register.emptyEmail")
     /// Username cannot be empty
     public static let emptyName = L10n.tr("Localizable", "Register.emptyName")
-    /// Please be sure to fill in all fields.
-    public static let emptyNameEmailPassword = L10n.tr("Localizable", "Register.emptyNameEmailPassword")
     /// Password cannot be empty
     public static let emptyPassword = L10n.tr("Localizable", "Register.emptyPassword")
     /// Forgot Password?
@@ -57,6 +55,8 @@ public enum L10n {
     public static let password = L10n.tr("Localizable", "Register.password")
     /// Sign in now
     public static let signIn = L10n.tr("Localizable", "Register.signIn")
+    /// Success Sign Up
+    public static let success = L10n.tr("Localizable", "Register.success")
     /// Sign Up
     public static let title = L10n.tr("Localizable", "Register.title")
   }

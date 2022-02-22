@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 import KeychainSwift
 
 protocol LoginViewDataSource {}
@@ -21,7 +20,7 @@ protocol LoginViewProtocol: LoginViewDataSource, LoginViewEventSource {
 
 final class LoginViewModel: BaseViewModel<LoginRouter>, LoginViewProtocol {
     
-    let keychain = KeychainSwift()
+    private let keychain = KeychainSwift()
     
     func pushPasswordResetScene() { }
     
@@ -32,12 +31,9 @@ final class LoginViewModel: BaseViewModel<LoginRouter>, LoginViewProtocol {
             self.hideLoading?()
             switch result {
             case .success(let response):
-                if let token = response.data?.accessToken {
-                    self.keychain.set(token, forKey: Keychain.token)
-                    if let message = response.message {
-                        self.showSuccessToast?(message)
-                    }
-                }
+                guard let token = response.data?.accessToken else { return }
+                self.keychain.set(token, forKey: Keychain.token)
+                self.showSuccessToast?(L10n.Login.success)
             case .failure(let error):
                 self.showWarningToast?(error.localizedDescription)
             }
