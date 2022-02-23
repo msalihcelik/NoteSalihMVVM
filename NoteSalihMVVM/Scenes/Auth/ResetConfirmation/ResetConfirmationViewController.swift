@@ -12,6 +12,9 @@ final class ResetConfirmationViewController: BaseViewController<ResetConfirmatio
     
     private let scrollView = UIScrollViewBuilder().build()
     private let contentView = UIViewBuilder().build()
+    private let stackView = UIStackViewBuilder()
+        .axis(.vertical)
+        .build()
     private let headerView = AuthHeaderView()
     private let loginButton = AuthButton()
     
@@ -39,6 +42,7 @@ extension ResetConfirmationViewController {
     private func addSubViews() {
         addScrollView()
         addContentView()
+        addStackView()
         addHeaderView()
         addLoginButton()
     }
@@ -54,15 +58,18 @@ extension ResetConfirmationViewController {
         contentView.widthToSuperview()
     }
     
+    private func addStackView() {
+        contentView.addSubview(stackView)
+        stackView.edgesToSuperview(insets: .init(top: 59, left: 25, bottom: 0, right: 25))
+    }
+    
     private func addHeaderView() {
-        contentView.addSubview(headerView)
-        headerView.edgesToSuperview(excluding: .bottom, insets: .init(top: 59, left: 25, bottom: 0, right: 25))
+        stackView.addArrangedSubview(headerView)
+        stackView.setCustomSpacing(36, after: headerView)
     }
     
     private func addLoginButton() {
-        contentView.addSubview(loginButton)
-        loginButton.topToBottom(of: headerView, offset: 36)
-        loginButton.edgesToSuperview(excluding: .top, insets: .left(25) + .right(25))
+        stackView.addArrangedSubview(loginButton)
     }
 }
 

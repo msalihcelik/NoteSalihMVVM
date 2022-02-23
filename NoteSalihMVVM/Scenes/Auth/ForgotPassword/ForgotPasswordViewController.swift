@@ -13,6 +13,9 @@ final class ForgotPasswordViewController: BaseViewController<ForgotPasswordViewM
     
     private let scrollView = UIScrollViewBuilder().build()
     private let contentView = UIViewBuilder().build()
+    private let stackView = UIStackViewBuilder()
+        .axis(.vertical)
+        .build()
     private let headerView = AuthHeaderView()
     private let emailTextField = AuthTextField()
     private let resetButton = AuthButton()
@@ -23,7 +26,6 @@ final class ForgotPasswordViewController: BaseViewController<ForgotPasswordViewM
         configureContents()
         setLocalize()
     }
-    
 }
 
 // MARK: - UILayout
@@ -32,6 +34,7 @@ extension ForgotPasswordViewController {
     private func addSubViews() {
         addScrollView()
         addContentView()
+        addStackView()
         addHeaderView()
         addEmailTextField()
         addResetButton()
@@ -48,21 +51,23 @@ extension ForgotPasswordViewController {
         contentView.widthToSuperview()
     }
     
+    private func addStackView() {
+        contentView.addSubview(stackView)
+        stackView.edgesToSuperview(insets: .init(top: 59, left: 25, bottom: 0, right: 25))
+    }
+    
     private func addHeaderView() {
-        contentView.addSubview(headerView)
-        headerView.edgesToSuperview(excluding: .bottom, insets: .init(top: 59, left: 25, bottom: 0, right: 25))
+        stackView.addArrangedSubview(headerView)
+        stackView.setCustomSpacing(31, after: headerView)
     }
     
     private func addEmailTextField() {
-        contentView.addSubview(emailTextField)
-        emailTextField.topToBottom(of: headerView, offset: 31)
-        emailTextField.edgesToSuperview(excluding: [.top, .bottom], insets: .left(25) + .right(25))
+        stackView.addArrangedSubview(emailTextField)
+        stackView.setCustomSpacing(35, after: emailTextField)
     }
     
     private func addResetButton() {
-        contentView.addSubview(resetButton)
-        resetButton.topToBottom(of: emailTextField, offset: 35)
-        resetButton.edgesToSuperview(excluding: .top, insets: .left(25) + .right(25))
+        stackView.addArrangedSubview(resetButton)
     }
 }
 
