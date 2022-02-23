@@ -13,10 +13,12 @@ public class AuthFooterView: UIView {
     
     private let leftLabel = UILabelBuilder()
         .font(.font(.josefinSansRegular, size: 15))
+        .textColor(.appDarkGray)
         .textAlignment(.center)
         .build()
     private let signButton = UIButtonBuilder()
         .titleFont(.font(.josefinSansRegular, size: 15))
+        .titleColor(.appBlue)
         .build()
     private let stackView = UIStackViewBuilder()
         .axis(.horizontal)
@@ -69,6 +71,7 @@ extension AuthFooterView {
     
     private func configureContents() {
         signButton.addTarget(self, action: #selector(signButtonTapped), for: .touchUpInside)
+        height(15)
     }
 }
 

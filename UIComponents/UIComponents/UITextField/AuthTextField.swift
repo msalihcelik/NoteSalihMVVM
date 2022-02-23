@@ -9,6 +9,8 @@ import UIKit
 
 public class AuthTextField: UITextField {
     
+    private let padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureContents()
@@ -19,6 +21,18 @@ public class AuthTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     // swiftlint:enable all
+    
+    public override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    public override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    public override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
 }
 
 // MARK: - Configure
@@ -29,7 +43,8 @@ extension AuthTextField {
         layer.borderColor = UIColor.appLightGray.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 5
-        leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: frame.height))
-        leftViewMode = .always
+        height(47)
+        autocorrectionType = .no
+        autocapitalizationType = .none
     }
 }

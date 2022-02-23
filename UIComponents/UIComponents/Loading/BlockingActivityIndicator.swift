@@ -13,12 +13,12 @@ final class BlockingActivityIndicator: UIView {
     
     override init(frame: CGRect) {
         self.activityIndicator = UIActivityIndicatorView(style: .gray)
-        activityIndicator.tintColor = .appSilver
-        activityIndicator.color = .appSilver
+        activityIndicator.tintColor = .appWhite
+        activityIndicator.color = .appWhite
         activityIndicator.startAnimating()
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         super.init(frame: frame)
-        backgroundColor = UIColor.appBlue.withAlphaComponent(0.35)
+        backgroundColor = UIColor.appEbonyClay.withAlphaComponent(0.35)
         addSubview(activityIndicator)
         activityIndicator.centerInSuperview()
     }

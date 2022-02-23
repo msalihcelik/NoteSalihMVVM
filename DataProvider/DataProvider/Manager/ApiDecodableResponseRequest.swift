@@ -19,7 +19,7 @@ public extension ApiDecodableResponseRequest {
     }
 }
 
-// MARK: - url
+// MARK: - Url
 public extension ApiDecodableResponseRequest {
     var url: String {
         return "https://notesalihmvvm.herokuapp.com/api/" + path

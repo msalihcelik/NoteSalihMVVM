@@ -19,6 +19,7 @@ $SwiftGen = pod 'SwiftGen', '~> 6.5'
 $SwiftEntryKit = pod 'SwiftEntryKit', '~> 2.0'
 $IQKeyboardManagerSwift = pod 'IQKeyboardManagerSwift', '~> 6.5'
 $Kingfisher = pod 'Kingfisher', '~> 6.3.1'
+$KeychainSwift = pod 'KeychainSwift', '~> 20.0'
 
 
 workspace 'NoteSalihMVVM'
@@ -33,6 +34,7 @@ target 'NoteSalihMVVM' do
   $MobilliumBuilders
   $SwiftEntryKit
   $IQKeyboardManagerSwift
+  $KeychainSwift
 
   target 'NoteSalihMVVMTests' do
     inherit! :search_paths
