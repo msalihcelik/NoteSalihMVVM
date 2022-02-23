@@ -27,6 +27,6 @@ final class ResetConfirmationViewModel: BaseViewModel<ResetConfirmationRouter>, 
     }
     
     func loginButtonTapped() {
-        router.placeOnWindowLogin()
+        router.popToRoot()
     }
 }

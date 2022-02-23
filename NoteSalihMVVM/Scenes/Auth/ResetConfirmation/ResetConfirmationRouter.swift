@@ -6,5 +6,5 @@
 //
 
 final class ResetConfirmationRouter: Router, ResetConfirmationRouter.Routes {
-    typealias Routes = LoginRoute
+    typealias Routes = PopToRootRoute
 }

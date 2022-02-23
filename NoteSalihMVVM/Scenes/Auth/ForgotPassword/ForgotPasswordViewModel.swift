@@ -20,7 +20,8 @@ final class ForgotPasswordViewModel: BaseViewModel<ForgotPasswordRouter>, Forgot
     
     func resetButtonTapped(email: String) {
         showLoading?()
-        dataProvider.request(for: ForgotPasswordRequest(email: email)) { [weak self] (result) in
+        let request = ForgotPasswordRequest(email: email)
+        dataProvider.request(for: request) { [weak self] (result) in
             guard let self = self else { return }
             self.hideLoading?()
             switch result {
