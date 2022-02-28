@@ -48,3 +48,10 @@
 "ResetConfirmation.title" = "Password Reset Confirmation";
 "ResetConfirmation.description" = "An email has been sent to %@ with further instructions.";
 "ResetConfirmation.login" = "Login";
+
+// MARK: - NoteList
+"NoteList.addNote" = "Add Note";
+"NoteList.search" = "Search...";
+
+// MARK: - NoteDetails
+"NoteDetails.saveNote" = "Save Note";

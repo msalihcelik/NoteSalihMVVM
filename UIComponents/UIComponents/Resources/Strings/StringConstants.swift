@@ -47,6 +47,18 @@ public enum L10n {
     public static let title = L10n.tr("Localizable", "Login.title")
   }
 
+  public enum NoteDetails {
+    /// Save Note
+    public static let saveNote = L10n.tr("Localizable", "NoteDetails.saveNote")
+  }
+
+  public enum NoteList {
+    /// Add Note
+    public static let addNote = L10n.tr("Localizable", "NoteList.addNote")
+    /// Search...
+    public static let search = L10n.tr("Localizable", "NoteList.search")
+  }
+
   public enum Register {
     /// Already have an account? 
     public static let already = L10n.tr("Localizable", "Register.already")

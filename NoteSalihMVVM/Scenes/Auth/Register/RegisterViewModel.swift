@@ -14,7 +14,6 @@ protocol RegisterViewEventSource {}
 
 protocol RegisterViewProtocol: RegisterViewDataSource, RegisterViewEventSource {
     func pushPasswordResetScene()
-    func pushNotesScene()
     func pushSignIn()
     func signUpButtonTapped(username: String, email: String, password: String)
 }
@@ -27,10 +26,8 @@ final class RegisterViewModel: BaseViewModel<RegisterRouter>, RegisterViewProtoc
         router.pushForgotPassword()
     }
     
-    func pushNotesScene() { }
-    
     func pushSignIn() {
-        router.close(completion: nil)
+        router.close()
     }
     
     func signUpButtonTapped(username: String, email: String, password: String) {
@@ -43,6 +40,7 @@ final class RegisterViewModel: BaseViewModel<RegisterRouter>, RegisterViewProtoc
                 guard let token = response.data?.accessToken else { return }
                 self.keychain.set(token, forKey: Keychain.token)
                 self.showSuccessToast?(L10n.Register.success)
+                self.router.close()
             case .failure(let error):
                 self.showWarningToast?(error.localizedDescription)
             }

@@ -20,6 +20,16 @@ public class AuthButton: UIButton {
     }
     // swiftlint:enable all
     
+    public var height: CGFloat {
+        get {
+            let heightConstraint = constraints.first(where: { $0.firstAttribute == .height })
+            return heightConstraint?.constant ?? 0
+        }
+        set(newValue) {
+            let heightConstraint = constraints.first(where: { $0.firstAttribute == .height })
+            heightConstraint?.constant = newValue
+        }
+    }
 }
 
 // MARK: - Configure
@@ -27,6 +37,7 @@ extension AuthButton {
     
     private func configureContents() {
         backgroundColor = .appBlue
+        tintColor = .appWhite
         titleLabel?.font = .font(.josefinSansSemiBold, size: 15)
         layer.cornerRadius = 5
         height(60)

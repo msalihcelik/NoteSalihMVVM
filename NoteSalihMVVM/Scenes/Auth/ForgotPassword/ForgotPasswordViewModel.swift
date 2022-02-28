@@ -9,12 +9,12 @@ import Foundation
 
 protocol ForgotPasswordViewDataSource {}
 
-protocol ForgotPasswordViewEventSource {
+protocol ForgotPasswordViewEventSource {}
+
+protocol ForgotPasswordViewProtocol: ForgotPasswordViewDataSource, ForgotPasswordViewEventSource {
     func resetButtonTapped(email: String)
     func pushResetConfirmation(email: String)
 }
-
-protocol ForgotPasswordViewProtocol: ForgotPasswordViewDataSource, ForgotPasswordViewEventSource {}
 
 final class ForgotPasswordViewModel: BaseViewModel<ForgotPasswordRouter>, ForgotPasswordViewProtocol {
     
