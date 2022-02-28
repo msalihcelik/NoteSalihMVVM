@@ -33,8 +33,8 @@ extension ModalTransition: Transition {
         self.viewController?.present(viewController, animated: isAnimated, completion: completionHandler)
     }
 
-    func close(_ viewController: UIViewController, completion: (() -> Void)?) {
-        viewController.dismiss(animated: isAnimated, completion: completion)
+    func close(_ viewController: UIViewController) {
+        viewController.dismiss(animated: isAnimated, completion: completionHandler)
     }
 }
 

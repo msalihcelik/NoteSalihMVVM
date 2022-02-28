@@ -11,7 +11,7 @@ protocol RouterProtocol: AnyObject {
     var viewController: UIViewController? { get }
 
     func open(_ viewController: UIViewController, transition: Transition)
-    func close(completion: (() -> Void)?)
+    func close()
 }
 
 class Router: RouterProtocol {
@@ -24,7 +24,7 @@ class Router: RouterProtocol {
         transition.open(viewController)
     }
 
-    func close(completion: (() -> Void)?) {
+    func close() {
         guard let openTransition = openTransition else {
             assertionFailure("You should specify an open transition in order to close a module.")
             return
@@ -33,7 +33,7 @@ class Router: RouterProtocol {
             assertionFailure("Nothing to close.")
             return
         }
-        openTransition.close(viewController, completion: completion)
+        openTransition.close(viewController)
     }
     
     deinit {
