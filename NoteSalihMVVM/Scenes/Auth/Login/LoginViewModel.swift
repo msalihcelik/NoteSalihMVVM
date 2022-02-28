@@ -36,6 +36,7 @@ final class LoginViewModel: BaseViewModel<LoginRouter>, LoginViewProtocol {
                 guard let token = response.data?.accessToken else { return }
                 self.keychain.set(token, forKey: Keychain.token)
                 self.showSuccessToast?(L10n.Login.success)
+                self.router.pushNoteList()
             case .failure(let error):
                 self.showWarningToast?(error.localizedDescription)
             }

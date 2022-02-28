@@ -149,12 +149,12 @@ extension LoginViewController {
             viewModel.showWarningToast?(L10n.Login.emptyEmail)
             return
         }
-        
+
         guard let password = passwordTextField.text, !password.isEmpty else {
             viewModel.showWarningToast?(L10n.Login.emptyPassword)
             return
         }
-        
+
         let validation = Validation()
         guard validation.isValidPassword(password) else { return }
         guard validation.isValidEmail(email) else { return }
