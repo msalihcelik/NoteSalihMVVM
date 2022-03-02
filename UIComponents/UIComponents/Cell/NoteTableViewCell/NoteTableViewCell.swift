@@ -7,8 +7,6 @@
 
 public class NoteTableViewCell: UITableViewCell, ReusableView {
     
-    public static var defaultReuseIdentifier = "noteCell"
-    
     weak var viewModel: NoteTableViewCellProtocol?
     
     private let stackView = UIStackViewBuilder()
