@@ -47,6 +47,11 @@ final class NoteListViewController: BaseViewController<NoteListViewModel> {
         super.viewWillDisappear(animated)
         navigationItem.setHidesBackButton(false, animated: true)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        searchBar.searchBarStyle = .minimal
+    }
 }
 
 // MARK: - UILayout
@@ -61,7 +66,7 @@ extension NoteListViewController {
     private func addNoteTableView() {
         view.addSubview(noteTableView)
         noteTableView.edgesToSuperview(excluding: .top)
-        noteTableView.topToSuperview(usingSafeArea: true)
+        noteTableView.topToSuperview(offset: 16, usingSafeArea: true)
     }
     
     private func addButton() {
@@ -94,7 +99,7 @@ extension NoteListViewController {
         noteTableView.delegate = self
         noteTableView.dataSource = self
         noteTableView.refreshControl = refreshControl
-        noteTableView.register(NoteTableViewCell.self, forCellReuseIdentifier: NoteTableViewCell.defaultReuseIdentifier)
+        noteTableView.register(NoteTableViewCell.self)
     }
     
     private func configureAddNoteButton() {
@@ -192,8 +197,7 @@ extension NoteListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteTableViewCell.defaultReuseIdentifier, for: indexPath) as? NoteTableViewCell
-        else { return UITableViewCell() }
+        let cell: NoteTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         let cellItem: NoteTableViewCellProtocol
         if viewModel.isEmptyFilteredItems {
             cellItem = viewModel.cellItemAt(indexPath: indexPath, type: .normal)
@@ -249,6 +253,7 @@ extension NoteListViewController: UITableViewDelegate {
         }
     }
 }
+// swiftlint:disable line_length
 
 // MARK: - UISearchBarDelegate
 extension NoteListViewController: UISearchBarDelegate {
@@ -263,9 +268,5 @@ extension NoteListViewController: UISearchBarDelegate {
         viewModel.searchText(text: searchText) {
             self.noteTableView.reloadData()
         }
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.searchBarStyle = .minimal
     }
 }
