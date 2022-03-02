@@ -18,6 +18,7 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         .distribution(.fillEqually)
         .spacing(14)
         .build()
+    
     private let emailTextField = AuthTextField()
     private let passwordTextField: AuthTextField = {
         let textField = AuthTextField()
