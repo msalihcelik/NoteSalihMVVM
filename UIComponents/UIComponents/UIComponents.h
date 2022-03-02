@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <DataProvider/DataProvider.h>
 #import <Utilities/Utilities.h>
+#import <MobilliumBuilders/MobilliumBuilders-Swift.h>
+#import <TinyConstraints/TinyConstraints-Swift.h>
 
 //! Project version number for UIComponents.
 FOUNDATION_EXPORT double UIComponentsVersionNumber;

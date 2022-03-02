@@ -5,10 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 22.02.2022.
 //
 
-import UIKit
-import TinyConstraints
-import MobilliumBuilders
-
 final class ForgotPasswordViewController: BaseViewController<ForgotPasswordViewModel> {
     
     private let scrollView = UIScrollViewBuilder().build()

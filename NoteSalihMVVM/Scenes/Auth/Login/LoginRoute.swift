@@ -5,8 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 10.02.2022.
 //
 
-import UIKit
-
 protocol LoginRoute {
     func placeOnWindowLogin()
 }

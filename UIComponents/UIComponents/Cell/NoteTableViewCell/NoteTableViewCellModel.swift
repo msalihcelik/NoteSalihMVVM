@@ -5,8 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 24.02.2022.
 //
 
-import Foundation
-
 public protocol NoteTableViewCellDataSource: AnyObject {
     var title: String { get set }
     var description: String { get set }
@@ -32,6 +30,4 @@ public final class NoteTableViewCellModel: NoteTableViewCellProtocol {
         self.description = description
         self.id = id
     }
-    
-    
 }

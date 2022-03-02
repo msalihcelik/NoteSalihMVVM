@@ -5,9 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 24.02.2022.
 //
 
-import MobilliumBuilders
-import TinyConstraints
-
 public class NoteTableViewCell: UITableViewCell, ReusableView {
     
     public static var defaultReuseIdentifier = "noteCell"

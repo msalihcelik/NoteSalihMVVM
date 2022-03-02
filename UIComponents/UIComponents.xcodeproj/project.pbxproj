@@ -202,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				673848B727BBD6DB0094F2C7 /* ActivityIndicatorView.swift */,
+				67E43EB327CF422200196BE9 /* ActivityPosition.swift */,
 			);
 			path = UIActivityIndicatorView;
 			sourceTree = "<group>";
@@ -305,7 +306,6 @@
 				67F7A8AD27B64DD80041DC3A /* Resources */,
 				67FE231F27B500F20078E2C2 /* UIComponents.h */,
 				67FE232027B500F20078E2C2 /* UIComponents.docc */,
-				67E43EB327CF422200196BE9 /* ActivityPosition.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";

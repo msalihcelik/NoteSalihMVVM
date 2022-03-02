@@ -5,8 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 22.02.2022.
 //
 
-import Foundation
-
 class Validation {
     
     func isValidEmail(_ email: String) -> Bool {

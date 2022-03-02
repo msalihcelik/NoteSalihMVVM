@@ -5,7 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 10.02.2022.
 //
 
-import Foundation
 import KeychainSwift
 
 protocol LoginViewDataSource {}

@@ -5,8 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 22.02.2022.
 //
 
-import Foundation
-
 protocol ForgotPasswordViewDataSource {}
 
 protocol ForgotPasswordViewEventSource {}

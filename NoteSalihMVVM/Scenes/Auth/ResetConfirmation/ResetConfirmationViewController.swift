@@ -5,9 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 22.02.2022.
 //
 
-import TinyConstraints
-import MobilliumBuilders
-
 final class ResetConfirmationViewController: BaseViewController<ResetConfirmationViewModel> {
     
     private let scrollView = UIScrollViewBuilder().build()

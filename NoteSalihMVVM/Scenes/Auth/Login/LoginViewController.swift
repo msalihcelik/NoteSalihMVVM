@@ -5,8 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 10.02.2022.
 //
 
-import UIKit
-
 final class LoginViewController: BaseViewController<LoginViewModel> {
     
     private let scrollView = UIScrollViewBuilder().build()
