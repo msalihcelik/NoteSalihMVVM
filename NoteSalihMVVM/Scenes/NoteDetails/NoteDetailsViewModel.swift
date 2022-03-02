@@ -35,6 +35,8 @@ final class NoteDetailsViewModel: BaseViewModel<NoteDetailsRouter>, NoteDetailsV
             createNoteRequest(title: note.title, description: note.description)
         case .update:
             updateNoteRequest(note: note)
+        case .show:
+            break
         }
     }
 }

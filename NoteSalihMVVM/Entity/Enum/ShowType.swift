@@ -8,4 +8,5 @@
 public enum ShowType {
     case create
     case update
+    case show
 }

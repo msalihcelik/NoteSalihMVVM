@@ -54,6 +54,8 @@ public enum L10n {
     public static let editNote = L10n.tr("Localizable", "NoteDetails.editNote")
     /// Save Note
     public static let saveNote = L10n.tr("Localizable", "NoteDetails.saveNote")
+    /// SHOW NOTE
+    public static let showNote = L10n.tr("Localizable", "NoteDetails.showNote")
   }
 
   public enum NoteList {

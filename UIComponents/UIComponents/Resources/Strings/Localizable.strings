@@ -61,3 +61,4 @@
 "NoteDetails.saveNote" = "Save Note";
 "NoteDetails.createNote" = "CREATE NOTE";
 "NoteDetails.editNote" = "EDIT NOTE";
+"NoteDetails.showNote" = "SHOW NOTE";
