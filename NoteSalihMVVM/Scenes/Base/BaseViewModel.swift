@@ -15,7 +15,7 @@ protocol BaseViewModelDataSource: AnyObject {
 protocol BaseViewModelEventSource: AnyObject {
     var showLoading: VoidClosure? { get set }
     var hideLoading: VoidClosure? { get set }
-    var showActivityIndicatorView: VoidClosure? { get set }
+    var showActivityIndicatorView: ((ActivityPosition?) -> Void)? { get set }
     var hideActivityIndicatorView: VoidClosure? { get set }
     var showWarningToast: StringClosure? { get set }
     var showSuccessToast: StringClosure? { get set }
@@ -33,7 +33,7 @@ class BaseViewModel<R: Router>: BaseViewModelProtocol {
     var showLoading: VoidClosure?
     var hideLoading: VoidClosure?
     
-    var showActivityIndicatorView: VoidClosure?
+    var showActivityIndicatorView: ((ActivityPosition?) -> Void)?
     var hideActivityIndicatorView: VoidClosure?
     
     var showWarningToast: StringClosure?
