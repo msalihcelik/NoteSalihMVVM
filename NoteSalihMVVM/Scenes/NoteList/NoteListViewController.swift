@@ -66,7 +66,7 @@ extension NoteListViewController {
     private func addNoteTableView() {
         view.addSubview(noteTableView)
         noteTableView.edgesToSuperview(excluding: .top)
-        noteTableView.topToSuperview(offset: 16, usingSafeArea: true)
+        noteTableView.topToSuperview(usingSafeArea: true)
     }
     
     private func addButton() {
@@ -99,6 +99,7 @@ extension NoteListViewController {
         noteTableView.delegate = self
         noteTableView.dataSource = self
         noteTableView.refreshControl = refreshControl
+        noteTableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
         noteTableView.register(NoteTableViewCell.self)
     }
     
@@ -205,7 +206,18 @@ extension NoteListViewController: UITableViewDataSource {
             cellItem = viewModel.cellItemAt(indexPath: indexPath, type: .filtered)
         }
         cell.setupCell(with: cellItem)
+        cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let note: NoteTableViewCellProtocol
+        if !viewModel.isEmptyFilteredItems {
+            note = viewModel.cellItemAt(indexPath: indexPath, type: .filtered)
+        } else {
+            note = viewModel.cellItemAt(indexPath: indexPath, type: .normal)
+        }
+        viewModel.clickedOnCell(note: note, showType: .show)
     }
 }
 

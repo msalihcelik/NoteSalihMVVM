@@ -89,6 +89,11 @@ extension NoteListViewModel {
     func deleteButtonTapped(at indexPath: IndexPath) {
         deleteNote(at: indexPath)
     }
+    
+    func clickedOnCell(note: NoteTableViewCellProtocol, showType: ShowType) {
+        let model = NoteTableViewCellModel(title: note.title, description: note.description, id: note.id)
+        router.pushNoteDetails(with: model, showType: .show, updateNoteList: nil)
+    }
 }
 
 // MARK: - Network

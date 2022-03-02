@@ -69,6 +69,15 @@ extension NoteDetailsViewController {
         descriptionTextView.textColor = .appDarkGray
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.layer.borderColor = UIColor.appLightGray.cgColor
+        
+        switch viewModel.showType {
+        case .show:
+            saveNoteButton.isHidden = true
+            titleTextField.isEnabled = false
+            descriptionTextView.isEditable = false
+        default:
+            break
+        }
     }
     
     private func setLocalize() {
@@ -77,6 +86,8 @@ extension NoteDetailsViewController {
             title = L10n.NoteDetails.createNote
         case .update:
             title = L10n.NoteDetails.editNote
+        case .show:
+            title = L10n.NoteDetails.showNote
         }
         saveNoteButton.setTitle(L10n.NoteDetails.saveNote, for: .normal)
         guard let note = viewModel.note else { return }
