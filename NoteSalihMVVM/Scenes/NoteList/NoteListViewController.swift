@@ -253,7 +253,7 @@ extension NoteListViewController: UITableViewDelegate {
         }
     }
 }
-// swiftlint:disable line_length
+// swiftlint:enable line_length
 
 // MARK: - UISearchBarDelegate
 extension NoteListViewController: UISearchBarDelegate {
