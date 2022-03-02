@@ -5,10 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 24.02.2022.
 //
 
-import UIKit
-import MobilliumBuilders
-import TinyConstraints
-
 final class NoteDetailsViewController: BaseViewController<NoteDetailsViewModel> {
     
     private let stackView = UIStackViewBuilder()
@@ -49,21 +45,14 @@ extension NoteDetailsViewController {
         saveNoteButton.bottomToSuperview(offset: -77, usingSafeArea: true)
         saveNoteButton.setHeight(42)
         saveNoteButton.width(140)
-        
     }
     
     private func addTitleNote() {
         stackView.addArrangedSubview(titleTextField)
-        titleTextField.font = .font(.josefinSansSemiBold, size: 22)
-        titleTextField.textColor = .appEbonyClay
     }
     
     private func addDescriptionTextView() {
         stackView.addArrangedSubview(descriptionTextView)
-        descriptionTextView.font = .font(.josefinSansRegular, size: 16)
-        descriptionTextView.textColor = .appDarkGray
-        descriptionTextView.layer.borderWidth = 1
-        descriptionTextView.layer.borderColor = UIColor.appLightGray.cgColor
     }
 }
 
@@ -72,6 +61,14 @@ extension NoteDetailsViewController {
     
     private func configureContents() {
         saveNoteButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        
+        titleTextField.font = .font(.josefinSansSemiBold, size: 22)
+        titleTextField.textColor = .appEbonyClay
+        
+        descriptionTextView.font = .font(.josefinSansRegular, size: 16)
+        descriptionTextView.textColor = .appDarkGray
+        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.layer.borderColor = UIColor.appLightGray.cgColor
     }
     
     private func setLocalize() {
@@ -81,9 +78,7 @@ extension NoteDetailsViewController {
         case .update:
             title = L10n.NoteDetails.editNote
         }
-        
         saveNoteButton.setTitle(L10n.NoteDetails.saveNote, for: .normal)
-        
         guard let note = viewModel.note else { return }
         titleTextField.text = note.title
         descriptionTextView.text = note.description

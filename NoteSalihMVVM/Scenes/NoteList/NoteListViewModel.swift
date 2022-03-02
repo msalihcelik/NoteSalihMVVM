@@ -7,9 +7,10 @@
 
 protocol NoteListViewDataSource {
     var numberOfItems: Int { get }
+    var numberOfFilteredItems: Int { get }
     var page: Int { get set }
     
-    func cellItemAt(indexPath: IndexPath) -> NoteTableViewCellProtocol
+    func cellItemAt(indexPath: IndexPath, type: ListType) -> NoteTableViewCellProtocol
 }
 
 protocol NoteListViewEventSource {
@@ -28,6 +29,7 @@ protocol NoteListViewProtocol: NoteListViewDataSource, NoteListViewEventSource {
 final class NoteListViewModel: BaseViewModel<NoteListRouter>, NoteListViewProtocol {
     
     private var cellItems: [NoteTableViewCellProtocol] = []
+    private var filteredItems: [NoteTableViewCellProtocol] = []
     var didUpdateTableViewRow: IndexPathClosure?
     var reloadData: VoidClosure?
     var page: Int = 1
@@ -38,16 +40,34 @@ final class NoteListViewModel: BaseViewModel<NoteListRouter>, NoteListViewProtoc
         return cellItems.count
     }
     
+    var numberOfFilteredItems: Int {
+        return filteredItems.count
+    }
+    
     var getCellItems: [NoteTableViewCellProtocol] {
         return cellItems
     }
     
-    func cellItemAt(indexPath: IndexPath) -> NoteTableViewCellProtocol {
-        return cellItems[indexPath.row]
+    var isEmptyFilteredItems: Bool {
+        return filteredItems.isEmpty
+    }
+    
+    func cellItemAt(indexPath: IndexPath, type: ListType) -> NoteTableViewCellProtocol {
+        switch type {
+        case .normal:
+            return cellItems[indexPath.row]
+        case .filtered:
+            return filteredItems[indexPath.row]
+        }
     }
     
     func didRemoveNote(at indexPath: IndexPath) {
         cellItems.remove(at: indexPath.row)
+    }
+    
+    func searchText(text: String, action: (() -> Void)?) {
+        filteredItems = text.isEmpty ? cellItems : cellItems.filter { $0.title.contains(text) }
+        action?()
     }
 }
 
@@ -81,8 +101,11 @@ extension NoteListViewModel {
             self.isRequestEnabled = true
             switch result {
             case .success(let response):
+                if self.page == 1 {
+                    self.cellItems.removeAll(keepingCapacity: false)
+                }
                 let cellItems = response.data.data.map({ NoteTableViewCellModel(with: $0) })
-                self.cellItems = cellItems
+                self.cellItems.append(contentsOf: cellItems)
                 self.page += 1
                 self.isPagingEnabled = response.data.currentPage < response.data.lastPage
                 self.reloadData?()

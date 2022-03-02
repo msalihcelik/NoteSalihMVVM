@@ -5,17 +5,12 @@
 //  Created by Mehmet Salih ÇELİK on 23.02.2022.
 //
 
-import TinyConstraints
-import MobilliumBuilders
-
 final class NoteListViewController: BaseViewController<NoteListViewModel> {
     
     private let refreshControl = UIRefreshControl()
     private let addNoteButton = AuthButton()
     private let noteTableView = UITableViewBuilder()
         .build()
-    
-    var filteredItems: [NoteTableViewCellProtocol] = []
     
     var navigationTitleView: UIView = {
         var view = UIView()
@@ -75,9 +70,6 @@ extension NoteListViewController {
         addNoteButton.bottomToSuperview(offset: -77, usingSafeArea: true)
         addNoteButton.setHeight(42)
         addNoteButton.width(140)
-        addNoteButton.contentEdgeInsets = .init(top: 13, left: 12, bottom: 13, right: 12)
-        addNoteButton.titleEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 0)
-        addNoteButton.imageEdgeInsets = .init(top: 0, left: -12, bottom: 0, right: 0)
     }
     
     private func addNavigationTitle() {
@@ -109,6 +101,9 @@ extension NoteListViewController {
         addNoteButton.addTarget(self, action: #selector(addNoteButtonTapped), for: .touchUpInside)
         addNoteButton.titleLabel?.font = .font(.josefinSansSemiBold, size: 13)
         addNoteButton.setImage(.icAdd.withRenderingMode(.alwaysTemplate), for: .normal)
+        addNoteButton.contentEdgeInsets = .init(top: 13, left: 12, bottom: 13, right: 12)
+        addNoteButton.titleEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 0)
+        addNoteButton.imageEdgeInsets = .init(top: 0, left: -12, bottom: 0, right: 0)
     }
     
     private func configureSearchBar() {
@@ -154,10 +149,11 @@ extension NoteListViewController {
     private func subscribeViewModel() {
         viewModel.reloadData = { [weak self] in
             self?.viewModel.page = 1
-            self?.viewModel.hideActivityIndicatorView?()
+            DispatchQueue.main.async {
+                self?.viewModel.hideActivityIndicatorView?()
+            }
             self?.noteTableView.reloadData()
         }
-        
         viewModel.didUpdateTableViewRow = { [weak self] indexPath in
             self?.noteTableView.reloadRows(at: [indexPath], with: .automatic)
         }
@@ -192,23 +188,24 @@ extension NoteListViewController: UITableViewDataSource {
             return viewModel.numberOfItems
             
         }
-        return filteredItems.count
+        return viewModel.numberOfFilteredItems
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteTableViewCell.defaultReuseIdentifier, for: indexPath) as? NoteTableViewCell
         else { return UITableViewCell() }
         let cellItem: NoteTableViewCellProtocol
-        if filteredItems.isEmpty {
-            cellItem = viewModel.getCellItems[indexPath.row]
+        if viewModel.isEmptyFilteredItems {
+            cellItem = viewModel.cellItemAt(indexPath: indexPath, type: .normal)
         } else {
-            cellItem = filteredItems[indexPath.row]
+            cellItem = viewModel.cellItemAt(indexPath: indexPath, type: .filtered)
         }
         cell.setupCell(with: cellItem)
         return cell
     }
 }
 
+// swiftlint:disable line_length
 // MARK: - UITableViewDelegate
 extension NoteListViewController: UITableViewDelegate {
     
@@ -220,11 +217,11 @@ extension NoteListViewController: UITableViewDelegate {
         
         let deleteButton = UIContextualAction(style: .destructive, title: "") { [weak self] (_, _, _) in
             guard let self = self else { return }
-            let alert = UIAlertController(title: "Delete Note", message: "Are you sure you want to delete this note.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { [weak self] _ in
+            let alert = UIAlertController(title: L10n.NoteList.deleteNote, message: L10n.NoteList.deleteAlertMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: L10n.NoteList.cancel, style: .default, handler: { [weak self] _ in
                 self?.dismiss(animated: true, completion: nil)
             }))
-            alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: { [weak self] _ in
+            alert.addAction(UIAlertAction(title: L10n.NoteList.delete, style: .default, handler: { [weak self] _ in
                 self?.viewModel.deleteButtonTapped(at: indexPath)
             }))
             self.present(alert, animated: true, completion: nil)
@@ -263,8 +260,9 @@ extension NoteListViewController: UISearchBarDelegate {
             searchBar.layer.borderColor = UIColor.appBlue.cgColor
         }
         self.searchText = searchText
-        filteredItems = searchText.isEmpty ? viewModel.getCellItems : viewModel.getCellItems.filter { $0.title.contains(searchText) }
-        noteTableView.reloadData()
+        viewModel.searchText(text: searchText) {
+            self.noteTableView.reloadData()
+        }
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
