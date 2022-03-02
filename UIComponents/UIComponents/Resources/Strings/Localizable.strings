@@ -52,6 +52,10 @@
 // MARK: - NoteList
 "NoteList.addNote" = "Add Note";
 "NoteList.search" = "Search...";
+"NoteList.deleteNote" = "Delete Note";
+"NoteList.deleteAlertMessage" = "Are you sure you want to delete this note.";
+"NoteList.cancel" = "Cancel";
+"NoteList.delete" = "Delete";
 
 // MARK: - NoteDetails
 "NoteDetails.saveNote" = "Save Note";

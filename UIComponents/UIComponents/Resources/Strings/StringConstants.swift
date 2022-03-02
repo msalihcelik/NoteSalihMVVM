@@ -59,6 +59,14 @@ public enum L10n {
   public enum NoteList {
     /// Add Note
     public static let addNote = L10n.tr("Localizable", "NoteList.addNote")
+    /// Cancel
+    public static let cancel = L10n.tr("Localizable", "NoteList.cancel")
+    /// Delete
+    public static let delete = L10n.tr("Localizable", "NoteList.delete")
+    /// Are you sure you want to delete this note.
+    public static let deleteAlertMessage = L10n.tr("Localizable", "NoteList.deleteAlertMessage")
+    /// Delete Note
+    public static let deleteNote = L10n.tr("Localizable", "NoteList.deleteNote")
     /// Search...
     public static let search = L10n.tr("Localizable", "NoteList.search")
   }
