@@ -5,8 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 24.02.2022.
 //
 
-import Foundation
-
 protocol NoteDetailsViewDataSource {
     var note: NoteTableViewCellModel? { get }
     var showType: ShowType { get set }
@@ -45,8 +43,10 @@ final class NoteDetailsViewModel: BaseViewModel<NoteDetailsRouter>, NoteDetailsV
 extension NoteDetailsViewModel {
     
     private func createNoteRequest(title: String, description: String) {
+        showLoading?()
         dataProvider.request(for: CreateNoteRequest(title: title, description: description)) { [weak self] (result) in
             guard let self = self else { return }
+            self.hideLoading?()
             switch result {
             case .success(let response):
                 guard let responseTitle = response.data?.title,
@@ -63,8 +63,10 @@ extension NoteDetailsViewModel {
     }
     
     private func updateNoteRequest(note: NoteTableViewCellModel) {
+        showLoading?()
         dataProvider.request(for: UpdateNoteRequest(title: note.title, description: note.description, id: note.id)) { [weak self] (result )in
             guard let self = self else { return }
+            self.hideLoading?()
             switch result {
             case .success(let response):
                 guard let responseTitle = response.data.title,
