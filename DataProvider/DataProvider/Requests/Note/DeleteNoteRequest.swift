@@ -9,10 +9,10 @@ public struct DeleteNoteRequest: ApiDecodableResponseRequest {
     
     public typealias ResponseType = DeleteNoteResponse
     
-    public var path: String
-    public var method: RequestMethod = .delete
-    public var parameters: RequestParameters = [:]
-    public var headers: RequestHeaders = [:]
+    public let path: String
+    public let method: RequestMethod = .delete
+    public let parameters: RequestParameters = [:]
+    public let headers: RequestHeaders = [:]
     
     public init(id: Int) {
         path = "notes/\(id)"

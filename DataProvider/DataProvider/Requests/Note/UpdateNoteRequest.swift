@@ -9,10 +9,10 @@ public struct UpdateNoteRequest: ApiDecodableResponseRequest {
     
     public typealias ResponseType = UpdateNoteResponse
     
-    public var path: String
-    public var method: RequestMethod = .put
+    public let path: String
+    public let method: RequestMethod = .put
     public var parameters: RequestParameters = [:]
-    public var headers: RequestHeaders = [:]
+    public let headers: RequestHeaders = [:]
     
     public init(title: String, description: String, id: Int) {
         parameters["title"] = title

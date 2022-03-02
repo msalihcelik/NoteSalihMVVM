@@ -9,10 +9,10 @@ public struct GetMyNotesRequest: ApiDecodableResponseRequest {
     
     public typealias ResponseType = GetMyNotesResponse
     
-    public var path: String = "users/me/notes"
-    public var method: RequestMethod = .get
+    public let path: String = "users/me/notes"
+    public let method: RequestMethod = .get
     public var parameters: RequestParameters = [:]
-    public var headers: RequestHeaders = [:]
+    public let headers: RequestHeaders = [:]
     
     public init(page: Int) {
         parameters["page"] = page
