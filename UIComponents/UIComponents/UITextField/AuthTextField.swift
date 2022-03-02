@@ -11,6 +11,17 @@ public class AuthTextField: UITextField {
     
     private let padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
     
+    public var height: CGFloat {
+        get {
+            let heightConstraint = constraints.first(where: { $0.firstAttribute == .height })
+            return heightConstraint?.constant ?? 0
+        }
+        set(newValue) {
+            let heightConstraint = constraints.first(where: { $0.firstAttribute == .height })
+            heightConstraint?.constant = newValue
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureContents()
