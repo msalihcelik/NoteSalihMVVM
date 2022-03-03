@@ -25,7 +25,7 @@ final class ProfileViewController: BaseViewController<ProfileViewModel> {
         configureContents()
         setLocalize()
         subscribeViewModel()
-        getUser()
+        viewModel.getUser()
     }
     
     override func viewWillAppear(_ animated: Bool) {

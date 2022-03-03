@@ -35,7 +35,7 @@ final class ProfileViewModel: BaseViewModel<ProfileRouter>, ProfileViewProtocol 
     }
     
     func leftIconTapped() {
-        
+        router.close()
     }
     
     func changePasswordTapped() {
@@ -43,6 +43,6 @@ final class ProfileViewModel: BaseViewModel<ProfileRouter>, ProfileViewProtocol 
     }
     
     func signOutTapped() {
-        
+        router.popToRoot()
     }
 }
