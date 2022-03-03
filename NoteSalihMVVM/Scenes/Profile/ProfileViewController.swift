@@ -15,8 +15,12 @@ final class ProfileViewController: BaseViewController<ProfileViewModel> {
     private let emailTextField = AuthTextField()
     private let saveButton = AuthButton()
     private let changePasswordButton = UIButtonBuilder()
+        .titleFont(.font(.josefinSansSemiBold, size: 14))
+        .titleColor(.appBlue)
         .build()
     private let signOutButton = UIButtonBuilder()
+        .titleFont(.font(.josefinSansSemiBold, size: 14))
+        .titleColor(.appRed)
         .build()
     
     override func viewDidLoad() {
@@ -58,30 +62,14 @@ extension ProfileViewController {
     
     private func configureContents() {
         configureNavigation()
-        configureSaveButton()
-        configureChangePasswordButton()
-        configureSignOutButton()
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        changePasswordButton.addTarget(self, action: #selector(changePasswordTapped), for: .touchUpInside)
+        signOutButton.addTarget(self, action: #selector(signOutTapped), for: .touchUpInside)
     }
     
     private func configureNavigation() {
         let leftIcon = UIBarButtonItem(image: .icHamburger, style: .plain, target: self, action: #selector(leftIconTapped))
         navigationItem.leftBarButtonItems = [leftIcon]
-    }
-    
-    private func configureSaveButton() {
-        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
-    }
-    
-    private func configureChangePasswordButton() {
-        changePasswordButton.titleLabel?.font = .font(.josefinSansSemiBold, size: 14)
-        changePasswordButton.setTitleColor(.appBlue, for: .normal)
-        changePasswordButton.addTarget(self, action: #selector(changePasswordTapped), for: .touchUpInside)
-    }
-    
-    private func configureSignOutButton() {
-        signOutButton.titleLabel?.font = .font(.josefinSansSemiBold, size: 14)
-        signOutButton.setTitleColor(.appRed, for: .normal)
-        signOutButton.addTarget(self, action: #selector(signOutTapped), for: .touchUpInside)
     }
     
     private func setLocalize() {
@@ -128,10 +116,10 @@ extension ProfileViewController {
 extension ProfileViewController {
     
     private func subscribeViewModel() {
-        viewModel.reloadUser = { [weak self] in
+        viewModel.reloadUser = { [weak self] user in
             guard let self = self else { return }
-            self.fullNameTextField.text = self.viewModel.getFullName
-            self.emailTextField.text = self.viewModel.getEmail
+            self.fullNameTextField.text = user.fullName
+            self.emailTextField.text = user.email
         }
     }
 }
