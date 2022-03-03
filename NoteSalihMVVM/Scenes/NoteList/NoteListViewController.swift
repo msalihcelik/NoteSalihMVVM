@@ -120,13 +120,14 @@ extension NoteListViewController {
     }
     
     private func configureNavigationItems() {
-        let rightBarItem = UIView()
+        let rightBarItem = UIButton()
         rightBarItem.backgroundColor = .black
         rightBarItem.layer.cornerRadius = 15
         rightBarItem.layer.borderWidth = 2
         rightBarItem.layer.borderColor = UIColor.blue.cgColor
         rightBarItem.height(30)
         rightBarItem.aspectRatio(1)
+        rightBarItem.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
         
         let leftIcon = UIBarButtonItem(image: .icHamburger, style: .plain, target: self, action: nil)
         let rightIcon = UIBarButtonItem(customView: rightBarItem)
@@ -181,8 +182,13 @@ extension NoteListViewController {
     }
     
     @objc
-    func singleTap(sender: UITapGestureRecognizer) {
+    private func singleTap(sender: UITapGestureRecognizer) {
         self.searchBar.resignFirstResponder()
+    }
+    
+    @objc
+    private func rightButtonTapped() {
+        viewModel.rightButtonTapped()
     }
 }
 

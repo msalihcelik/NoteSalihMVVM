@@ -43,6 +43,14 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         configureContents()
         setLocalize()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        passwordTextField.becomeFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
 }
 
 // MARK: - UILayout

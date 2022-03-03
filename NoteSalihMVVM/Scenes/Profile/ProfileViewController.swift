@@ -1,0 +1,125 @@
+//
+//  ProfileViewController.swift
+//  NoteSalihMVVM
+//
+//  Created by Mehmet Salih ÇELİK on 3.03.2022.
+//
+
+final class ProfileViewController: BaseViewController<ProfileViewModel> {
+    
+    private let stackView = UIStackViewBuilder()
+        .spacing(15)
+        .axis(.vertical)
+        .build()
+    private let fullNameTextField = AuthTextField()
+    private let emailTextField = AuthTextField()
+    private let saveButton = AuthButton()
+    private let changePasswordButton = UIButtonBuilder()
+        .titleFont(.font(.josefinSansSemiBold, size: 14))
+        .titleColor(.appBlue)
+        .build()
+    private let signOutButton = UIButtonBuilder()
+        .titleFont(.font(.josefinSansSemiBold, size: 14))
+        .titleColor(.appRed)
+        .build()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addSubViews()
+        configureContents()
+        setLocalize()
+        subscribeViewModel()
+        viewModel.getUser()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.setHidesBackButton(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.setHidesBackButton(false, animated: true)
+    }
+}
+
+// MARK: - UILayout
+extension ProfileViewController {
+    
+    private func addSubViews() {
+        view.addSubview(stackView)
+        stackView.edgesToSuperview(excluding: .bottom, insets: .init(top: 25, left: 25, bottom: 25, right: 25), usingSafeArea: true)
+        stackView.addArrangedSubview(fullNameTextField)
+        stackView.addArrangedSubview(emailTextField)
+        stackView.addArrangedSubview(saveButton)
+        stackView.addArrangedSubview(changePasswordButton)
+        stackView.addArrangedSubview(signOutButton)
+    }
+}
+
+// MARK: - Configure & SetLocalize
+extension ProfileViewController {
+    
+    private func configureContents() {
+        configureNavigation()
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        changePasswordButton.addTarget(self, action: #selector(changePasswordTapped), for: .touchUpInside)
+        signOutButton.addTarget(self, action: #selector(signOutTapped), for: .touchUpInside)
+    }
+    
+    private func configureNavigation() {
+        let leftIcon = UIBarButtonItem(image: .icHamburger, style: .plain, target: self, action: #selector(leftIconTapped))
+        navigationItem.leftBarButtonItems = [leftIcon]
+    }
+    
+    private func setLocalize() {
+        title = L10n.Profile.profile
+        saveButton.setTitle(L10n.Profile.save, for: .normal)
+        changePasswordButton.setTitle(L10n.Profile.changePassword, for: .normal)
+        signOutButton.setTitle(L10n.Profile.signOut, for: .normal)
+    }
+}
+
+// MARK: - Actions
+extension ProfileViewController {
+
+    @objc
+    private func saveButtonTapped() {
+        guard let userName = fullNameTextField.text, !userName.isEmpty,
+              let email = emailTextField.text, !email.isEmpty else {
+            ToastPresenter.showWarningToast(text: L10n.Profile.emptyError)
+            return
+        }
+        let validation = Validation()
+        guard validation.isValidName(userName) else { return }
+        guard validation.isValidEmail(email) else { return }
+        viewModel.updateUser(userName: userName, email: email)
+    }
+    
+    @objc
+    private func changePasswordTapped() {
+        viewModel.changePasswordTapped()
+    }
+    
+    @objc
+    private func signOutTapped() {
+        viewModel.signOutTapped()
+    }
+    
+    @objc
+    private func leftIconTapped() {
+        viewModel.leftIconTapped()
+    }
+}
+
+// MARK: - SubscribeViewModel
+extension ProfileViewController {
+    
+    private func subscribeViewModel() {
+        viewModel.reloadUser = { [weak self] user in
+            guard let self = self else { return }
+            self.fullNameTextField.text = user.fullName
+            self.emailTextField.text = user.email
+        }
+    }
+}
