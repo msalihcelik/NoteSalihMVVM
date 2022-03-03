@@ -5,8 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 3.03.2022.
 //
 
-import Foundation
-
 protocol ChangePasswordViewDataSource {}
 
 protocol ChangePasswordViewEventSource {}
