@@ -62,3 +62,9 @@
 "NoteDetails.createNote" = "CREATE NOTE";
 "NoteDetails.editNote" = "EDIT NOTE";
 "NoteDetails.showNote" = "SHOW NOTE";
+
+// MARK: - Profile
+"Profile.profile" = "PROFILE" ;
+"Profile.save" = "Save";
+"Profile.changePassword" = "Change Password";
+"Profile.signOut" = "Sign Out";
