@@ -6,5 +6,5 @@
 //
 
 final class ProfileRouter: Router, ProfileRouter.Routes {
-    typealias Routes = PopToRootRoute
+    typealias Routes = PopToRootRoute & ChangePasswordRoute
 }

@@ -70,3 +70,15 @@
 "Profile.signOut" = "Sign Out";
 "Profile.success" = "Success";
 "Profile.emptyError" = "Your name or email cannot be empty.";
+
+// MARK: - ChangePassword
+"ChangePassword.changePassword" = "CHANGE PASSWORD";
+"ChangePassword.password" = "Password";
+"ChangePassword.newPassword" = "New Password";
+"ChangePassword.retypeNewPassword" = "Retype New Password";
+"ChangePassword.save" = "Save";
+"ChangePassword.success" = "Success";
+"ChangePassword.sameOldPassword" = "Your old password cannot be the same as your new password.";
+"ChangePassword.differentNewPassword" = "Your new passwords do not match.";
+"ChangePassword.emptyError" = "Your password cannot be empty.";
+

@@ -66,7 +66,7 @@ extension ProfileViewModel {
     }
     
     func changePasswordTapped() {
-        
+        router.pushChangePassword()
     }
     
     func signOutTapped() {
