@@ -74,6 +74,7 @@ extension ProfileViewController {
     
     private func configureChangePasswordButton() {
         changePasswordButton.titleLabel?.font = .font(.josefinSansSemiBold, size: 14)
+        changePasswordButton.setTitleColor(.appBlue, for: .normal)
         changePasswordButton.addTarget(self, action: #selector(changePasswordTapped), for: .touchUpInside)
     }
     
