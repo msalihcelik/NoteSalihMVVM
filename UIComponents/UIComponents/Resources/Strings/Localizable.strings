@@ -68,3 +68,5 @@
 "Profile.save" = "Save";
 "Profile.changePassword" = "Change Password";
 "Profile.signOut" = "Sign Out";
+"Profile.success" = "Success";
+"Profile.emptyError" = "Your name or email cannot be empty.";

@@ -76,12 +76,16 @@ public enum L10n {
   public enum Profile {
     /// Change Password
     public static let changePassword = L10n.tr("Localizable", "Profile.changePassword")
+    /// Your name or email cannot be empty.
+    public static let emptyError = L10n.tr("Localizable", "Profile.emptyError")
     /// PROFILE
     public static let profile = L10n.tr("Localizable", "Profile.profile")
     /// Save
     public static let save = L10n.tr("Localizable", "Profile.save")
     /// Sign Out
     public static let signOut = L10n.tr("Localizable", "Profile.signOut")
+    /// Success
+    public static let success = L10n.tr("Localizable", "Profile.success")
   }
 
   public enum Register {
