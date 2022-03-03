@@ -22,6 +22,8 @@ public enum L10n {
     public static let retypeNewPassword = L10n.tr("Localizable", "ChangePassword.retypeNewPassword")
     /// Save
     public static let save = L10n.tr("Localizable", "ChangePassword.save")
+    /// Success
+    public static let success = L10n.tr("Localizable", "ChangePassword.success")
   }
 
   public enum Forgot {

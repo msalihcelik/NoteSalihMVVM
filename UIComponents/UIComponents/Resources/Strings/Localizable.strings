@@ -77,4 +77,5 @@
 "ChangePassword.newPassword" = "New Password";
 "ChangePassword.retypeNewPassword" = "Retype New Password";
 "ChangePassword.save" = "Save";
+"ChangePassword.success" = "Success";
 
