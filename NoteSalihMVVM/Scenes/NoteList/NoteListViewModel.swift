@@ -94,6 +94,10 @@ extension NoteListViewModel {
         let model = NoteTableViewCellModel(title: note.title, description: note.description, id: note.id)
         router.pushNoteDetails(with: model, showType: .show, updateNoteList: nil)
     }
+    
+    func rightButtonTapped() {
+        router.pushProfile()
+    }
 }
 
 // MARK: - Network
