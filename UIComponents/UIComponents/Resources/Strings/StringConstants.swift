@@ -11,6 +11,19 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
 
+  public enum ChangePassword {
+    /// CHANGE PASSWORD
+    public static let changePassword = L10n.tr("Localizable", "ChangePassword.changePassword")
+    /// New Password
+    public static let newPassword = L10n.tr("Localizable", "ChangePassword.newPassword")
+    /// Password
+    public static let password = L10n.tr("Localizable", "ChangePassword.password")
+    /// Retype New Password
+    public static let retypeNewPassword = L10n.tr("Localizable", "ChangePassword.retypeNewPassword")
+    /// Save
+    public static let save = L10n.tr("Localizable", "ChangePassword.save")
+  }
+
   public enum Forgot {
     /// Confirm your email and we'll send the instructions.
     public static let description = L10n.tr("Localizable", "Forgot.description")

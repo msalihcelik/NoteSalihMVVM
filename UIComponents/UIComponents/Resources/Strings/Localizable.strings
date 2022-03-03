@@ -73,8 +73,8 @@
 
 // MARK: - ChangePassword
 "ChangePassword.changePassword" = "CHANGE PASSWORD";
-"Changepassword.password" = "Password";
-"Changepassword.newPassword" = "New Password";
-"Changepassword.retypeNewPassword" = "Retype New Password";
+"ChangePassword.password" = "Password";
+"ChangePassword.newPassword" = "New Password";
+"ChangePassword.retypeNewPassword" = "Retype New Password";
 "ChangePassword.save" = "Save";
 
