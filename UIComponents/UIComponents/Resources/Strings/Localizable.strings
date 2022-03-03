@@ -80,4 +80,5 @@
 "ChangePassword.success" = "Success";
 "ChangePassword.sameOldPassword" = "Your old password cannot be the same as your new password.";
 "ChangePassword.differentNewPassword" = "Your new passwords do not match.";
+"ChangePassword.emptyError" = "Your password cannot be empty.";
 

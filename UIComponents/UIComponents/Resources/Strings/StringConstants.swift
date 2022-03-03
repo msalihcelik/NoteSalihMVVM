@@ -16,6 +16,8 @@ public enum L10n {
     public static let changePassword = L10n.tr("Localizable", "ChangePassword.changePassword")
     /// Your new passwords do not match.
     public static let differentNewPassword = L10n.tr("Localizable", "ChangePassword.differentNewPassword")
+    /// Your password cannot be empty.
+    public static let emptyError = L10n.tr("Localizable", "ChangePassword.emptyError")
     /// New Password
     public static let newPassword = L10n.tr("Localizable", "ChangePassword.newPassword")
     /// Password
