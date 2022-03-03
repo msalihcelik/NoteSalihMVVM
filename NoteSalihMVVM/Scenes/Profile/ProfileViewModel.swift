@@ -6,7 +6,7 @@
 //
 
 protocol ProfileViewDataSource {
-    
+    var user: User? { get }
 }
 
 protocol ProfileViewEventSource {
@@ -23,15 +23,15 @@ protocol ProfileViewProtocol: ProfileViewDataSource, ProfileViewEventSource {
 
 final class ProfileViewModel: BaseViewModel<ProfileRouter>, ProfileViewProtocol {
     
-    var user: User = User(fullName: "", email: "", id: 0)
+    var user: User?
     var reloadUser: VoidClosure?
     
     var getFullName: String {
-        return user.fullName ?? ""
+        return user?.fullName ?? ""
     }
     
     var getEmail: String {
-        return user.email ?? ""
+        return user?.email ?? ""
     }
 }
 
