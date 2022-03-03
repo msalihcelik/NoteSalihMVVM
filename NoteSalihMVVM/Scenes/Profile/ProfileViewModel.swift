@@ -6,11 +6,11 @@
 //
 
 protocol ProfileViewDataSource {
-    var user: User? { get }
+    
 }
 
 protocol ProfileViewEventSource {
-    var reloadUser: VoidClosure? { get set }
+    var reloadUser: ((User) -> Void)? { get set }
 }
 
 protocol ProfileViewProtocol: ProfileViewDataSource, ProfileViewEventSource {
@@ -22,17 +22,7 @@ protocol ProfileViewProtocol: ProfileViewDataSource, ProfileViewEventSource {
 }
 
 final class ProfileViewModel: BaseViewModel<ProfileRouter>, ProfileViewProtocol {
-    
-    var user: User?
-    var reloadUser: VoidClosure?
-    
-    var getFullName: String {
-        return user?.fullName ?? ""
-    }
-    
-    var getEmail: String {
-        return user?.email ?? ""
-    }
+    var reloadUser: ((User) -> Void)?
 }
 
 // MARK: - Network
@@ -46,8 +36,7 @@ extension ProfileViewModel {
             switch result {
             case .success(let response):
                 guard let data = response.data else { return }
-                self.user = data
-                self.reloadUser?()
+                self.reloadUser?(data)
             case .failure(let error):
                 self.showWarningToast?(error.localizedDescription)
             }
