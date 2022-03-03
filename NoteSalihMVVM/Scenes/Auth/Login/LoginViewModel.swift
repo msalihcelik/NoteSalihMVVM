@@ -5,7 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 10.02.2022.
 //
 
-import Foundation
 import KeychainSwift
 
 protocol LoginViewDataSource {}
@@ -35,7 +34,7 @@ final class LoginViewModel: BaseViewModel<LoginRouter>, LoginViewProtocol {
             case .success(let response):
                 guard let token = response.data?.accessToken else { return }
                 self.keychain.set(token, forKey: Keychain.token)
-                self.showSuccessToast?(L10n.Login.success)
+                self.router.pushNoteList()
             case .failure(let error):
                 self.showWarningToast?(error.localizedDescription)
             }

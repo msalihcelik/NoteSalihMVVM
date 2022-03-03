@@ -43,8 +43,8 @@ extension BaseViewController {
             self?.dismissLoading()
         }
         
-        viewModel.showActivityIndicatorView = { [weak self] in
-            self?.showActivityIndicator()
+        viewModel.showActivityIndicatorView = { [weak self] position in
+            self?.showActivityIndicator(position: position ?? .center)
         }
         
         viewModel.hideActivityIndicatorView = { [weak self] in

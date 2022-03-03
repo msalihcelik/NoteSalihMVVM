@@ -20,6 +20,6 @@ class PlaceOnWindowTransition: Transition {
         }, completion: nil)
     }
     
-    func close(_ viewController: UIViewController, completion: (() -> Void)?) {}
+    func close(_ viewController: UIViewController) {}
     
 }

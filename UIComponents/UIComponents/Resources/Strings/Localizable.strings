@@ -48,3 +48,17 @@
 "ResetConfirmation.title" = "Password Reset Confirmation";
 "ResetConfirmation.description" = "An email has been sent to %@ with further instructions.";
 "ResetConfirmation.login" = "Login";
+
+// MARK: - NoteList
+"NoteList.addNote" = "Add Note";
+"NoteList.search" = "Search...";
+"NoteList.deleteNote" = "Delete Note";
+"NoteList.deleteAlertMessage" = "Are you sure you want to delete this note.";
+"NoteList.cancel" = "Cancel";
+"NoteList.delete" = "Delete";
+
+// MARK: - NoteDetails
+"NoteDetails.saveNote" = "Save Note";
+"NoteDetails.createNote" = "CREATE NOTE";
+"NoteDetails.editNote" = "EDIT NOTE";
+"NoteDetails.showNote" = "SHOW NOTE";

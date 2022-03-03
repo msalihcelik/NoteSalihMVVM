@@ -8,7 +8,7 @@
 import UIKit
 
 public class AuthButton: UIButton {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureContents()
@@ -20,6 +20,13 @@ public class AuthButton: UIButton {
     }
     // swiftlint:enable all
     
+    public override class var requiresConstraintBasedLayout: Bool {
+        return true
+    }
+    
+    public func setHeight(_ height: CGFloat) {
+        heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
 }
 
 // MARK: - Configure
@@ -27,8 +34,9 @@ extension AuthButton {
     
     private func configureContents() {
         backgroundColor = .appBlue
+        tintColor = .appWhite
         titleLabel?.font = .font(.josefinSansSemiBold, size: 15)
         layer.cornerRadius = 5
-        height(60)
+        heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
 }

@@ -5,8 +5,6 @@
 //  Created by Mehmet Salih ÇELİK on 10.02.2022.
 //
 
-import UIKit
-
 final class LoginViewController: BaseViewController<LoginViewModel> {
     
     private let scrollView = UIScrollViewBuilder().build()
@@ -18,6 +16,7 @@ final class LoginViewController: BaseViewController<LoginViewModel> {
         .distribution(.fillEqually)
         .spacing(14)
         .build()
+    
     private let emailTextField = AuthTextField()
     private let passwordTextField: AuthTextField = {
         let textField = AuthTextField()
@@ -149,12 +148,12 @@ extension LoginViewController {
             viewModel.showWarningToast?(L10n.Login.emptyEmail)
             return
         }
-        
+
         guard let password = passwordTextField.text, !password.isEmpty else {
             viewModel.showWarningToast?(L10n.Login.emptyPassword)
             return
         }
-        
+
         let validation = Validation()
         guard validation.isValidPassword(password) else { return }
         guard validation.isValidEmail(email) else { return }

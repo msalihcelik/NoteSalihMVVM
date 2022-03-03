@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		67061ABD27C61DAE00810191 /* PopToRootRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061ABC27C61DAE00810191 /* PopToRootRoute.swift */; };
+		67061B0027C6720B00810191 /* NoteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061AFD27C6720B00810191 /* NoteListRouter.swift */; };
+		67061B0127C6720B00810191 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061AFE27C6720B00810191 /* NoteListViewController.swift */; };
+		67061B0227C6720B00810191 /* NoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061AFF27C6720B00810191 /* NoteListViewModel.swift */; };
+		67061B0427C6722B00810191 /* NoteListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061B0327C6722B00810191 /* NoteListRoute.swift */; };
+		67061B2227C79A8D00810191 /* NoteDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061B1F27C79A8D00810191 /* NoteDetailsRouter.swift */; };
+		67061B2327C79A8D00810191 /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061B2027C79A8D00810191 /* NoteDetailsViewController.swift */; };
+		67061B2427C79A8D00810191 /* NoteDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061B2127C79A8D00810191 /* NoteDetailsViewModel.swift */; };
+		67061B2627C79AA200810191 /* NoteDetailsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67061B2527C79AA200810191 /* NoteDetailsRoute.swift */; };
 		6709080027C4F24900700C60 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670907FF27C4F24900700C60 /* Validation.swift */; };
 		6709080527C533FE00700C60 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080227C533FE00700C60 /* ForgotPasswordRouter.swift */; };
 		6709080627C533FE00700C60 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709080327C533FE00700C60 /* ForgotPasswordViewController.swift */; };
@@ -26,6 +34,9 @@
 		6750EC8127BFB980002B84E0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750EC7E27BFB980002B84E0 /* RegisterViewController.swift */; };
 		6750EC8227BFB980002B84E0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750EC7F27BFB980002B84E0 /* RegisterViewModel.swift */; };
 		6750EC8427BFB9A7002B84E0 /* RegisterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750EC8327BFB9A7002B84E0 /* RegisterRoute.swift */; };
+		67E43EAC27CCE78000196BE9 /* NoteTableViewCellModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E43EAB27CCE78000196BE9 /* NoteTableViewCellModel+Extension.swift */; };
+		67E43EB227CF41FD00196BE9 /* ShowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E43EB127CF41FD00196BE9 /* ShowType.swift */; };
+		67E43EDD27CF998400196BE9 /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E43EDC27CF998400196BE9 /* ListType.swift */; };
 		67FE22BE27B4FD360078E2C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FE22BD27B4FD360078E2C2 /* AppDelegate.swift */; };
 		67FE22C727B4FD370078E2C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FE22C627B4FD370078E2C2 /* Assets.xcassets */; };
 		67FE22CA27B4FD370078E2C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FE22C827B4FD370078E2C2 /* LaunchScreen.storyboard */; };
@@ -94,6 +105,14 @@
 		136820DD115292DD0F7097F4 /* Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteSalihMVVM_NoteSalihMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E38BD0E3BDFE12537DACD5 /* Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoteSalihMVVM-NoteSalihMVVMUITests/Pods-NoteSalihMVVM-NoteSalihMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		67061ABC27C61DAE00810191 /* PopToRootRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToRootRoute.swift; sourceTree = "<group>"; };
+		67061AFD27C6720B00810191 /* NoteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListRouter.swift; sourceTree = "<group>"; };
+		67061AFE27C6720B00810191 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
+		67061AFF27C6720B00810191 /* NoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewModel.swift; sourceTree = "<group>"; };
+		67061B0327C6722B00810191 /* NoteListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListRoute.swift; sourceTree = "<group>"; };
+		67061B1F27C79A8D00810191 /* NoteDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsRouter.swift; sourceTree = "<group>"; };
+		67061B2027C79A8D00810191 /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
+		67061B2127C79A8D00810191 /* NoteDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewModel.swift; sourceTree = "<group>"; };
+		67061B2527C79AA200810191 /* NoteDetailsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsRoute.swift; sourceTree = "<group>"; };
 		670907FF27C4F24900700C60 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		6709080227C533FE00700C60 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
 		6709080327C533FE00700C60 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +131,9 @@
 		6750EC7E27BFB980002B84E0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6750EC7F27BFB980002B84E0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		6750EC8327BFB9A7002B84E0 /* RegisterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRoute.swift; sourceTree = "<group>"; };
+		67E43EAB27CCE78000196BE9 /* NoteTableViewCellModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteTableViewCellModel+Extension.swift"; sourceTree = "<group>"; };
+		67E43EB127CF41FD00196BE9 /* ShowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowType.swift; sourceTree = "<group>"; };
+		67E43EDC27CF998400196BE9 /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
 		67FE22BA27B4FD360078E2C2 /* NoteSalihMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteSalihMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE22BD27B4FD360078E2C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67FE22C627B4FD370078E2C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +213,28 @@
 			path = Routes;
 			sourceTree = "<group>";
 		};
+		67061AFC27C671DC00810191 /* NoteList */ = {
+			isa = PBXGroup;
+			children = (
+				67061AFD27C6720B00810191 /* NoteListRouter.swift */,
+				67061AFE27C6720B00810191 /* NoteListViewController.swift */,
+				67061AFF27C6720B00810191 /* NoteListViewModel.swift */,
+				67061B0327C6722B00810191 /* NoteListRoute.swift */,
+			);
+			path = NoteList;
+			sourceTree = "<group>";
+		};
+		67061B1E27C7991200810191 /* NoteDetails */ = {
+			isa = PBXGroup;
+			children = (
+				67061B1F27C79A8D00810191 /* NoteDetailsRouter.swift */,
+				67061B2027C79A8D00810191 /* NoteDetailsViewController.swift */,
+				67061B2127C79A8D00810191 /* NoteDetailsViewModel.swift */,
+				67061B2527C79AA200810191 /* NoteDetailsRoute.swift */,
+			);
+			path = NoteDetails;
+			sourceTree = "<group>";
+		};
 		670907FE27C4F23400700C60 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +286,39 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		67E43EA527CCCAAF00196BE9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				67E43EA827CCCCB200196BE9 /* Enum */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		67E43EA827CCCCB200196BE9 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				67E43EB127CF41FD00196BE9 /* ShowType.swift */,
+				67E43EDC27CF998400196BE9 /* ListType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		67E43EA927CCE75D00196BE9 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				67E43EAA27CCE76700196BE9 /* Cells */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		67E43EAA27CCE76700196BE9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				67E43EAB27CCE78000196BE9 /* NoteTableViewCellModel+Extension.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		67FE22B127B4FD360078E2C2 = {
 			isa = PBXGroup;
 			children = (
@@ -267,9 +344,11 @@
 		67FE22BC27B4FD360078E2C2 /* NoteSalihMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				67E43EA927CCE75D00196BE9 /* UIComponents */,
 				670907FE27C4F23400700C60 /* Validation */,
 				67FE23E827B525BD0078E2C2 /* AppDelegate */,
 				67FE23E927B52EAC0078E2C2 /* Configurations */,
+				67E43EA527CCCAAF00196BE9 /* Entity */,
 				67FE23EB27B52ED80078E2C2 /* Routing */,
 				67FE23FB27B533BC0078E2C2 /* Scenes */,
 				6738488E27BA5E9C0094F2C7 /* DataProvider */,
@@ -364,8 +443,10 @@
 		67FE23FB27B533BC0078E2C2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				67FE241A27B53DE60078E2C2 /* Auth */,
 				67FE23FC27B533C50078E2C2 /* Base */,
+				67FE241A27B53DE60078E2C2 /* Auth */,
+				67061AFC27C671DC00810191 /* NoteList */,
+				67061B1E27C7991200810191 /* NoteDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -702,14 +783,18 @@
 				67FE242027B53E000078E2C2 /* LoginViewController.swift in Sources */,
 				6750EC8127BFB980002B84E0 /* RegisterViewController.swift in Sources */,
 				67FE23FA27B532A30078E2C2 /* ModalTransition.swift in Sources */,
+				67061B2227C79A8D00810191 /* NoteDetailsRouter.swift in Sources */,
 				6738489227BA5F060094F2C7 /* ApiRequestInterceptor.swift in Sources */,
 				67061ABD27C61DAE00810191 /* PopToRootRoute.swift in Sources */,
+				67E43EDD27CF998400196BE9 /* ListType.swift in Sources */,
 				67FE240727B5353F0078E2C2 /* BaseRouter.swift in Sources */,
 				67FE242327B53E200078E2C2 /* LoginRoute.swift in Sources */,
 				6709081427C5603B00700C60 /* ResetConfirmationViewModel.swift in Sources */,
+				67061B0127C6720B00810191 /* NoteListViewController.swift in Sources */,
 				6750EC8027BFB980002B84E0 /* RegisterRouter.swift in Sources */,
 				6738489027BA5EE80094F2C7 /* ApiLogger.swift in Sources */,
 				6738489427BA5F1C0094F2C7 /* DataProvider.swift in Sources */,
+				67061B2327C79A8D00810191 /* NoteDetailsViewController.swift in Sources */,
 				67FE23F927B532A30078E2C2 /* Transition.swift in Sources */,
 				6750EC8427BFB9A7002B84E0 /* RegisterRoute.swift in Sources */,
 				67FE23F027B52FDE0078E2C2 /* Router.swift in Sources */,
@@ -717,19 +802,26 @@
 				6709080027C4F24900700C60 /* Validation.swift in Sources */,
 				67FE23EE27B52F880078E2C2 /* Animator.swift in Sources */,
 				6750EC7B27BE9947002B84E0 /* AppDelegate+IQKeyboardManager.swift in Sources */,
+				67E43EB227CF41FD00196BE9 /* ShowType.swift in Sources */,
 				67FE240827B5353F0078E2C2 /* BaseViewController.swift in Sources */,
 				67FE242127B53E000078E2C2 /* LoginViewModel.swift in Sources */,
 				6709080927C5343E00700C60 /* ForgotPasswordRoute.swift in Sources */,
+				67061B2627C79AA200810191 /* NoteDetailsRoute.swift in Sources */,
 				6709081327C5603B00700C60 /* ResetConfirmationViewController.swift in Sources */,
 				67FE240627B5353F0078E2C2 /* BaseViewModel.swift in Sources */,
 				67FE241927B53DC60078E2C2 /* AppRouter.swift in Sources */,
 				6709081627C5606B00700C60 /* ResetConfirmationRoute.swift in Sources */,
 				67FE241027B53B9F0078E2C2 /* PlaceOnWindowTransition.swift in Sources */,
+				67061B2427C79A8D00810191 /* NoteDetailsViewModel.swift in Sources */,
+				67E43EAC27CCE78000196BE9 /* NoteTableViewCellModel+Extension.swift in Sources */,
 				67FE23F827B532A30078E2C2 /* PushTransition.swift in Sources */,
 				6709081227C5603B00700C60 /* ResetConfirmationRouter.swift in Sources */,
 				67FE241F27B53E000078E2C2 /* LoginRouter.swift in Sources */,
 				6709080627C533FE00700C60 /* ForgotPasswordViewController.swift in Sources */,
+				67061B0427C6722B00810191 /* NoteListRoute.swift in Sources */,
 				6709080727C533FE00700C60 /* ForgotPasswordViewModel.swift in Sources */,
+				67061B0027C6720B00810191 /* NoteListRouter.swift in Sources */,
+				67061B0227C6720B00810191 /* NoteListViewModel.swift in Sources */,
 				67FE22BE27B4FD360078E2C2 /* AppDelegate.swift in Sources */,
 				6709080527C533FE00700C60 /* ForgotPasswordRouter.swift in Sources */,
 				6750EC8227BFB980002B84E0 /* RegisterViewModel.swift in Sources */,

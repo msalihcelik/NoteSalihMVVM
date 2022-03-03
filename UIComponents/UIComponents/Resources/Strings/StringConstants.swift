@@ -47,6 +47,32 @@ public enum L10n {
     public static let title = L10n.tr("Localizable", "Login.title")
   }
 
+  public enum NoteDetails {
+    /// CREATE NOTE
+    public static let createNote = L10n.tr("Localizable", "NoteDetails.createNote")
+    /// EDIT NOTE
+    public static let editNote = L10n.tr("Localizable", "NoteDetails.editNote")
+    /// Save Note
+    public static let saveNote = L10n.tr("Localizable", "NoteDetails.saveNote")
+    /// SHOW NOTE
+    public static let showNote = L10n.tr("Localizable", "NoteDetails.showNote")
+  }
+
+  public enum NoteList {
+    /// Add Note
+    public static let addNote = L10n.tr("Localizable", "NoteList.addNote")
+    /// Cancel
+    public static let cancel = L10n.tr("Localizable", "NoteList.cancel")
+    /// Delete
+    public static let delete = L10n.tr("Localizable", "NoteList.delete")
+    /// Are you sure you want to delete this note.
+    public static let deleteAlertMessage = L10n.tr("Localizable", "NoteList.deleteAlertMessage")
+    /// Delete Note
+    public static let deleteNote = L10n.tr("Localizable", "NoteList.deleteNote")
+    /// Search...
+    public static let search = L10n.tr("Localizable", "NoteList.search")
+  }
+
   public enum Register {
     /// Already have an account? 
     public static let already = L10n.tr("Localizable", "Register.already")

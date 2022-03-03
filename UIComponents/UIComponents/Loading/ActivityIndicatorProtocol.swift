@@ -9,16 +9,23 @@ import UIKit
 import TinyConstraints
 
 public protocol ActivityIndicatorProtocol {
-    func showActivityIndicator()
+    func showActivityIndicator(position: ActivityPosition)
     func hideActivityIndicator()
 }
 
 public extension ActivityIndicatorProtocol where Self: UIViewController {
-    func showActivityIndicator() {
+    func showActivityIndicator(position: ActivityPosition) {
         let indicator = ActivityIndicatorView(frame: .infinite)
         indicator.startAnimating()
         view.addSubview(indicator)
-        indicator.centerInSuperview()
+//        indicator.centerInSuperview()
+        switch position {
+        case .center:
+            indicator.centerInSuperview()
+        case .bottom:
+            indicator.centerXToSuperview()
+            indicator.bottomToSuperview(usingSafeArea: true)
+        }
         view.bringSubviewToFront(indicator)
     }
     

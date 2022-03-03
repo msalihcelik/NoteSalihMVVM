@@ -6,6 +6,5 @@
 //
 
 final class ForgotPasswordRouter: Router, ForgotPasswordRouter.Routes {
-    
     typealias Routes = ResetConfirmationRoute
 }
