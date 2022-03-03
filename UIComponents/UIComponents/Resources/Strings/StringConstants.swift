@@ -73,6 +73,17 @@ public enum L10n {
     public static let search = L10n.tr("Localizable", "NoteList.search")
   }
 
+  public enum Profile {
+    /// Change Password
+    public static let changePassword = L10n.tr("Localizable", "Profile.changePassword")
+    /// PROFILE
+    public static let profile = L10n.tr("Localizable", "Profile.profile")
+    /// Save
+    public static let save = L10n.tr("Localizable", "Profile.save")
+    /// Sign Out
+    public static let signOut = L10n.tr("Localizable", "Profile.signOut")
+  }
+
   public enum Register {
     /// Already have an account? 
     public static let already = L10n.tr("Localizable", "Register.already")
