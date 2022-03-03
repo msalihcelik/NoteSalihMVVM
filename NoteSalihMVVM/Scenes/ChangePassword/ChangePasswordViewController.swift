@@ -35,6 +35,7 @@ extension ChangePasswordViewController {
         stackView.addArrangedSubview(newPasswordTextField)
         stackView.addArrangedSubview(retypeNewPasswordTextField)
         stackView.setCustomSpacing(33, after: retypeNewPasswordTextField)
+        stackView.addArrangedSubview(saveButton)
     }
 }
 
@@ -46,6 +47,7 @@ extension ChangePasswordViewController {
         passwordTextField.isSecureTextEntry = true
         newPasswordTextField.isSecureTextEntry = true
         retypeNewPasswordTextField.isSecureTextEntry = true
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
     
     private func configureNavigation() {
@@ -67,11 +69,28 @@ extension ChangePasswordViewController {
     
     @objc
     private func saveButtonTapped() {
-        
+        guard let password = passwordTextField.text, !password.isEmpty,
+              let newPassword = newPasswordTextField.text, !newPassword.isEmpty,
+              let retypeNewPassword = retypeNewPasswordTextField.text, !retypeNewPassword.isEmpty else {
+                  ToastPresenter.showWarningToast(text: L10n.ChangePassword.emptyError)
+            return
+        }
+        let validation = Validation()
+        guard validation.isValidPassword(password),
+              validation.isValidPassword(newPassword) else { return }
+        guard newPassword == retypeNewPassword else {
+            viewModel.differentPasswordError()
+            return
+        }
+        guard password != newPassword, password != retypeNewPassword else {
+            viewModel.sameAllError()
+            return
+        }
+        viewModel.changePassword(password: password, newPassword: newPassword, retypeNewPassword: retypeNewPassword)
     }
     
     @objc
     private func leftIconTapped() {
-        
+        viewModel.leftIconTapped()
     }
 }
