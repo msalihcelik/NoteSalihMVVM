@@ -1,0 +1,83 @@
+/* 
+  Localizable.strings
+  UIComponents
+
+  Created by Mehmet Salih ÇELİK on 11.02.2022.
+  
+*/
+
+// MARK: - Login
+"Login.title" = "Giriş";
+"Login.description" = "Uygulamamızı kullanmaya devam etmek için giriş yapın veya kaydolun.";
+"Login.email" = "E-posta adresi";
+"Login.password" = "Parola";
+"Login.newUser" = "Yeni kullanıcı? ";
+"Login.signUp" = "Şimdi kayıt ol";
+"Login.forgot" = "Parolanızı mı unuttunuz?";
+"Login.emptyEmail" = "E-posta adresiniz boş olamaz.";
+"Login.emptyPassword" = "Parolanız boş olamaz.";
+"Login.success" = "Giriş Başarılı";
+
+// MARK: - Register
+"Register.title" = "Kayıt Ol";
+"Register.description" = "Uygulamamızı kullanmaya devam etmek için giriş yapın veya kaydolun.";
+"Register.fullName" = "Ad Soyad";
+"Register.email" = "E-mail adresi";
+"Register.password" = "Parola";
+"Register.forgot" = "Parolanızı mı unuttunuz?";
+"Register.already" = "Zaten hesabın var mı? ";
+"Register.signIn" = "Şimdi giriş yap";
+"Register.emptyName" = "Adınız ve soyadınız boş olamaz.";
+"Register.emptyEmail" = "E-posta adresiniz boş olamaz.";
+"Register.emptyPassword" = "Parolanız boş olamaz.";
+"Register.success" = "Kayıt Başarılı";
+
+// MARK: - Validation
+"Validation.name" = "Lütfen geçerli bir isim girin.";
+"Validation.email" = "Lütfen geçerli bir e-posta adresi girin";
+"Validation.password" = "Parola en az 6 karakter olmalıdır.";
+
+// MARK: - Forgot
+"Forgot.title" = "Parolanızı mı unuttunuz?";
+"Forgot.description" = "E-postanızı onaylayın, talimatları gönderelim.";
+"Forgot.email" = "E-posta adresi";
+"Forgot.reset" = "Parolayı sıfırla";
+"Forgot.emptyEmail" = "E-posta adresiniz boş olamaz.";
+
+// MARK: - ResetConfirmation
+"ResetConfirmation.title" = "Parola sıfırlama onayı";
+"ResetConfirmation.description" = "%@ adresine daha fazla talimat içeren bir e-posta gönderildi.";
+"ResetConfirmation.login" = "Giriş";
+
+// MARK: - NoteList
+"NoteList.addNote" = "Not ekle";
+"NoteList.search" = "Ara...";
+"NoteList.deleteNote" = "Notu sil";
+"NoteList.deleteAlertMessage" = "Bu notu silmek istediğinizden emin misiniz?";
+"NoteList.cancel" = "Vazgeç";
+"NoteList.delete" = "Sil";
+
+// MARK: - NoteDetails
+"NoteDetails.saveNote" = "Not Kaydet";
+"NoteDetails.createNote" = "NOT OLUŞTUR";
+"NoteDetails.editNote" = "NOT DÜZENLE";
+"NoteDetails.showNote" = "NOT GÖRÜNTÜLE";
+
+// MARK: - Profile
+"Profile.profile" = "PROFİL" ;
+"Profile.save" = "Kaydet";
+"Profile.changePassword" = "Parolayı Değiştir";
+"Profile.signOut" = "Çıkış Yap";
+"Profile.success" = "Başarılı";
+"Profile.emptyError" = "Adınız veya e-posta adresiniz boş bırakılamaz.";
+
+// MARK: - ChangePassword
+"ChangePassword.changePassword" = "PAROLA DEĞİŞTİR";
+"ChangePassword.password" = "Parola";
+"ChangePassword.newPassword" = "Yeni Parola";
+"ChangePassword.retypeNewPassword" = "Yeni Parolanızı tekrar yazınız";
+"ChangePassword.save" = "Kaydet";
+"ChangePassword.success" = "Başarılı";
+"ChangePassword.sameOldPassword" = "Eski parolanız yeni parolanızla aynı olamaz.";
+"ChangePassword.differentNewPassword" = "Yeni parolanız eşleşmiyor.";
+"ChangePassword.emptyError" = "Parolanız boş olamaz.";
