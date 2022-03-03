@@ -96,7 +96,15 @@ extension ProfileViewController {
 
     @objc
     private func saveButtonTapped() {
-    
+        guard let userName = fullNameTextField.text, !userName.isEmpty,
+              let email = emailTextField.text, !email.isEmpty else {
+            ToastPresenter.showWarningToast(text: L10n.Profile.emptyError)
+            return
+        }
+        let validation = Validation()
+        guard validation.isValidName(userName) else { return }
+        guard validation.isValidEmail(email) else { return }
+        viewModel.updateUser(userName: userName, email: email)
     }
     
     @objc
@@ -121,6 +129,8 @@ extension ProfileViewController {
     private func subscribeViewModel() {
         viewModel.reloadUser = { [weak self] in
             guard let self = self else { return }
+            self.fullNameTextField.text = self.viewModel.getFullName
+            self.emailTextField.text = self.viewModel.getEmail
         }
     }
 }
