@@ -316,9 +316,9 @@
 		677FE11B27D0EFD00069763E /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
-				677FE11C27D0EFF20069763E /* ChangePasswordRouter.swift */,
 				677FE11D27D0EFF20069763E /* ChangePasswordViewController.swift */,
 				677FE11E27D0EFF20069763E /* ChangePasswordViewModel.swift */,
+				677FE11C27D0EFF20069763E /* ChangePasswordRouter.swift */,
 				677FE12227D0EFFE0069763E /* ChangePasswordRoute.swift */,
 			);
 			path = ChangePassword;

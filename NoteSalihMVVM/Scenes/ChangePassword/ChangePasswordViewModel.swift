@@ -26,9 +26,10 @@ final class ChangePasswordViewModel: BaseViewModel<ChangePasswordRouter>, Change
 extension ChangePasswordViewModel {
     
     func changePassword(password: String, newPassword: String, retypeNewPassword: String) {
-        dataProvider.request(for: ChangePasswordRequest(password: password,
-                                                        newPassword: newPassword,
-                                                        newPasswordConfirmation: retypeNewPassword)) { [weak self] result in
+        showLoading?()
+        let request = ChangePasswordRequest(password: password, newPassword: newPassword, newPasswordConfirmation: retypeNewPassword)
+        dataProvider.request(for: request) { [weak self] result in
+            self?.hideLoading?()
             switch result {
             case .success:
                 ToastPresenter.showSuccessToast(text: L10n.ChangePassword.success)
