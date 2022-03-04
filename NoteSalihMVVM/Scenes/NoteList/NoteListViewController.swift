@@ -20,7 +20,7 @@ final class NoteListViewController: BaseViewController<NoteListViewModel> {
     }()
     var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.placeholder = "Search..."
+        searchBar.placeholder = L10n.NoteList.search
         searchBar.autocapitalizationType = .none
         searchBar.becomeFirstResponder()
         let frame = CGRect(x: 0, y: 0, width: 300, height: 44)
